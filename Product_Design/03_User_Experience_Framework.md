@@ -1,31 +1,29 @@
 ---
 doc_id: PDD.03.00
-version: 0.1.0
-last_updated: 2025-11-08
+version: 0.1.1
+last_updated: 2025-11-09
 status: draft
 owners: [design@survey-platform.io]
-tags: [user-experience, ux-framework, design-system, multi-screen]
+tags: [user-experience, ux-framework, design-system, multi-screen, remote-operations]
 ---
 
 # 03_User_Experience_Framework
 
 ## Purpose
 This document defines the **user experience framework** for the Survey Management Platform (SMP).  
-It describes how users interact with the system across screens, how context flows between modules, and the principles guiding interface and interaction design.
+It establishes how users interact with the system across multiple screens, how mission context is propagated, and the guiding principles that ensure consistency, clarity, and operational safety—particularly within **remote onshore survey operations**.
 
-The objective is to create a consistent, intuitive, and safe environment for operators managing complex, concurrent marine survey missions.
+The goal is to enable surveyors and supporting roles to operate multiple survey missions concurrently, maintaining full situational awareness and data quality oversight from an onshore facility.
 
 ---
 
 ## Scope & Context
-The SMP operates within a **multi-screen, multi-mission workspace**.  
-It is designed for real-time survey environments where operators need to:
-- Manage multiple active missions concurrently.  
-- Switch context rapidly without losing situational awareness.  
-- Interpret live data and respond to system health indicators quickly.  
-- Collaborate with onshore teams through traceable, synchronized records.
+The SMP supports **remote survey operations**, where surveyors manage live missions running offshore.  
+Operators work from an **onshore control center**, coordinating with the vessel’s bridge, operational crew, and sometimes the Data Processor team.  
+All interactions occur within a **multi-window environment**, where the mission context determines what data and controls are active at any given time.
 
-The UX framework ensures a **common visual and behavioral language** across all screens and roles.
+Diagnostic and configuration functions are **triggered as contextual windows** (modals) from within the Mission Deck rather than having dedicated screens.  
+This model simplifies the operator workspace and reduces unnecessary interface switching.
 
 ---
 
@@ -33,34 +31,33 @@ The UX framework ensures a **common visual and behavioral language** across all 
 
 ### 1. Multi-Screen Operational Concept
 
-SMP is optimized for a **4×2 screen layout** typical of offshore survey desks.  
-Each screen serves a defined operational purpose, minimizing overlap and maximizing information clarity.
+The SMP is currently designed around an **8-screen layout** (4×2 grid), though screen allocation may evolve as testing and optimization continue.
 
 | Screen | Function | Context |
 |---------|-----------|----------|
-| **1. Triage Hub** | Global mission overview, selection, and activation. | Cross-mission |
-| **2. Mission Deck** | Primary control and monitoring surface for the selected mission. | Active mission |
-| **3. Navigation / Reference** | Vessel positioning, heading, and reference systems. | Active mission |
-| **4–5. Stream Viewer(s)** | Live data visualization and quality monitoring per sensor type. | Active mission |
-| **6–7. Diagnostics / Configuration Tools** | Troubleshooting, validation, and configuration management. | Active mission |
-| **8. Online Log** | Consolidated operational log and traceability record. | Cross-mission |
+| **1. Triage Hub** | Displays all missions currently assigned to the surveyor. Each mission container shows key health and performance metrics and allows mission selection or monitoring. | Cross-mission |
+| **2. Mission Deck** | Primary control and monitoring surface for the selected mission. Hosts key mission tools, health metrics, and access to Diagnostics and Configuration modals. | Active mission |
+| **3. Navigation** | Displays the live operational plan and vessel tracking. For the MVP, this screen will display **QINSy** to ensure navigational accuracy and adherence to survey plan. | Active mission |
+| **4. Unallocated (future)** | Reserved for future tools or expanded features. | — |
+| **5–6. Stream Viewer(s)** | Visualize live data from key sensors (e.g., MBES, SSS, INS). Allow real-time quality validation and alignment with Mission Deck metrics. | Active mission |
+| **7. Unallocated (future)** | Reserved for mission support or communication extensions. | — |
+| **8. Online Log** | Centralized mission and system log showing chronological events, alerts, and notes. | Cross-mission |
 
-> Only the **Triage Hub** and **Online Log** are persistent across missions.  
-> All other screens adapt dynamically to the currently active mission context.
+> All screens except for **Triage Hub** and **Online Log** are contextual to the currently active mission.
 
 ---
 
 ### 2. Context Propagation Model
 
 The SMP maintains a **single active mission context** at any time.  
-When an operator selects a mission in the **Triage Hub**, the following occurs:
+When the surveyor selects a mission from the **Triage Hub**:
 
-1. The **Mission Context** is broadcast to all mission-scoped windows.  
-2. Each module (Mission Deck, Stream Viewer, Diagnostics) updates its data and state.  
-3. The **Online Log** remains global but continues to tag all new entries with the current `MissionID`.  
-4. Operators can confirm the active mission from any screen via a shared header component.
+1. The **Mission Context** object is activated and broadcast to all mission-scoped modules.  
+2. **Mission Deck**, **Stream Viewer(s)**, and **Navigation** screens update to reflect that mission’s data, health, and configurations.  
+3. The **Online Log** remains global but continues to record all mission activity tagged by `MissionID`.  
+4. Diagnostics or configuration modals opened from the Mission Deck automatically reference the current active mission context.
 
-This ensures synchronized state across the multi-screen environment while preserving mission isolation and traceability.
+This design guarantees synchronization across all operational screens and prevents cross-mission interference.
 
 ---
 
@@ -68,28 +65,31 @@ This ensures synchronized state across the multi-screen environment while preser
 
 | Pillar | Description | Example Application |
 |--------|--------------|---------------------|
-| **Situational Awareness** | Operators must understand the health and progress of all missions at a glance. | Global status banners, mission color coding, health badges. |
-| **Cognitive Clarity** | Reduce information overload through structured layouts and minimal visual noise. | Grouping of controls by task; progressive disclosure of detail. |
-| **Actionable Insight** | Information surfaces with context and recommended next steps. | Alerts include probable cause and suggested response. |
-| **Consistency** | Controls, colors, and behavior remain uniform across modules. | Same command pattern for Start/Stop in Deck and Diagnostics. |
-| **Safety by Design** | High-impact actions are confirmable and reversible. | Confirmation required for mission termination or config overwrite. |
-| **Traceable Transparency** | Every visible change links to a logged event. | Log entries auto-generated from operator actions. |
+| **Situational Awareness** | Operators must maintain a clear understanding of mission status and data quality in real time. | Health summaries and status icons visible on all screens. |
+| **Cognitive Clarity** | Reduce information noise and emphasize what matters most in the moment. | Context-aware display of metrics; secondary data hidden until requested. |
+| **Actionable Insight** | Alerts and notifications should convey meaning and guidance, not just warning states. | “Quality threshold exceeded – pause logging and verify transducer alignment.” |
+| **Consistency** | Shared patterns across modules (visual hierarchy, terminology, and layout). | All control panels follow the same command-button and status pattern. |
+| **Safety by Design** | Prevent accidental actions that could compromise data integrity or mission progress. | Confirmation prompts for **Stop Logging** to avoid unintended data loss. |
+| **Accessibility & Redundancy** | Critical information must be perceivable through multiple cues, not just color. | Combine color + iconography for health and alert states. |
+| **Traceable Transparency** | Every action produces a visible and logged outcome. | Operator commands and system events appear in the Online Log. |
 
 ---
 
 ## Functional or UX Details
 
-### 4. Visual and Interaction Hierarchy
+### 4. Interaction & Layout Flow
 
-The SMP uses a **three-tier visual hierarchy**:
+While not all screens will share identical structures, SMP interfaces will adhere to a **left-to-right, top-to-bottom interaction rhythm**, promoting intuitive scanning and control access.
 
-| Tier | Purpose | Components |
-|------|----------|-------------|
-| **Global Layer** | Always visible, provides orientation and mission status. | Top header (Mission ID, UTC clock, system health). |
-| **Module Layer** | Screen-specific functions and views. | Command panels, sensor tables, stream canvases. |
-| **Contextual Layer** | On-demand overlays for deeper insight or action. | Alerts, modals (Diagnostics, Configurations). |
+| Zone | Function | Example Components |
+|-------|-----------|--------------------|
+| **Top Region** | Mission identity, system time, high-level health state. | Header, mission selector, UTC clock. |
+| **Left Panel** | Command and configuration area. | Logging controls, template actions, diagnostics launcher. |
+| **Main Panel** | Data visualization and health awareness zone. | Health tiles, sensor summaries, live data streams. |
+| **Right Panel** | Contextual information and alerts. | Alert stack, notifications, QC summaries. |
+| **Bottom Panel** | Logs and secondary context. | Online Log dock, annotations, recent actions. |
 
-Interactions follow a **predictable left-to-right, top-to-bottom flow**—overview on the left, detail on the right, logs or context at the bottom.
+This flow reinforces **progressive disclosure**—operators start from overview (left/top) and move toward detail or response (right/bottom).
 
 ---
 
@@ -97,11 +97,11 @@ Interactions follow a **predictable left-to-right, top-to-bottom flow**—overvi
 
 | Category | Principle | Design Implication |
 |-----------|------------|--------------------|
-| **Status & Health** | Always visible, summarized, color-coded. | Unified color system for normal/warning/critical. |
-| **Alarms** | Contextual and non-blocking; designed to prompt action, not obstruct work. | Alerts stack at screen edge; dismissible once acknowledged. |
-| **Controls** | Grouped by intent (Command, Configuration, Logging). | Consistent location across modules. |
-| **Data Visualization** | Favor clarity over density. Use sparklines, gauges, and bars for trend comprehension. | Avoid 3D or unnecessary visual complexity. |
-| **Typography & Color** | Use weight, not color, to emphasize hierarchy; color reserved for state. | Consistent tone across mission-scoped views. |
+| **Status & Health** | Always visible, summarized with dual-mode indicators (color + iconography). | Green + ✓, Amber + !, Red + ⚠. |
+| **Alarms & Alerts** | Non-blocking by default; some critical alerts may be non-dismissible until resolved. | Critical “Low Quality” alert persists until logging conditions improve. |
+| **Controls** | Grouped by functional intent (Commands, Configuration, Logging). | Consistent location across modules. |
+| **Data Visualization** | Prioritize clarity and interpretability over graphical density. | Trend micro-charts and indicators instead of large dashboards. |
+| **Typography & Symbolism** | Use weight, spacing, and icons to denote importance; avoid reliance on color alone. | Accessibility compliance across viewing conditions. |
 
 ---
 
@@ -109,36 +109,36 @@ Interactions follow a **predictable left-to-right, top-to-bottom flow**—overvi
 
 | Interaction | Description | Example |
 |--------------|-------------|----------|
-| **Mission Activation** | Select mission from Triage Hub → updates all contextual windows. | Changes Mission Deck, Stream Viewer contents. |
-| **Command Execution** | Operator triggers a system action (e.g., Start Logging). | Action confirmed, logged automatically. |
-| **Alert Response** | Operator reviews alert with suggested remediation. | “Low SNR detected – check transducer alignment.” |
-| **Configuration Update** | Apply or validate a configuration template. | Updates sensor behavior, generates log entry. |
-| **Monitoring** | Continuous observation of sensor health and quality metrics. | Animated or periodic metric updates. |
-| **Logging** | Manual notes or automatic event recording. | Operator annotation during data anomaly. |
+| **Mission Activation** | Selecting a mission from the Triage Hub updates all contextual windows. | Mission Deck, Stream Viewer, and Navigation update within seconds. |
+| **Command Execution** | Operator initiates system action such as Start/Stop Logging. | Stop Logging → Confirmation modal → Log entry created. |
+| **Alert Response** | Operator reviews actionable alert with contextual recommendations. | “Ping density low – check navigation offset or sensor alignment.” |
+| **Configuration Validation** | Operator reviews or adjusts configuration using modal window. | Apply template → validate parameters → receive success confirmation. |
+| **Monitoring & Observation** | Continuous health and data quality assessment during mission. | Live metric animations and alert changes in Mission Deck and Stream Viewer. |
+| **Logging & Annotation** | Every command, alert, and note is automatically time-stamped and recorded. | Surveyor adds context note during QC event. |
 
 ---
 
-### 7. Design System Overview
+### 7. Design System Guidelines
 
-Although visual components may evolve, SMP maintains consistent **semantic and spatial rules**:
-- **Color coding:**  
-  - Green → Normal operation  
-  - Amber → Warning or degraded performance  
-  - Red → Critical or failed state  
-- **Action icons:** contextual but non-intrusive (minimal animation).  
-- **Layouts:** grid-aligned, fixed safe zones for core data and alerts.  
-- **Feedback:** every system action triggers visible or logged feedback (no silent actions).  
+The SMP’s interface language emphasizes **calm, legible, and consistent visual hierarchy**.  
+Key principles include:
 
-> SMP’s design language prioritizes legibility, rhythm, and calm — enabling operators to sustain focus during prolonged missions.
+- **Color + Icon Redundancy:** Color used only in combination with iconography for accessibility (e.g., ⚠ red = critical, ! amber = warning, ✓ green = normal).  
+- **Consistency of Patterns:** Buttons, controls, and dialogs follow a unified interaction model across all modules.  
+- **Feedback & Traceability:** Every action provides visual confirmation and creates a corresponding log event.  
+- **Safe Interactions:** Critical controls (e.g., stopping logging) require deliberate user acknowledgment.  
+- **Rhythmic Layouts:** Gridded alignment, generous spacing, and predictable flow minimize visual fatigue.  
+- **Operational Legibility:** UI optimized for extended monitoring under varied light and environmental conditions.
 
 ---
 
 ## Acceptance Criteria
 
-- The document clearly articulates SMP’s user experience principles and operational model.  
-- Screen roles, context propagation, and multi-mission behavior are defined for all design and engineering stakeholders.  
-- Visual hierarchy and design language guidelines are established for use in future functional specifications.  
-- Interaction principles align with operational safety and traceability goals.
+- Remote onshore operational context and screen allocation are correctly represented.  
+- Experience pillars reflect the platform’s principles and real-world constraints.  
+- Accessibility and redundancy (color + iconography) are included as standard practice.  
+- Interaction model supports safe, contextual, and traceable workflows.  
+- Layout rhythm and behavior are clearly described to guide further functional design.
 
 ---
 
@@ -146,17 +146,17 @@ Although visual components may evolve, SMP maintains consistent **semantic and s
 
 | Topic | Pending Decision |
 |--------|------------------|
-| **Alert Escalation Path** | Define how critical alerts propagate across screens (Deck ↔ Triage). |
-| **Diagnostics Access Pattern** | Confirm whether Diagnostics opens inline, as modal, or external window. |
-| **Mission Summary Widgets** | Evaluate which performance indicators appear on global header vs. mission deck. |
-| **Accessibility Testing** | Validate readability and color contrast under dim bridge lighting. |
+| **Screen Allocation Flexibility** | Validate if Navigation will remain external (QINSy) or integrated in future SMP release. |
+| **Alert Dismissal Rules** | Define exact conditions where alerts must be resolved before dismissal. |
+| **Diagnostics Modal Behavior** | Confirm if diagnostic views can remain persistent alongside mission controls. |
+| **Layout Adaptability** | Determine how layouts adapt to reduced screen environments (e.g., laptop mode for testing). |
 
 ---
 
 ### Summary Statement
 
-> The SMP user experience framework defines a synchronized, mission-centric environment optimized for safety, clarity, and operational flow.  
-> By maintaining consistent behavior and shared mission context across screens, the platform delivers the awareness and confidence required for complex, real-time marine survey operations.
+> The SMP User Experience Framework defines a mission-centric, remote-operational environment focused on safety, clarity, and accessibility.  
+> It aligns all modules under shared interaction and visualization principles, ensuring that operators can manage multiple missions confidently—whether monitoring, commanding, or responding to system changes.
 
 ---
 
