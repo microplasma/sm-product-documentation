@@ -1,5 +1,5 @@
 ---
-doc_id: PDD.02.00
+doc_id: PDD.02
 version: 0.1.0
 last_updated: 2025-11-08
 status: draft

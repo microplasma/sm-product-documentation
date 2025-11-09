@@ -1,8 +1,24 @@
-## Ocean Infinity – Survey Management Platform (SMP)
+---
+doc_id: UXR.04
+version: 0.1.0
+last_updated: 2025-11-09
+status: draft
+owners: [research@survey-platform.io]
+tags: [ux-research, pain-points, opportunities, smp]
+---
 
-**Version:** 1.0
-**Date:** 2025-10-25
-**Owner:** SMP Research & Design
+# UXR.04 – Pain Points and Opportunities
+
+<!--
+Changes made:
+1. Added standardized front-matter for repository uniformity.
+2. Updated H1 heading to align with SMP documentation naming convention.
+3. No textual, tabular, or semantic changes.
+-->
+
+**Version:** 1.0  
+**Date:** 2025-10-25  
+**Owner:** SMP Research & Design  
 **Status:** Consolidated Summary (Strategic Layer)
 
 ---

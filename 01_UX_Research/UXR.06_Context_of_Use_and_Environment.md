@@ -1,11 +1,28 @@
-## Ocean Infinity – Survey Management Platform (SMP)
+---
+doc_id: UXR.06
+version: 0.1.0
+last_updated: 2025-11-09
+status: draft
+owners: [research@survey-platform.io]
+tags: [ux-research, context-of-use, environment, smp]
+---
 
-**Version:** 1.0
-**Date:** 2025-10-25
-**Owner:** SMP Research & Design
+# UXR.06 – Context of Use and Environment
+
+<!--
+Changes made:
+1. Added standardized front-matter for repository alignment.
+2. Corrected minor typo (“---singe”).
+3. Updated H1 to standard format.
+4. Content unchanged.
+-->
+
+**Version:** 1.0  
+**Date:** 2025-10-25  
+**Owner:** SMP Research & Design  
 **Status:** Complete (Operational Environment Overview)
 
----singe
+---
 
 ## 1. Purpose & Scope
 
@@ -35,23 +52,23 @@ Cross-validated with operational feedback from online and offshore teams between
 
 ### 3.1 Offshore Control Room
 
-* **Setup:** Typically 6–8 screens per operator, distributed across multiple systems (navigation, sensor monitoring, ROV video, logging, communication).
-* **Lighting & Conditions:** Dimmed environment with limited natural light, requiring strong visual contrast and low-glare interfaces.
-* **Noise & Vibration:** Constant low-frequency background noise from vessel machinery; communication via headsets and intercom.
-* **Workload Characteristics:** Long shifts (12-hour rotations), alternating focus between active control and passive monitoring.
+* **Setup:** Typically 6–8 screens per operator, distributed across multiple systems (navigation, sensor monitoring, ROV video, logging, communication).  
+* **Lighting & Conditions:** Dimmed environment with limited natural light, requiring strong visual contrast and low-glare interfaces.  
+* **Noise & Vibration:** Constant low-frequency background noise from vessel machinery; communication via headsets and intercom.  
+* **Workload Characteristics:** Long shifts (12-hour rotations), alternating focus between active control and passive monitoring.  
 * **Cognitive Constraints:** High mental load due to multi-system vigilance and alarm fatigue.
 
 ### 3.2 Remote Operations Centre (ROC)
 
-* **Setup:** 8 screens per surveyor (typically), higher bandwidth reliability, and better ergonomic setup.
-* **Role Distribution:** One senior may supervise multiple missions concurrently.
-* **Collaboration Mode:** Real-time remote assistance via chat/video overlay, shared mission dashboards.
+* **Setup:** 8 screens per surveyor (typically), higher bandwidth reliability, and better ergonomic setup.  
+* **Role Distribution:** One senior may supervise multiple missions concurrently.  
+* **Collaboration Mode:** Real-time remote assistance via chat/video overlay, shared mission dashboards.  
 * **Challenge:** Latency in command feedback or data visualization may cause delayed responses during troubleshooting.
 
 ### 3.3 Vessel Deck & Equipment Zone
 
-* **Setup:** Mobile tablets or terminals used for calibration and deck activity coordination.
-* **Environmental Factors:** Wet, cold, or variable light conditions; gloves, movement, and PPE affect usability.
+* **Setup:** Mobile tablets or terminals used for calibration and deck activity coordination.  
+* **Environmental Factors:** Wet, cold, or variable light conditions; gloves, movement, and PPE affect usability.  
 * **Design Relevance:** Mobile or touchscreen interfaces must use large targets, minimal text input, and offline cache capabilities.
 
 ---
@@ -97,12 +114,12 @@ Cross-validated with operational feedback from online and offshore teams between
 
 ## 7. Design Implications Summary
 
-1. **Design for visibility and feedback** – users must always see what is happening and why.
-2. **Resilient interaction model** – platform must sustain partial data loss or temporary disconnections.
-3. **Standardize across contexts** – interfaces should look and behave consistently across offshore and remote settings.
-4. **Minimize manual data handling** – reduce folder management and manual log entry.
-5. **Integrate human rhythms** – support shift transitions and fatigue mitigation through structured overviews.
-6. **Accessible and ergonomic** – support both mouse/keyboard and touch under varying lighting and motion conditions.
+1. **Design for visibility and feedback** – users must always see what is happening and why.  
+2. **Resilient interaction model** – platform must sustain partial data loss or temporary disconnections.  
+3. **Standardize across contexts** – interfaces should look and behave consistently across offshore and remote settings.  
+4. **Minimize manual data handling** – reduce folder management and manual log entry.  
+5. **Integrate human rhythms** – support shift transitions and fatigue mitigation through structured overviews.  
+6. **Accessible and ergonomic** – support both mouse/keyboard and touch under varying lighting and motion conditions.  
 
 ---
 
@@ -115,5 +132,5 @@ Cross-validated with operational feedback from online and offshore teams between
 
 ---
 
-**End of Document**
+**End of Document**  
 *“Designing for the environment means designing for resilience, clarity, and control.”*

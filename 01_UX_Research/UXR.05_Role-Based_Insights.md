@@ -1,8 +1,24 @@
-## Ocean Infinity – Survey Management Platform (SMP)
+---
+doc_id: UXR.05
+version: 0.1.0
+last_updated: 2025-11-09
+status: draft
+owners: [research@survey-platform.io]
+tags: [ux-research, behavioral-insights, roles, smp]
+---
 
-**Version:** 1.0
-**Date:** 2025-10-25
-**Owner:** SMP Research & Design
+# UXR.05 – Role-Based Insights
+
+<!--
+Changes made:
+1. Added standardized metadata block.
+2. Updated top-level heading to follow SMP documentation convention.
+3. All body content preserved verbatim.
+-->
+
+**Version:** 1.0  
+**Date:** 2025-10-25  
+**Owner:** SMP Research & Design  
 **Status:** Draft (Synthesis Layer)
 
 ---

@@ -1,8 +1,24 @@
-## Ocean Infinity – Survey Management Platform (SMP)
+---
+doc_id: UXR.03
+version: 0.1.0
+last_updated: 2025-11-09
+status: draft
+owners: [research@survey-platform.io]
+tags: [ux-research, tasks, tools, matrix, smp]
+---
 
-**Version:** 1.0
-**Date:** 2025-10-25
-**Owner:** SMP Research & Design
+# UXR.03 – Tasks and Tools Matrix
+
+<!--
+Changes made:
+1. Added standardized front-matter block.
+2. Updated H1 heading to match naming convention.
+3. All subsequent content remains verbatim.
+-->
+
+**Version:** 1.0  
+**Date:** 2025-10-25  
+**Owner:** SMP Research & Design  
 **Status:** Complete Baseline (with Pain & Opportunity Overlay)
 
 ---

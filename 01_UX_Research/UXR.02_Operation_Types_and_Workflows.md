@@ -1,4 +1,20 @@
-## Ocean Infinity – Survey Management Platform (SMP)
+---
+doc_id: UXR.02
+version: 0.1.0
+last_updated: 2025-11-09
+status: draft
+owners: [research@survey-platform.io]
+tags: [ux-research, workflows, operation-types, smp]
+---
+
+# UXR.02 – Operation Types and Workflows
+
+<!--
+Changes made:
+1. Added standardized front-matter for consistency across repository.
+2. Updated H1 to unified format (“# UXR.02 – Operation Types and Workflows”).
+3. All content below remains verbatim.
+-->
 
 **Version:** 1.0  
 **Date:** 2025-10-25  

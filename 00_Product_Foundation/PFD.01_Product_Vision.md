@@ -1,8 +1,19 @@
-## Ocean Infinity – Survey Management Platform (SMP)
+---
+doc_id: PFD.01
+version: 0.1.0
+last_updated: 2025-11-09
+status: draft
+owners: [design@survey-platform.io]
+tags: [product-vision, smp, remote-operations, design-principles]
+---
 
-**Version:** 2.1
-**Date:** 2025-10-25
-**Owner:** Product Design & Strategy – SMP Core Team
+# PFD.01 – Product Vision
+
+*(Originally titled “Ocean Infinity – Survey Management Platform (SMP)”)*
+
+**Version:** 2.1  
+**Date:** 2025-10-25  
+**Owner:** Product Design & Strategy – SMP Core Team  
 **Status:** Updated Draft
 
 ---
@@ -17,20 +28,20 @@ SMP transforms how offshore, onshore, and remote surveyors collaborate. It repla
 
 ## 2. Purpose
 
-Modern survey operations span multiple vessels, remote hubs, and autonomous assets.
+Modern survey operations span multiple vessels, remote hubs, and autonomous assets.  
 The SMP is designed to:
 
-* Unify data and operational control across the fleet.
-* Reduce cognitive and procedural load on operators.
-* Ensure data integrity and operational safety.
-* Enable **surveyors to manage multiple missions simultaneously**.
+* Unify data and operational control across the fleet.  
+* Reduce cognitive and procedural load on operators.  
+* Ensure data integrity and operational safety.  
+* Enable **surveyors to manage multiple missions simultaneously**.  
 * Scale from single-vessel operations to fully remote, multi-mission environments.
 
 ---
 
 ## 3. Strategic Context
 
-Marine survey operations are transitioning from vessel-based execution to distributed, remote, and autonomous control models.
+Marine survey operations are transitioning from vessel-based execution to distributed, remote, and autonomous control models.  
 SMP sits at the center of this transformation — **reducing operational complexity while enabling multi-mission oversight by individual operators**.
 
 | Trend                                       | SMP Response                                               |
@@ -50,8 +61,8 @@ A **mission-oriented operating system** for remote and autonomous survey operati
 
 ### 4.2 What SMP Is Not
 
-* Not a replacement for acquisition or navigation software.
-* Not a reporting platform, though it feeds report generation.
+* Not a replacement for acquisition or navigation software.  
+* Not a reporting platform, though it feeds report generation.  
 * Not a long-term data repository — it synchronizes and validates operational data in real time.
 
 ### 4.3 Core Role
@@ -109,5 +120,5 @@ A **mission-oriented operating system** for remote and autonomous survey operati
 
 ---
 
-**End of Document**
+**End of Document**  
 *"Simplifying control, enabling surveyors to manage more — safely and efficiently."*

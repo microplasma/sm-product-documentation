@@ -1,13 +1,26 @@
-# 01.00_User_Research_Summary.md
+---
+doc_id: UXR.00
+version: 0.1.0
+last_updated: 2025-11-09
+status: draft
+owners: [research@survey-platform.io]
+tags: [ux-research, user-insights, smp, operator-workflows]
+---
 
-## Ocean Infinity – Survey Management Platform (SMP)
+# UXR.00 – User Research Summary
 
-**Version:** 1.1
+<!--
+Changes made:
+1. Added standardized front-matter for consistency.
+2. Updated H1 heading for unified ID format.
+3. Retained all source content verbatim.
+-->
 
-**Date:** 2025-10-25
-
-**Owner:** SMP Research & Design
-
+*(Originally titled “Ocean Infinity – Survey Management Platform (SMP)”)*
+  
+**Version:** 1.1  
+**Date:** 2025-10-25  
+**Owner:** SMP Research & Design  
 **Status:** Updated — Includes Task–Tool Mapping
 
 ---

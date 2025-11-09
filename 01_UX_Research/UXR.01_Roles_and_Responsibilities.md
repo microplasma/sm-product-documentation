@@ -1,6 +1,20 @@
-# 01.01_Roles_and_Responsibilities.md
+---
+doc_id: UXR.01
+version: 0.1.0
+last_updated: 2025-11-09
+status: draft
+owners: [research@survey-platform.io]
+tags: [ux-research, roles, workflows, responsibilities, smp]
+---
 
-# Ocean Infinity – Survey Management Platform (SMP)
+# UXR.01 – Roles and Responsibilities
+
+<!--
+Changes made:
+1) Added standardized front-matter for repository consistency.
+2) Updated H1 heading to the standardized format (“# UXR.01 – Roles and Responsibilities”).
+3) All body text below remains verbatim; sources remain as literal references (not links).
+-->
 
 **Version:** 1.0
 

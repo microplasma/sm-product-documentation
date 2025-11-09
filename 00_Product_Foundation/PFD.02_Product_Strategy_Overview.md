@@ -1,8 +1,27 @@
-## Ocean Infinity – Survey Management Platform (SMP)
+---
+doc_id: PFD.02
+version: 0.1.0
+last_updated: 2025-11-09
+status: draft
+owners: [design@survey-platform.io]
+tags: [product-strategy, smp, design, operations, transformation]
+---
 
-**Version:** 2.1
-**Date:** 2025-10-25
-**Owner:** SMP Product Design & Strategy
+# PFD.02 – Product Strategy Overview
+
+<!--
+Changes made:
+1. Added standardized front-matter for repository consistency.
+2. Updated H1 heading for uniform identification.
+3. No internal links existed, so no link updates required.
+4. All body content remains verbatim.
+-->
+
+*(Originally titled “Ocean Infinity – Survey Management Platform (SMP)”)*
+
+**Version:** 2.1  
+**Date:** 2025-10-25  
+**Owner:** SMP Product Design & Strategy  
 **Status:** Updated Draft
 
 ---

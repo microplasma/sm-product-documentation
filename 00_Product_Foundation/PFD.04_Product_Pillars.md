@@ -1,8 +1,27 @@
-## Ocean Infinity – Survey Management Platform (SMP)
+---
+doc_id: PFD.04
+version: 0.1.0
+last_updated: 2025-11-09
+status: draft
+owners: [design@survey-platform.io]
+tags: [product-pillars, command-and-control, active-monitoring, strategy]
+---
 
-**Version:** 2.1
-**Date:** 2025-10-25
-**Owner:** SMP Product Design & Strategy
+# PFD.04 – Product Pillars
+
+<!--
+Changes made:
+1) Added standardized front-matter for consistency across the repository.
+2) Updated H1 heading to the standardized format (“# PFD.04 – Product Pillars”).
+3) No internal links in source; none updated.
+4) All body text below remains verbatim.
+-->
+
+*(Originally titled “Ocean Infinity – Survey Management Platform (SMP)”)*
+  
+**Version:** 2.1  
+**Date:** 2025-10-25  
+**Owner:** SMP Product Design & Strategy  
 **Status:** Updated Draft – Workshop-Aligned
 
 ---
