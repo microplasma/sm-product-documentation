@@ -1,0 +1,99 @@
+# DOC_MANIFEST.yml
+version: 0.1.0
+last_updated: 2025-11-09
+repo: sm-product-documentation
+default_branch: main
+manifest_version: 1
+
+sections:
+  - section_id: 00PF
+    title: Product Foundation
+    base_path: 00_Product_Foundation
+    tags: [vision, strategy, architecture, pillars]
+    files:
+      - doc_id: PFD.01
+        title: Product Vision
+        path: 00_Product_Foundation/PFD.01_Product_Vision.md
+      - doc_id: PFD.02
+        title: Product Strategy Overview
+        path: 00_Product_Foundation/PFD.02_Product_Strategy_Overview.md
+      - doc_id: PFD.03
+        title: Product Architecture Overview
+        path: 00_Product_Foundation/PFD.03_Product_Architecture_Overview.md
+      - doc_id: PFD.04
+        title: Product Pillars
+        path: 00_Product_Foundation/PFD.04_Product_Pillars.md
+
+  - section_id: 01UX
+    title: UX Research
+    base_path: 01_UX_Research
+    tags: [research, roles, workflows, insights]
+    files:
+      - doc_id: UXR.00
+        title: User Research Summary
+        path: 01_UX_Research/UXR.00_User_Research_Summary.md
+      - doc_id: UXR.01
+        title: Roles and Responsibilities
+        path: 01_UX_Research/UXR.01_Roles_and_Responsibilities.md
+      - doc_id: UXR.02
+        title: Operation Types and Workflows
+        path: 01_UX_Research/UXR.02_Operation_Types_and_Workflows.md
+      - doc_id: UXR.03
+        title: Tasks and Tools Matrix
+        path: 01_UX_Research/UXR.03_Tasks_and_Tools_Matrix.md
+      - doc_id: UXR.04
+        title: Pain Points and Opportunities
+        path: 01_UX_Research/UXR.04_Pain_Points_and_Opportunities.md
+      - doc_id: UXR.05
+        title: Role-Based Insights
+        path: 01_UX_Research/UXR.05_Role-Based_Insights.md
+      - doc_id: UXR.06
+        title: Context of Use and Environment
+        path: 01_UX_Research/UXR.06_Context_of_Use_and_Environment.md
+
+  - section_id: 02PD
+    title: Product Design
+    base_path: 02_Product_Design
+    tags: [design, architecture, ux, features]
+    files:
+      - doc_id: PDD.00
+        title: Introduction and Principles
+        path: 02_Product_Design/PDD.00_Introduction_and_Principles.md
+      - doc_id: PDD.01
+        title: System Overview
+        path: 02_Product_Design/PDD.01_System_Overview.md
+      - doc_id: PDD.02
+        title: Information Architecture
+        path: 02_Product_Design/PDD.02_Information_Arquitecture.md
+      - doc_id: PDD.03
+        title: User Experience Framework
+        path: 02_Product_Design/PDD.03_User_Experience_Framework.md
+      - doc_id: PDD.04.01
+        title: Triage Hub
+        path: 02_Product_Design/PDD.04.01_Triage_Hub.md
+      - doc_id: PDD.04.02
+        title: Mission Deck
+        path: 02_Product_Design/PDD.04.02_Mission_Deck.md
+      - doc_id: PDD.04.03
+        title: Stream Viewer
+        path: 02_Product_Design/PDD.04.03_Stream_Viewer.md
+      - doc_id: PDD.04.04
+        title: Configuration Manager
+        path: 02_Product_Design/PDD.04.04_Configuration_Manager.md
+      - doc_id: PDD.04.05
+        title: Online Log and Traceability
+        path: 02_Product_Design/PDD.04.05_Online_Log_and_Traceability.md
+      - doc_id: PDD.05
+        title: Data and Configuration Structure
+        path: 02_Product_Design/PDD.05_Data_and_Configuration_Structure.md
+      - doc_id: PDD.06
+        title: User Roles and Operational Modes
+        path: 02_Product_Design/PDD.06_User_Roles_and_Operational_Modes.md
+      - doc_id: PDD.07
+        title: Future Directions and Open Items
+        path: 02_Product_Design/PDD.07_Future_Directions_and_Open_Items.md
+
+root_docs:
+  - doc_id: RD.ROOT
+    title: Repository README
+    path: README.md
