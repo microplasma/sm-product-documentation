@@ -7,7 +7,7 @@ owners: [design@survey-platform.io]
 tags: [future-directions, design-research, open-items, roadmap-alignment, smp-evolution]
 ---
 
-# 07_Future_Directions_and_Open_Items
+# PDD.07_Future_Directions_and_Open_Items
 
 ## Purpose
 This document consolidates all **outstanding design questions, open topics, and future directions** identified across the Survey Management Platform (SMP) design documentation.  

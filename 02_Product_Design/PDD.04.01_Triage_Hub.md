@@ -7,7 +7,7 @@ owners: [design@survey-platform.io]
 tags: [functional-specification, triage-hub, mission-selection, cross-mission, remote-operations]
 ---
 
-# 04.01_Triage_Hub
+# PDD.04.01_Triage_Hub
 
 ## Purpose
 The **Triage Hub** is the entry point and global overview of the Survey Management Platform (SMP).  

@@ -7,7 +7,7 @@ owners: [design@survey-platform.io]
 tags: [introduction, principles, foundation, design]
 ---
 
-# 00_Introduction_and_Principles
+# PDD.00_Introduction_and_Principles
 
 ## Purpose
 This document introduces the **Survey Management Platform (SMP)**—a unified operational environment that enables marine survey teams to **plan, execute, monitor, and manage multiple concurrent survey missions** with full situational awareness and data traceability.  

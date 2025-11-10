@@ -7,7 +7,7 @@ owners: [design@survey-platform.io]
 tags: [functional-specification, configuration-manager, system-setup, templates, thresholds, remote-operations]
 ---
 
-# 04.04_Configuration_Manager
+# PDD.04.04_Configuration_Manager
 
 ## Purpose
 The **Configuration Manager** provides a structured environment for reviewing, editing, and applying configuration parameters across system components and sensors within a mission.  

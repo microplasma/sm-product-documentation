@@ -7,7 +7,7 @@ owners: [design@survey-platform.io]
 tags: [data-architecture, configuration, telemetry, thresholds, traceability, design-specification]
 ---
 
-# 05_Data_and_Configuration_Structure
+# PDD.05_Data_and_Configuration_Structure
 
 ## Purpose
 This document defines the **data and configuration framework** that underpins the Survey Management Platform (SMP).  

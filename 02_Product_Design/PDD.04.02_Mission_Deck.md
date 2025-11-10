@@ -7,7 +7,7 @@ owners: [design@survey-platform.io]
 tags: [functional-specification, mission-deck, command-control, health-monitoring, configuration-manager, remote-operations]
 ---
 
-# 04.02_Mission_Deck
+# PDD.04.02_Mission_Deck
 
 ## Purpose
 The **Mission Deck** is the central operational workspace of the Survey Management Platform (SMP).  

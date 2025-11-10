@@ -7,7 +7,7 @@ owners: [design@survey-platform.io]
 tags: [roles, operational-modes, permissions, workflows, remote-operations]
 ---
 
-# 06_User_Roles_and_Operational_Modes
+# PDD.06_User_Roles_and_Operational_Modes
 
 ## Purpose
 This document defines the **user roles** and **operational modes** within the Survey Management Platform (SMP).  

@@ -7,7 +7,7 @@ owners: [design@survey-platform.io]
 tags: [information, architecture, system-model, mission-structure, data-flow]
 ---
 
-# 02_Information_Architecture
+# PDD.02_Information_Architecture
 
 ## Purpose
 This document defines the **information structure and logical relationships** that underpin the Survey Management Platform (SMP).  

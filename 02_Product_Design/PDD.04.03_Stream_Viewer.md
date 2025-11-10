@@ -7,7 +7,7 @@ owners: [design@survey-platform.io]
 tags: [functional-specification, stream-viewer, monitoring, qc, sensor-visualization, remote-operations]
 ---
 
-# 04.03_Stream_Viewer
+# PDD.04.03_Stream_Viewer
 
 ## Purpose
 The **Stream Viewer** provides real-time visualization of sensor data streams within the active mission.  
