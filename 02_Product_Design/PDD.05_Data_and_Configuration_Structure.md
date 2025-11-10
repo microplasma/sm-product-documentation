@@ -71,8 +71,7 @@ Global Defaults → Template → Mission Configuration → Live Runtime
 
 - **Global Defaults:** Vessel or organization-level baselines.  
 - **Template:** Predefined parameter sets (e.g., “ShallowWater_Std”).  
-- **Mission Configuration:** Editable during mission setup phase.  
-- **Live Runtime:** Read-only operational state; locked during logging.
+- **Mission Configuration:** Mission-specific parameters.  
 
 ### 🔁 Versioning & Rollback
 Each configuration is versioned. When a new configuration is applied:
@@ -127,7 +126,7 @@ Snapshots and logs are linked for full operational replay and auditability.
 | Rule | Description |
 |------|--------------|
 | **Parameter Validation** | Each field validated against type, range, and unit definitions before save. |
-| **Locked State Enforcement** | No edits allowed when mission is in active logging or locked state. |
+| **Locked State Enforcement** | Some edits won't be allowed based on RBAC rules. |
 | **Conflict Resolution** | In multi-user cases, the most recent valid save prevails; concurrent edit warnings are shown. |
 | **Unit Consistency** | All numeric parameters use standardized SI units. |
 | **Safe Recovery** | Incomplete or corrupted configuration loads last valid version automatically. |

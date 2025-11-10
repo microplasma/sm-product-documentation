@@ -40,10 +40,10 @@ Operational modes define system state and determine which functions are active o
 
 | Role | Primary Focus | Core Responsibilities | Typical Screens / Tools |
 |------|----------------|------------------------|--------------------------|
-| **Survey Operator** | Execute and monitor live survey operations across one or more missions. | - Control sensors and manage logging.<br>- Monitor system and data health across multiple missions.<br>- Ensure the quality of acquired data.<br>- Add notes to Online Log.<br>- Apply configuration templates during preparation. | Mission Deck, Stream Viewer, Online Log, Triage Hub. |
-| **Senior Surveyor** | Technical oversight and calibration. | - Lead mobilisation and sensor calibration.<br>- Support troubleshooting during operations.<br>- Validate configuration and QC thresholds.<br>- Lock configurations before logging. | Mission Deck, Configuration Manager, Diagnostics. |
-| **Project Execution Coordinator (PEC)** | Oversee operational coordination and mission performance. | - Monitor all active missions.<br>- Track mission health and progress.<br>- Coordinate onshore/offshore communications.<br>- Oversee compliance and delivery progress. | Triage Hub, Mission Health Summary, File Transfer Monitor. |
-| **Data Processor** | Post-processing and validation. | - Verify data integrity and completeness.<br>- Review logs and file transfers.<br>- Validate QC outcomes and file naming compliance.<br>- Generate post-mission summaries. | Online Log, File Transfer Monitor (read-only), Data Archives. |
+| **Survey Operator** | Execute and monitor live survey operations across one or more missions. | - Control sensors and manage logging.<br>- Monitor system and data health across multiple missions.<br>- Ensure the quality of acquired data.<br>- Add notes to Online Log.<br>- Apply configuration templates during preparation. | Triage Hub, Mission Deck, Stream Viewer, Navigation, Online Log. |
+| **Senior Surveyor** | Technical oversight and calibration. | - Lead mobilisation and sensor calibration.<br>- Support troubleshooting during operations.<br>- Validate configuration and QC thresholds. | Mission Deck, Configuration Manager, Diagnostics. |
+| **Project Execution Coordinator (PEC)** | Oversee operational coordination and mission performance. | - Track mission health and progress.<br>- Coordinate onshore/offshore communications.<br>- Oversee compliance and delivery progress. | Does not directly utilize the SMP |
+| **Data Processor** | Post-processing and validation. | - Verify data integrity and completeness.<br>- Review logs and file transfers.<br>- Validate QC outcomes and file naming compliance.<br>- Generate post-mission summaries. | Online Log, File Transfer Monitor, Data Archives. |
 
 > **Note:** Role permissions are managed through a **global RBAC system**, not mission-specific configuration.  
 > The mechanism for user–mission assignment will be defined in a future phase.
@@ -54,8 +54,8 @@ Operational modes define system state and determine which functions are active o
 
 | Mode | Description | Feature Availability | Notes |
 |------|--------------|----------------------|-------|
-| **Preparation** | Pre-mission configuration and calibration phase. | - All configuration fields editable.<br>- Sensors can be added/removed.<br>- Templates can be applied.<br>- Thresholds adjustable.<br>- Diagnostics fully enabled. | Primarily used by Senior Surveyor and Survey Operator during setup. |
-| **Active Logging** | Live data acquisition phase. | - Configuration locked (read-only).<br>- Sensor ON/OFF/Restart allowed.<br>- QC overlays active in Stream Viewer.<br>- Alerts and health indicators live.<br>- Manual log entries available. | Survey Operator monitors multiple missions simultaneously. |
+| **Preparation** | Pre-mission configuration and calibration phase. | - Sensors can be added/removed.<br>- Templates can be applied.<br>- Thresholds adjustable.<br>- Diagnostics fully enabled. | Primarily used by Senior Surveyor and Survey Operator during setup (mobilization and calibration phases). |
+| **Active Logging** | Live data acquisition phase. | - Sensor ON/OFF/Restart.<br>- QC overlays active in Stream Viewer.<br>- Alerts and health indicators live.<br>- Manual log entries available. | Survey Operator monitors multiple missions simultaneously. |
 | **Review** | Post-mission assessment phase. | - Logging disabled.<br>- Configuration editable for next mission.<br>- Log and alert archives accessible.<br>- File transfer and completeness checks active.<br>- Export summaries enabled. | Used by Data Processor and Senior Surveyor for validation. |
 
 ---
@@ -66,7 +66,7 @@ Operational modes define system state and determine which functions are active o
 |------------------|--------------|----------------|---------|
 | **Survey Operator** | Configure and prepare mission; test sensors. | Control and monitor multiple missions; manage quality and live performance. | Review logs and data quality reports. |
 | **Senior Surveyor** | Lead calibration and configuration; lock setup. | Support operations and monitor QC thresholds. | Validate data, update templates, prepare next setup. |
-| **PEC** | Observe setup progress across missions. | Monitor health, alerts, and mission timelines. | Review mission completion summaries. |
+| **PEC** | Observe setup progress across missions. | Monitor health and mission timelines. | Review mission completion summaries. |
 | **Data Processor** | Not involved in setup. | Read-only view of mission status. | Validate data and compile final reports. |
 
 ---
@@ -86,7 +86,6 @@ Operational modes define system state and determine which functions are active o
 ## User Safety & Access Design Principles
 
 1. **Safety by Design:**  
-   - Operators cannot change configurations during active logging.  
    - Only authorized roles can lock or unlock configurations.  
 
 2. **Global RBAC Integration (Future):**  
@@ -94,7 +93,7 @@ Operational modes define system state and determine which functions are active o
    - A single user can have different roles across missions (e.g., Operator in one, Observer in another).  
 
 3. **Read-Only Assurance:**  
-   - During critical operations, configuration and diagnostics are locked to prevent accidental disruptions.  
+   - For some parameters, configuration is locked to prevent accidental disruptions.  
 
 4. **Cross-Mission Isolation:**  
    - Missions maintain independent operational states to prevent data cross-contamination.  
@@ -119,7 +118,6 @@ Operational modes define system state and determine which functions are active o
 | **Global RBAC Definition** | Confirm structure and management interface for user-role assignments. |
 | **Mission Ownership** | Determine how missions are transferred between users. |
 | **Concurrent Mission Load** | Establish upper limit of missions per operator for safe monitoring. |
-| **PEC Dashboard Scope** | Define KPIs and summaries for PEC mission overview. |
 | **UI Role Personalization** | Explore role-specific UI presets or shortcuts. |
 
 ---

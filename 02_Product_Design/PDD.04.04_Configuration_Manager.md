@@ -13,7 +13,7 @@ tags: [functional-specification, configuration-manager, system-setup, templates,
 The **Configuration Manager** provides a structured environment for reviewing, editing, and applying configuration parameters across system components and sensors within a mission.  
 It serves as the single point of control for **mission setup**, **system calibration**, and **quality threshold definition**, ensuring operational consistency and reducing configuration errors across missions.
 
-This tool supports both preparation and live monitoring phases—though its editing capabilities are restricted while data logging is active.
+This tool supports both preparation and live monitoring phases—though its editing capabilities may restricted on a role basis.
 
 ---
 
@@ -25,9 +25,7 @@ Key capabilities include:
 - Reviewing system and sensor configurations.  
 - Adjusting thresholds and quality limits used by QC overlays and alerts.  
 - Managing configuration templates for reuse and consistency.  
-- Locking configurations under RBAC control when mission is live or configuration is finalized.  
-
-> During **active logging**, the Configuration Manager remains accessible in **read-only mode** to prevent unsafe state changes.
+- Locking configurations under RBAC control.  
 
 ---
 
@@ -62,7 +60,7 @@ Key capabilities include:
 | **System** | Defines system-wide operational parameters (network, time sync, storage). | - Network host & port configuration. <br> - Logging directory paths. <br> - Time synchronization settings. <br> - Recording and redundancy settings. |
 | **Sensors** | Lists all mission sensors with their configuration and status. | - Add / Remove Sensor actions. <br> - Sensor type, model, and connection parameters. <br> - Alignment, offset, and latency parameters. <br> - Health status indicators (green/amber/red). |
 | **Thresholds & Health** | Centralized configuration of QC thresholds used across the system. | - Metric thresholds (latency, packet loss, SNR, etc.). <br> - Alert severity mapping (Warning/Critical). <br> - Default and per-sensor override options. <br> - Linked to QC overlays in Stream Viewer. |
-| **Templates** | Manages reusable configuration sets. | - Template library (project / mission level). <br> - Import / Export options. <br> - Apply Template (disabled during active logging). <br> - Rollback to previous configuration. |
+| **Templates** | Manages reusable configuration sets. | - Template library (project / mission level). <br> - Import / Export options. <br> - Apply Template. <br> - Rollback to previous configuration. |
 
 ---
 
@@ -73,7 +71,7 @@ Key capabilities include:
 - Opens modal listing available sensor types (MBES, SSS, SBP, INS, USBL, GNSS, SVP/CTD, Cameras).
 - Once added:
   - Default parameters auto-populate from template or system defaults.
-  - Entry appears in the sensor table with editable fields (during configuration phase).
+  - Entry appears in the sensor table with editable fields.
   - Changes are logged under mission configuration events.
 
 #### Removing a Sensor
@@ -88,11 +86,9 @@ Key capabilities include:
 
 | State | Description | Editable | Behavior |
 |--------|-------------|----------|-----------|
-| **Preparation** | Mission not yet logging; safe to configure. | ✅ Yes | All parameters editable. |
-| **Active Logging** | Mission actively recording. | 🚫 No | Read-only mode; changes disabled. |
+| **Preparation** | Mission not logging. | ✅ Yes | All parameters editable. |
+| **Active Logging** | Mission actively recording. | ✅ Yes | All parameters editable. |
 | **Locked (RBAC)** | Configuration finalized by authorized role. | 🚫 No | Locked icon shown; unlock requires proper credentials. |
-
-When the state changes (e.g., from Preparation → Active Logging), the UI automatically updates field availability and color states (e.g., greyed-out locked fields).
 
 ---
 
@@ -118,7 +114,7 @@ Templates provide standardized configurations that ensure consistent setup acros
 | Action | Description | Behavior |
 |---------|-------------|-----------|
 | **Create Template** | Saves current configuration as a reusable template. | Requires unique name and optional description. |
-| **Apply Template** | Loads predefined parameters into current mission. | Disabled during active logging. |
+| **Apply Template** | Loads predefined parameters into current mission. | Confirmation message. |
 | **Rollback Configuration** | Restores previously applied template or last saved state. | Confirmation required. |
 | **Import / Export** | Allows sharing templates between projects or vessels. | File-based import/export (.json or .yaml). |
 
@@ -130,19 +126,19 @@ Templates provide standardized configurations that ensure consistent setup acros
 
 - Real-time validation ensures only valid parameter ranges are saved.  
 - Warnings appear inline for invalid or incomplete entries.  
-- Successful saves and applications display a green confirmation banner with timestamp.  
+- Successful saves and applications display a confirmation banner with timestamp.  
 - Validation results are recorded in the mission log for traceability.
 
 ---
 
 ## Acceptance Criteria
 
-- Configuration Manager allows complete mission setup while preventing unsafe edits during logging.  
+- Configuration Manager allows complete mission setup.  
 - All configuration states (Preparation, Active Logging, Locked) are visually clear.  
 - Thresholds & Health tab synchronizes correctly with QC overlays and alert systems.  
 - Template application and rollback are logged with timestamps.  
 - All configuration changes are traceable and reversible.  
-- Read-only mode remains accessible during logging for inspection.  
+- Read-only mode remains accessible for inspection.  
 - Layout follows the SMP interface design standards for modularity and clarity.
 
 ---

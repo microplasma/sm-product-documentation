@@ -29,8 +29,6 @@ Functions include:
 - Observing file transfer and logging states.  
 - Accessing Diagnostics, Calibration, and Configuration tools via modals.
 
-> During live logging, configuration editing is restricted to prevent unsafe changes, but viewing remains available.
-
 ---
 
 ## Key Concepts / Framework
@@ -70,7 +68,7 @@ Functions include:
 | **Restart Sensor** | Restarts connection or device process. | Shows temporary progress indicator on tile border. |
 | **Add Sensor** | Opens modal listing available sensors. | Selecting a sensor adds it to mission list; entry logged. |
 | **Remove Sensor** | Removes selected sensor from mission. | Requires confirmation; removal logged. |
-| **Signal Flow** | Opens sensor diagnostic modal. | Contextual per sensor; read-only while logging. |
+| **Signal Flow** | Opens sensor diagnostic modal. | Contextual per sensor. |
 
 > All add/remove or state-change actions are recorded automatically in the mission log.  
 > Configuration parameters for new sensors are set within the Configuration Manager.
@@ -81,10 +79,10 @@ Functions include:
 
 | Tool | Purpose | Behavior |
 |------|----------|-----------|
-| **SVP/CDT (Hydrosens)** | Opens oceanographic profile tools. | Modal overlay; read-only during logging. |
-| **Calibration** | Accesses calibration status and routines. | Modal overlay; locked for edits while logging. |
+| **SVP/CDT (Hydrosens)** | Opens oceanographic profile tools. | Modal overlay. |
+| **Calibration** | Accesses calibration status and routines. | Modal overlay. |
 | **Diagnostics** | Opens diagnostic tools for network and signal flow. | Fully accessible; independent per mission. |
-| **Configuration Manager** | Provides configuration access for System, Sensors, Thresholds & Health, and Templates. | Editable only when logging is stopped; read-only otherwise. Allows per-sensor diagnostics access. |
+| **Configuration Manager** | Provides configuration access for System, Sensors, Thresholds & Health, and Templates. | Allows per-sensor diagnostics access. |
 
 > All tools open in **persistent modals** that maintain state across mission switches.  
 > When switching missions, the application restores the last-known state for each mission, including open modals and unsaved progress.
@@ -147,7 +145,6 @@ Transient states (e.g., restarting, reconnecting) use animated or border progres
 
 - Mission Deck supports full mission and sensor control safely.  
 - Adding/removing sensors is supported during mission preparation.  
-- Configuration and parameter edits are disabled during active logging.  
 - Modals preserve mission context and state when switching missions.  
 - Alerts are strictly advisory; system actions are always operator-driven.  
 - File Transfer panel provides accurate, continuous feedback.  
@@ -162,7 +159,7 @@ Transient states (e.g., restarting, reconnecting) use animated or border progres
 |--------|------------------|
 | **Sensor Library Integration** | Define how available sensors are populated in Add Sensor modal. |
 | **Mission State Persistence** | Confirm behavior for restoring per-mission modal state when switching contexts. |
-| **Configuration Lock Messaging** | Define UX for indicating locked state during logging. |
+| **Configuration Lock Messaging** | Define UX for indicating locked state. |
 | **Alert Escalation Logic** | Clarify escalation triggers for cross-mission visibility. |
 | **Sensor Removal Rules** | Establish removal restrictions (e.g., cannot remove active logging sensors). |
 
