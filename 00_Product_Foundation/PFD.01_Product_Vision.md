@@ -4,32 +4,30 @@ version: 0.1.0
 last_updated: 2025-11-09
 status: draft
 owners: [design@survey-platform.io]
-tags: [product-vision, smp, remote-operations, design-principles]
+tags: [product-vision, ois, remote-operations, design-principles]
 ---
 
 # PFD.01 – Product Vision
 
-*(Originally titled “Ocean Infinity – Survey Management Platform (SMP)”)*
-
 **Version:** 2.1  
 **Date:** 2025-10-25  
-**Owner:** Product Design & Strategy – SMP Core Team  
+**Owner:** Product Design & Strategy – OIS Core Team  
 **Status:** Updated Draft
 
 ---
 
 ## 1. Vision Statement
 
-> **The Survey Management Platform (SMP)** enables Ocean Infinity’s teams to manage, monitor, and control complex marine survey operations — across vessels, systems, and missions — from anywhere, with confidence, safety, and efficiency.
+> **OI Survey (OIS)** enables Ocean Infinity’s teams to manage, monitor, and control complex marine survey operations — across vessels, systems, and missions — from anywhere, with confidence, safety, and efficiency.
 
-SMP transforms how offshore, onshore, and remote surveyors collaborate. It replaces fragmented, tool-heavy workflows with a unified, intelligent environment that connects data, sensors, and people through real-time awareness, automation, and **safe multi-mission operations**.
+OIS transforms how offshore, onshore, and remote surveyors collaborate. It replaces fragmented, tool-heavy workflows with a unified, intelligent environment that connects data, sensors, and people through real-time awareness, automation, and **safe multi-mission operations**.
 
 ---
 
 ## 2. Purpose
 
 Modern survey operations span multiple vessels, remote hubs, and autonomous assets.  
-The SMP is designed to:
+OIS is designed to:
 
 * Unify data and operational control across the fleet.  
 * Reduce cognitive and procedural load on operators.  
@@ -42,9 +40,9 @@ The SMP is designed to:
 ## 3. Strategic Context
 
 Marine survey operations are transitioning from vessel-based execution to distributed, remote, and autonomous control models.  
-SMP sits at the center of this transformation — **reducing operational complexity while enabling multi-mission oversight by individual operators**.
+OIS sits at the center of this transformation — **reducing operational complexity while enabling multi-mission oversight by individual operators**.
 
-| Trend                                       | SMP Response                                               |
+| Trend                                       | OIS Response                                               |
 | ------------------------------------------- | ---------------------------------------------------------- |
 | Fragmented workflows and high operator load | Unified modular platform with automated context management |
 | Increasing mission concurrency              | Operator-level multi-mission capability                    |
@@ -55,11 +53,11 @@ SMP sits at the center of this transformation — **reducing operational complex
 
 ## 4. Product Definition
 
-### 4.1 What SMP Is
+### 4.1 What OIS Is
 
 A **mission-oriented operating system** for remote and autonomous survey operations, designed to unify control, monitoring, and collaboration.
 
-### 4.2 What SMP Is Not
+### 4.2 What OIS Is Not
 
 * Not a replacement for acquisition or navigation software.  
 * Not a reporting platform, though it feeds report generation.  

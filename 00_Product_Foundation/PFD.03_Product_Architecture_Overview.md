@@ -4,34 +4,24 @@ version: 0.1.0
 last_updated: 2025-11-09
 status: draft
 owners: [design@survey-platform.io]
-tags: [architecture, smp, system-design, remote-operations, multi-mission]
+tags: [architecture, ois, system-design, remote-operations, multi-mission]
 ---
 
 # PFD.03 – Product Architecture Overview
 
-<!--
-Changes made:
-1. Added standardized front-matter for alignment with documentation format.
-2. Updated H1 heading for ID consistency.
-3. Fixed a minor table formatting issue before the roadmap phases.
-4. All body text remains verbatim.
--->
-
-*(Originally titled “Ocean Infinity – Survey Management Platform (SMP)”)*
-
 **Version:** 2.1  
 **Date:** 2025-10-25  
-**Owner:** SMP Product Design & Strategy  
+**Owner:** OIS Product Design & Strategy  
 **Status:** Updated Draft – Reflecting Operator-Level Multi-Mission Capability
 
 ---
 
 ## 1. Purpose
 
-This document defines the **conceptual architecture** of the Ocean Infinity Survey Management Platform (SMP).  
+This document defines the **conceptual architecture** of OI Survey (OIS).  
 It describes how the platform is structured to deliver safe, efficient, and scalable multi-mission marine survey operations, emphasizing the ability for **surveyors to manage multiple missions simultaneously** without losing situational awareness or operational safety.
 
-SMP aims to:
+OIS aims to:
 
 * Simplify operational workflows and reduce tool fragmentation.  
 * Support remote, multi-user, and **multi-mission operations at the operator level**.  
@@ -44,20 +34,20 @@ SMP aims to:
 
 | **Principle**                     | **Description**                                                                                                                                                                                                      |
 | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Modularity**                    | Each SMP capability exists as an independent module. Modules can evolve or be replaced without redesigning the entire system.                                                                                        |
+| **Modularity**                    | Each OIS capability exists as an independent module. Modules can evolve or be replaced without redesigning the entire system.                                                                                        |
 | **Mission-Centric Design**        | Operations revolve around "missions" — virtualized representations of ongoing surveys. Every action, log, and configuration is contextualized within a mission workspace.                                            |
-| **Reduced Complexity**            | SMP simplifies operators’ interaction with complex systems by integrating key workflows, minimizing tool-switching, and ensuring consistency across functions.                                                       |
+| **Reduced Complexity**            | OIS simplifies operators’ interaction with complex systems by integrating key workflows, minimizing tool-switching, and ensuring consistency across functions.                                                       |
 | **Concurrent Mission Operations** | Individual surveyors can safely manage, monitor, and control multiple active missions at once. The system dynamically manages focus, alerts, and data synchronization to preserve operational safety and efficiency. |
 | **Distributed Collaboration**     | Multiple users (onboard, onshore, remote) can safely observe, assist, or command without conflict. Access and actions are governed by role-based permissions.                                                        |
 | **Traceable State Management**    | All actions, configurations, and events are automatically recorded — forming a continuous operational record.                                                                                                        |
 | **Scalable Architecture**         | The system expands from single-vessel control to multi-mission fleet operations through modular orchestration and scalable data management.                                                                          |
-| **Interoperability**              | SMP connects seamlessly with acquisition, navigation, and IT systems through defined data and API interfaces.                                                                                                        |
+| **Interoperability**              | OIS connects seamlessly with acquisition, navigation, and IT systems through defined data and API interfaces.                                                                                                        |
 
 ---
 
 ## 3. Conceptual Overview
 
-SMP functions as an **orchestration layer** connecting people, systems, and data across multiple concurrent survey missions. It reduces operational complexity while ensuring every mission remains contextually distinct, safe, and traceable.
+OIS functions as an **orchestration layer** connecting people, systems, and data across multiple concurrent survey missions. It reduces operational complexity while ensuring every mission remains contextually distinct, safe, and traceable.
 
 The architecture enables:
 
@@ -108,7 +98,7 @@ The **Online Log** captures every system and user event across all active missio
 
 ## 5. Module Architecture
 
-Each SMP **module** is independent but interoperable across missions.  
+Each OIS **module** is independent but interoperable across missions.  
 Modules subscribe to mission contexts and can operate concurrently for multiple missions within the same user session.
 
 | **Module**                      | **Primary Purpose**                                                      | **Multi-Mission Role**                                                                                                 |
@@ -127,7 +117,7 @@ Modules subscribe to mission contexts and can operate concurrently for multiple 
 
 ## 6. Data and State Management
 
-SMP maintains **live, synchronized mission states** across multiple concurrent sessions using a publish/subscribe (Pub/Sub) architecture.
+OIS maintains **live, synchronized mission states** across multiple concurrent sessions using a publish/subscribe (Pub/Sub) architecture.
 
 | **Function**                   | **Description**                                                                                     |
 | ------------------------------ | --------------------------------------------------------------------------------------------------- |
@@ -159,7 +149,7 @@ The collaboration framework supports **safe, shared operations** between surveyo
 
 ## 8. Integration Model
 
-SMP integrates with existing acquisition, navigation, and IT systems.  
+OIS integrates with existing acquisition, navigation, and IT systems.  
 All integrations are abstracted through a **unified API Gateway**, supporting simultaneous mission data exchange.
 
 * **Upstream Systems:** Sensor data acquisition, navigation, positioning, telemetry.  
@@ -170,7 +160,7 @@ All integrations are abstracted through a **unified API Gateway**, supporting si
 
 ## 9. Scalability Framework
 
-SMP scales **horizontally across missions and operators**.
+OIS scales **horizontally across missions and operators**.
 
 | **Level**          | **Scaling Function**                                                                |
 | ------------------ | ----------------------------------------------------------------------------------- |
@@ -216,7 +206,7 @@ This architecture supports the operational goal of maintaining output volume wit
 
 ## 12. Summary
 
-The SMP architecture defines a **modular, mission-oriented, and scalable system** designed to:
+The OIS architecture defines a **modular, mission-oriented, and scalable system** designed to:
 
 * Simplify operations and reduce complexity.  
 * Allow individual surveyors to manage multiple missions simultaneously.  

@@ -17,18 +17,16 @@ Changes made:
 4) All body text below remains verbatim.
 -->
 
-*(Originally titled “Ocean Infinity – Survey Management Platform (SMP)”)*
-  
 **Version:** 2.1  
 **Date:** 2025-10-25  
-**Owner:** SMP Product Design & Strategy  
+**Owner:** OIS Product Design & Strategy  
 **Status:** Updated Draft – Workshop-Aligned
 
 ---
 
 ## 1. Purpose
 
-This document defines the **core product pillars** that guide the Survey Management Platform (SMP) — specifically the two operational priorities identified in the workshop:
+This document defines the **core product pillars** that guide OI Survey (OIS) — specifically the two operational priorities identified in the workshop:
 
 1. **Command & Control (C&C)**
 2. **Active Monitoring (AM)**

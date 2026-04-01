@@ -4,33 +4,23 @@ version: 0.1.0
 last_updated: 2025-11-09
 status: draft
 owners: [design@survey-platform.io]
-tags: [product-strategy, smp, design, operations, transformation]
+tags: [product-strategy, ois, design, operations, transformation]
 ---
 
 # PFD.02 – Product Strategy Overview
 
-<!--
-Changes made:
-1. Added standardized front-matter for repository consistency.
-2. Updated H1 heading for uniform identification.
-3. No internal links existed, so no link updates required.
-4. All body content remains verbatim.
--->
-
-*(Originally titled “Ocean Infinity – Survey Management Platform (SMP)”)*
-
 **Version:** 2.1  
 **Date:** 2025-10-25  
-**Owner:** SMP Product Design & Strategy  
+**Owner:** OIS Product Design & Strategy  
 **Status:** Updated Draft
 
 ---
 
 ## 1. Purpose
 
-This document defines the **strategic intent** of the Survey Management Platform (SMP), describing how it delivers operational, technological, and experiential transformation across Ocean Infinity’s survey operations.
+This document defines the **strategic intent** of OI Survey (OIS), describing how it delivers operational, technological, and experiential transformation across Ocean Infinity’s survey operations.
 
-It translates SMP’s **vision** (“to unify control, monitoring, and collaboration across survey operations”) into **actionable strategic objectives** and **guiding principles**.
+It translates OIS's **vision** (“to unify control, monitoring, and collaboration across survey operations”) into **actionable strategic objectives** and **guiding principles**.
 
 ---
 
@@ -40,11 +30,11 @@ It translates SMP’s **vision** (“to unify control, monitoring, and collabora
 
 The marine survey industry is shifting from on-vessel operations to distributed, remote, and increasingly autonomous workflows. Ocean Infinity’s operational model requires scalability, efficiency, and resilience to maintain mission throughput with fewer personnel.
 
-SMP is the enabler of this model — consolidating fragmented tools into a coherent environment that supports multi-user and **multi-mission operations at the operator level**.
+OIS is the enabler of this model — consolidating fragmented tools into a coherent environment that supports multi-user and **multi-mission operations at the operator level**.
 
 ### 2.2 The Strategic Opportunity
 
-Surveyors currently manage complex toolchains across multiple systems and displays, leading to inefficiency and fatigue. SMP’s strategic opportunity is to:
+Surveyors currently manage complex toolchains across multiple systems and displays, leading to inefficiency and fatigue. OIS's strategic opportunity is to:
 
 * **Reduce operational complexity.**
 * **Enable surveyors to manage multiple concurrent missions safely and effectively.**
@@ -97,7 +87,7 @@ Surveyors currently manage complex toolchains across multiple systems and displa
 ### 5.3 Operational Strategy
 
 * **Remote-First Model:** Designed for onshore and offshore collaboration.
-* **Incremental Adoption:** SMP integrates progressively with existing workflows.
+* **Incremental Adoption:** OIS integrates progressively with existing workflows.
 * **Standardization:** Configuration templates and predefined mission profiles reduce variance.
 * **Data Integrity:** Automated event logging ensures traceability across missions.
 
