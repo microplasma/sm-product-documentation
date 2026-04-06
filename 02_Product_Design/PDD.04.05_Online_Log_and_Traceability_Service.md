@@ -16,6 +16,8 @@ links:
     href: 02_Product_Design/PDD.04.05_Online_Log_and_Traceability_Service.md
   - rel: related
     href: 02_Product_Design/PDD.04.02_Mission_Deck.md
+  - rel: related
+    href: 01_UX_Research/UXR.08_Senior_Surveyor_Workshop_Feature_Themes.md
 ---
 
 # PDD.04.05 - Online Log and Traceability Service
@@ -57,6 +59,14 @@ Online Log should be understood as a shared service, not only a panel or window.
 - Mission Deck and related surfaces should feed Online Log through both system-generated and user-generated events.
 - Specialized subsystems such as Hydrosens should also contribute traceable workflow events.
 - Online Log should remain the backbone for later automation, analytics, and multi-mission operational understanding.
+
+## Research Implications
+The senior surveyor workshop reinforces traceability as an operational need rather than an administrative add-on. The strongest signals are:
+- event logging must support live operational understanding and later reporting
+- handover quality depends on one trustworthy narrative rather than scattered notes and system records
+- file-transfer state, user actions, and mission events should contribute to the same defensible timeline
+
+This strengthens the treatment of Online Log as a shared service backbone for OI Survey.
 
 ## Summary Statement
 > Online Log should be treated as the traceability backbone of OI Survey: a structured operational record that binds together automation, intervention, annotation, reporting, and confidence in what happened across survey work.

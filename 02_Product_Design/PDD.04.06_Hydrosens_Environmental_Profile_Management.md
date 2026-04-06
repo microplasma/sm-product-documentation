@@ -18,6 +18,8 @@ links:
     href: 02_Product_Design/PDD.04.02_Mission_Deck.md
   - rel: related
     href: 02_Product_Design/PDD.04.05_Online_Log_and_Traceability_Service.md
+  - rel: related
+    href: 01_UX_Research/UXR.08_Senior_Surveyor_Workshop_Feature_Themes.md
 ---
 
 # PDD.04.06 - Hydrosens Environmental Profile Management
@@ -59,6 +61,14 @@ Sound velocity and environmental profile truth are not peripheral concerns. They
 
 ## Product Direction
 Hydrosens should be documented under its current product/module identity while also representing the longer-lived capability of environmental profile management.
+
+## Research Implications
+The senior surveyor workshop adds strong support for keeping environmental and geodetic readiness visible in the broader OI Survey model. The workshop material repeatedly points to the need for:
+- trustworthy SVP and reference-data preparation
+- explicit visibility of profile readiness and validity
+- operational continuity between specialist profile workflows and mission-time confidence
+
+This reinforces Hydrosens as a specialized but connected subsystem rather than a hidden utility.
 
 ## Summary Statement
 > Hydrosens should remain a distinct but fully connected part of OI Survey: the subsystem that turns raw environmental acquisition into validated, survey-ready profile truth that can be distributed and trusted downstream.

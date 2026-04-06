@@ -37,6 +37,10 @@ Synthesis of research: roles, workflows, tasks/tools, pain points, insights, con
   [`UXR.07_Sensor_Taxonomy.md`](./UXR.07_Sensor_Taxonomy.md)  
   *Operational classification of sensors and systems by control model, dependency role, coupling, deployment context, and validation timing.*
 
+- **UXR.08 - Senior Surveyor Workshop Feature Themes**  
+  [`UXR.08_Senior_Surveyor_Workshop_Feature_Themes.md`](./UXR.08_Senior_Surveyor_Workshop_Feature_Themes.md)  
+  *Synthesis of the senior surveyor workshop feature catalog into durable operator themes, pain points, and design implications.*
+
 ## Navigation
 - Upstream: **Product Foundation** -> [`../00_Product_Foundation/README.md`](../00_Product_Foundation/README.md)  
 - Downstream: **Product Design** -> [`../02_Product_Design/README.md`](../02_Product_Design/README.md)
@@ -51,4 +55,5 @@ Synthesis of research: roles, workflows, tasks/tools, pain points, insights, con
   - **Environment** -> `UXR.06`
   - **Sensor-grounded overview** -> `UXR.00`
   - **Sensor taxonomy** -> `UXR.07`
+  - **Workshop synthesis** -> `UXR.08`
 - Chunk by headings; keep tables and long lists intact where possible.

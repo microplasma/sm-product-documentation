@@ -16,6 +16,8 @@ links:
     href: 02_Product_Design/PDD.04.03_Detached_Evidence_Surfaces.md
   - rel: related
     href: 02_Product_Design/PDD.04.02_Mission_Deck.md
+  - rel: related
+    href: 01_UX_Research/UXR.08_Senior_Surveyor_Workshop_Feature_Themes.md
 ---
 
 # PDD.04.03 - Detached Evidence Surfaces
@@ -50,6 +52,15 @@ The older `Stream Viewer` concept is still useful, but should now be treated as 
 - The product should make it clear whether a surface is observational only or linked to operational consequence.
 - QC overlays should support interpretation, not become decorative overlays without operational meaning.
 - Detached evidence should complement Mission Deck, not compete with it as the primary operating surface.
+
+## Research Implications
+The senior surveyor workshop adds strong evidence for this surface family by repeatedly pointing to:
+- live stream viewing across sensor types
+- side-by-side evidence comparison
+- camera and imagery visibility outside the main control workflow
+- QC overlays and short-history/trend support for interpretation
+
+This supports keeping detached evidence as a durable capability even if the exact product manifestation remains flexible.
 
 ## Summary Statement
 > Detached Evidence Surfaces should help surveyors inspect, compare, and watch evidence in the way the mission demands, without forcing every evidence-heavy workflow back into the central mission-time control surface.

@@ -18,6 +18,8 @@ links:
     href: 02_Product_Design/PDD.04.01_Multi-Mission_Context.md
   - rel: related
     href: 02_Product_Design/PDD.04.05_Online_Log_and_Traceability_Service.md
+  - rel: related
+    href: 01_UX_Research/UXR.08_Senior_Surveyor_Workshop_Feature_Themes.md
 ---
 
 # PDD.04.02 - Mission Deck
@@ -71,6 +73,15 @@ Mission Deck should coordinate:
 
 ## Current Direction
 Mission Deck remains one of the most important and stable concepts in OI Survey. While the exact internal structure has evolved through prototyping, the product role remains clear: it is the surveyor's central mission-time workspace.
+
+## Research Implications
+The senior surveyor workshop strongly supports Mission Deck as the primary home for:
+- mission-time control and recovery
+- trustworthy selected-system understanding
+- visible consequence of start/stop/restart and related interventions
+- fast movement between intervention, diagnostics, evidence, and traceability
+
+The workshop does not require Mission Deck to absorb every specialist tool, but it does reinforce the need for one central mission-time operating surface where surveyors can understand and act without reconstructing context.
 
 ## Summary Statement
 > Mission Deck should be the surveyor's dependable mission-time cockpit: a place where state, evidence, intervention, and operational confidence come together without forcing deep specialist workflows into one flat surface.

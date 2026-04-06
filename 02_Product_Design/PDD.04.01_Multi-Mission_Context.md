@@ -16,6 +16,8 @@ links:
     href: 02_Product_Design/PDD.04.01_Multi-Mission_Context.md
   - rel: related
     href: 02_Product_Design/PDD.04.02_Mission_Deck.md
+  - rel: related
+    href: 01_UX_Research/UXR.08_Senior_Surveyor_Workshop_Feature_Themes.md
 ---
 
 # PDD.04.01 - Multi-Mission Context
@@ -66,6 +68,14 @@ This surface is not for detailed system control. Its role is to support:
 
 ## Current Direction
 The former `Triage Hub` concept is now more accurately expressed as Multi-Mission Context. The concept remains core, but the exact UI treatment can evolve.
+
+## Research Implications
+The senior surveyor workshop reinforces that cross-mission context is not only a convenience layer. It is needed to:
+- compare relative mission posture quickly
+- recognize which mission needs attention now
+- keep mission progress, spatial context, and recent critical change visible enough to support safe focus shifting
+
+This evidence strengthens the role of Multi-Mission Context as an attention-management surface rather than a generic dashboard.
 
 ## Summary Statement
 > Multi-Mission Context should help surveyors manage attention safely across missions by showing which mission matters now, why it matters, and how focus can shift without losing situational understanding.

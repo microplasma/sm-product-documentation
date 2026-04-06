@@ -1,5 +1,5 @@
 ﻿# DOC_MANIFEST.yml
-version: 0.2.0
+version: 0.3.0
 last_updated: 2026-04-06
 repo: sm-product-documentation
 default_branch: main
@@ -53,6 +53,9 @@ sections:
       - doc_id: UXR.07
         title: Sensor Taxonomy
         path: 01_UX_Research/UXR.07_Sensor_Taxonomy.md
+      - doc_id: UXR.08
+        title: Senior Surveyor Workshop Feature Themes
+        path: 01_UX_Research/UXR.08_Senior_Surveyor_Workshop_Feature_Themes.md
 
   - section_id: 02PD
     title: Product Design
@@ -99,7 +102,19 @@ sections:
         title: Design Bets, Gaps and Future Directions
         path: 02_Product_Design/PDD.07_Design_Bets_Gaps_and_Future_Directions.md
 
+  - section_id: 03DC
+    title: Decisions
+    base_path: 03_Decisions
+    tags: [decisions, product, design, governance]
+    files:
+      - decision_id: DCR.0001
+        title: Multi-Mission Context Naming
+        path: 03_Decisions/DCR.0001_Multi-Mission_Context_Naming.md
+
 root_docs:
   - doc_id: RD.ROOT
     title: Repository README
     path: README.md
+  - source_id: SRC.ROOT
+    title: Sources README
+    path: sources/README.md

@@ -18,6 +18,8 @@ links:
     href: 01_UX_Research/UXR.01_Roles_and_Responsibilities.md
   - rel: related
     href: 01_UX_Research/UXR.05_Role-Based_Insights.md
+  - rel: related
+    href: 01_UX_Research/UXR.08_Senior_Surveyor_Workshop_Feature_Themes.md
 ---
 
 # PDD.06 - Roles, Authority and Operational Modes
@@ -57,6 +59,14 @@ This document defines who acts, supervises, validates, annotates, and configures
 - The product should support collaboration without erasing accountability.
 - The same role may need different levels of access across missions or workflows.
 - Traceability should preserve both system events and human judgment.
+
+## Research Implications
+The senior surveyor workshop sharpens the importance of:
+- visible lock state and permission boundaries during live work
+- safe multi-user participation without overlapping interference
+- clear accountability for configuration, intervention, and annotation
+
+This supports keeping authority, permission, and collaboration concerns explicit in the product model rather than treating them as background admin behavior.
 
 ## Summary Statement
 > OI Survey should make roles and authority legible at the moment of work so that survey teams can collaborate safely without losing clarity about who can act, who can validate, and who remains accountable.

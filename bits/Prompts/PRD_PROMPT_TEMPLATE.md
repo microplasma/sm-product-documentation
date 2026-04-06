@@ -1,4 +1,4 @@
-# PRD_PROMPT_TEMPLATE
+﻿# PRD_PROMPT_TEMPLATE
 version: 0.1.0  
 last_updated: 2025-11-09  
 
@@ -10,7 +10,7 @@ Once the PRD is generated, you can follow with the **Implementation Plan Extensi
 
 ---
 
-## 🧩 Context Overview (for the model)
+## ðŸ§© Context Overview (for the model)
 
 The repository is organized into three structured sections:
 
@@ -26,13 +26,13 @@ Each document contains a `doc_id` prefix (e.g., `PFD.02`, `UXR.04`, `PDD.04.03`)
 
 ---
 
-## 🎯 Primary Prompt — Generate the Product Requirements Document (PRD)
+## ðŸŽ¯ Primary Prompt â€” Generate the Product Requirements Document (PRD)
 
 **System / Role Instruction**
 
 > You are a **Senior Product Manager** with strong UX and engineering collaboration experience.  
 > You are responsible for writing a **Product Requirements Document (PRD)** for the SM Product System based on the provided repository documentation.  
-> Your output must be **clear, structured, and traceable** — suitable for both design and engineering review.
+> Your output must be **clear, structured, and traceable** â€” suitable for both design and engineering review.
 
 **Task**
 
@@ -45,7 +45,7 @@ Using the provided document summaries, excerpts, and manifest references:
 
 ---
 
-### 🧱 Required PRD Structure
+### ðŸ§± Required PRD Structure
 
 ```
 # Product Requirements Document (PRD)
@@ -83,8 +83,8 @@ For each:
 - Dependencies or Constraints
 
 Include subsections for:
-- Core System Functions (PDD.01–PDD.03)
-- Feature Workspaces (PDD.04.01–PDD.04.05)
+- Core System Functions (PDD.01â€“PDD.03)
+- Feature Workspaces (PDD.04.01â€“PDD.04.05)
 - Data & Configuration (PDD.05)
 - Roles & Modes (PDD.06)
 
@@ -106,7 +106,7 @@ Include subsections for:
 
 ---
 
-### 📋 Output Requirements
+### ðŸ“‹ Output Requirements
 - Output must be in **Markdown**.
 - Keep the PRD under **3,000 words**.
 - Maintain clarity, concision, and traceability.
@@ -115,15 +115,15 @@ Include subsections for:
 
 ---
 
-### 🧠 Optional Enhancements
+### ðŸ§  Optional Enhancements
 You may ask the model to:
-- Generate a **Requirements Traceability Matrix (RTM)** (REQ-ID → doc_id → section).
+- Generate a **Requirements Traceability Matrix (RTM)** (REQ-ID â†’ doc_id â†’ section).
 - Suggest **success metrics** aligned with the strategy.
 - Produce a **summary table** mapping user pain points to product features.
 
 ---
 
-## 🔜 Follow-Up Prompt — Generate Implementation Plan
+## ðŸ”œ Follow-Up Prompt â€” Generate Implementation Plan
 
 Once the PRD is complete, provide it to the same or another model with the following instruction:
 
@@ -140,12 +140,12 @@ Once the PRD is complete, provide it to the same or another model with the follo
 
 ---
 
-## 🧩 Example Workflow
+## ðŸ§© Example Workflow
 
 1. Copy excerpts or summaries from:
    - `PFD.01_Product_Vision.md`
    - `UXR.04_Pain_Points_and_Opportunities.md`
-   - `PDD.04.03_Stream_Viewer.md`
+   - `PDD.04.03_Detached_Evidence_Surfaces.md`
 2. Paste them after this prompt under a section titled **"Context Inputs"**.
 3. Run this prompt in ChatGPT or your chosen LLM.
 4. Save the output as `PRD_SM_Product_System.md`.
@@ -153,9 +153,10 @@ Once the PRD is complete, provide it to the same or another model with the follo
 
 ---
 
-## 🧭 Notes
+## ðŸ§­ Notes
 - Keep this file in the root of the repository.
 - When the documentation evolves, update `DOC_MANIFEST.yml` and re-run this prompt for a refreshed PRD.
-- Recommended output checkpoint: PRD v0.1 → Implementation Plan v0.1 → Engineering Spec v0.1
+- Recommended output checkpoint: PRD v0.1 â†’ Implementation Plan v0.1 â†’ Engineering Spec v0.1
 
 ---
+
