@@ -1,6 +1,6 @@
-# DOC_MANIFEST.yml
-version: 0.1.0
-last_updated: 2025-11-09
+﻿# DOC_MANIFEST.yml
+version: 0.2.0
+last_updated: 2026-04-06
 repo: sm-product-documentation
 default_branch: main
 manifest_version: 1
@@ -50,48 +50,54 @@ sections:
       - doc_id: UXR.06
         title: Context of Use and Environment
         path: 01_UX_Research/UXR.06_Context_of_Use_and_Environment.md
+      - doc_id: UXR.07
+        title: Sensor Taxonomy
+        path: 01_UX_Research/UXR.07_Sensor_Taxonomy.md
 
   - section_id: 02PD
     title: Product Design
     base_path: 02_Product_Design
-    tags: [design, architecture, ux, features]
+    tags: [design, architecture, ux, operations]
     files:
       - doc_id: PDD.00
-        title: Introduction and Principles
-        path: 02_Product_Design/PDD.00_Introduction_and_Principles.md
+        title: Design Principles and Documentation Model
+        path: 02_Product_Design/PDD.00_Design_Principles_and_Documentation_Model.md
       - doc_id: PDD.01
-        title: System Overview
-        path: 02_Product_Design/PDD.01_System_Overview.md
+        title: OIS Product Topology
+        path: 02_Product_Design/PDD.01_OIS_Product_Topology.md
       - doc_id: PDD.02
-        title: Information Architecture
-        path: 02_Product_Design/PDD.02_Information_Arquitecture.md
+        title: Operational Information Model
+        path: 02_Product_Design/PDD.02_Operational_Information_Model.md
       - doc_id: PDD.03
-        title: User Experience Framework
-        path: 02_Product_Design/PDD.03_User_Experience_Framework.md
+        title: Interaction Framework and Surface Grammar
+        path: 02_Product_Design/PDD.03_Interaction_Framework_and_Surface_Grammar.md
       - doc_id: PDD.04.01
-        title: Triage Hub
-        path: 02_Product_Design/PDD.04.01_Triage_Hub.md
+        title: Multi-Mission Context
+        path: 02_Product_Design/PDD.04.01_Multi-Mission_Context.md
       - doc_id: PDD.04.02
         title: Mission Deck
         path: 02_Product_Design/PDD.04.02_Mission_Deck.md
       - doc_id: PDD.04.03
-        title: Stream Viewer
-        path: 02_Product_Design/PDD.04.03_Stream_Viewer.md
+        title: Detached Evidence Surfaces
+        path: 02_Product_Design/PDD.04.03_Detached_Evidence_Surfaces.md
       - doc_id: PDD.04.04
-        title: Configuration Manager
-        path: 02_Product_Design/PDD.04.04_Configuration_Manager.md
+        title: Operational Configuration Management
+        path: 02_Product_Design/PDD.04.04_Operational_Configuration_Management.md
       - doc_id: PDD.04.05
-        title: Online Log and Traceability
-        path: 02_Product_Design/PDD.04.05_Online_Log_and_Traceability.md
+        title: Online Log and Traceability Service
+        path: 02_Product_Design/PDD.04.05_Online_Log_and_Traceability_Service.md
+      - doc_id: PDD.04.06
+        title: Hydrosens Environmental Profile Management
+        path: 02_Product_Design/PDD.04.06_Hydrosens_Environmental_Profile_Management.md
       - doc_id: PDD.05
-        title: Data and Configuration Structure
-        path: 02_Product_Design/PDD.05_Data_and_Configuration_Structure.md
+        title: Operational State and Configuration Model
+        path: 02_Product_Design/PDD.05_Operational_State_and_Configuration_Model.md
       - doc_id: PDD.06
-        title: User Roles and Operational Modes
-        path: 02_Product_Design/PDD.06_User_Roles_and_Operational_Modes.md
+        title: Roles, Authority and Operational Modes
+        path: 02_Product_Design/PDD.06_Roles_Authority_and_Operational_Modes.md
       - doc_id: PDD.07
-        title: Future Directions and Open Items
-        path: 02_Product_Design/PDD.07_Future_Directions_and_Open_Items.md
+        title: Design Bets, Gaps and Future Directions
+        path: 02_Product_Design/PDD.07_Design_Bets_Gaps_and_Future_Directions.md
 
 root_docs:
   - doc_id: RD.ROOT
