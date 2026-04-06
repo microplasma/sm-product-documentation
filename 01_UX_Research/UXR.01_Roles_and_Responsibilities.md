@@ -4,7 +4,7 @@ version: 0.1.0
 last_updated: 2025-11-09
 status: draft
 owners: [research@survey-platform.io]
-tags: [ux-research, roles, workflows, responsibilities, smp]
+tags: [ux-research, roles, workflows, responsibilities, ois]
 ---
 
 # UXR.01 – Roles and Responsibilities
@@ -20,7 +20,7 @@ Changes made:
 
 **Date:** 2025-10-25
 
-**Owner:** SMP Research & Design
+**Owner:** OIS Research & Design
 
 **Status:** Draft (evidence-based)
 
@@ -30,7 +30,7 @@ Changes made:
 
 This document defines the **key roles involved in underwater survey operations**, their core responsibilities, decision-making boundaries, and tool dependencies.
 
-It highlights how these roles interact across operation types (Geophysical, Geotechnical, Pipeline/IMR) and how SMP can support their evolving collaboration patterns — particularly in the shift toward **multi-mission, reduced-headcount operations**.
+It highlights how these roles interact across operation types (Geophysical, Geotechnical, Pipeline/IMR) and how OIS can support their evolving collaboration patterns — particularly in the shift toward **multi-mission, reduced-headcount operations**.
 
 ---
 
@@ -85,7 +85,7 @@ QINSy / Quantum, Discover, Inomar, SIS, EIVA Touchpad, APOS, VOYIS / RVHD, Onlin
 - No consolidated overview of data health.
 - Bandwidth limitations in remote operation.
 
-**Opportunities for SMP:**
+**Opportunities for OIS:**
 
 - Unified status dashboard (Active Monitoring).
 - Auto-verification of data stream and logging states.
@@ -118,7 +118,7 @@ QINSy (line plans, KP validation), Excel MAC templates, Online Log, Planner / re
 - No central configuration rollback.
 - Limited cross-mission visibility.
 
-**Opportunities for SMP:**
+**Opportunities for OIS:**
 
 - Config template management and rollback functions.
 - Role-based configuration lock.
@@ -148,7 +148,7 @@ Planner, QINSy (navigation planning), Online Log (summaries).
 - No real-time progress visualization across concurrent missions.
 - Manual coordination with vessel operations.
 
-**Opportunities for SMP:**
+**Opportunities for OIS:**
 
 - Mission overview dashboard with completion metrics.
 - Alert-based downtime indicators.
@@ -177,7 +177,7 @@ Network folders, Redgate, Planner, custom QC scripts.
 - Non-standardized metadata between operations.
 - Manual cross-verification of event logs and folders.
 
-**Opportunities for SMP:**
+**Opportunities for OIS:**
 
 - Integrated Online Log → File structure linkage.
 - QC compliance report generation.
@@ -202,7 +202,7 @@ Network folders, Redgate, Planner, custom QC scripts.
 - Delayed approval process disrupts mobilisation.
 - Lack of diagnostic tools accessible to operators.
 
-**Opportunities for SMP:**
+**Opportunities for OIS:**
 
 - Embedded diagnostics / ping-test module.
 - Operator-level pre-check routines before mobilisation.
@@ -211,7 +211,7 @@ Network folders, Redgate, Planner, custom QC scripts.
 
 ## 5. Cross-Role Interaction Model
 
-| **Collaboration Context** | **Participants** | **Current Mode** | **Pain Point** | **SMP Opportunity** |
+| **Collaboration Context** | **Participants** | **Current Mode** | **Pain Point** | **OIS Opportunity** |
 | --- | --- | --- | --- | --- |
 | **Shift Handover** | Surveyor ↔ Surveyor | OneNote + verbal | Inconsistent details, missing anomalies | Structured handover interface integrated with Online Log |
 | **QC Review** | Surveyor ↔ Senior Surveyor | Shared folders, MAC | Redundant re-checking | Automated QC validation dashboard |
@@ -221,11 +221,11 @@ Network folders, Redgate, Planner, custom QC scripts.
 
 ---
 
-## 6. Evolving Role Dynamics in SMP
+## 6. Evolving Role Dynamics in OIS
 
-As SMP introduces automation and multi-mission control:
+As OIS introduces automation and multi-mission control:
 
-| **Role Evolution** | **Change Introduced by SMP** | **Impact** |
+| **Role Evolution** | **Change Introduced by OIS** | **Impact** |
 | --- | --- | --- |
 | Surveyor | Gains ability to monitor multiple missions simultaneously. | Reduces idle time; requires new alert prioritization tools. |
 | Senior Surveyor | Focus shifts to supervision and triage rather than micromanagement. | Increases oversight efficiency and reduces redundant checks. |
@@ -235,9 +235,9 @@ As SMP introduces automation and multi-mission control:
 
 ---
 
-## 7. Role-to-Module Mapping (SMP Impact Matrix)
+## 7. Role-to-Module Mapping (OIS Impact Matrix)
 
-| **Role** | **Key SMP Modules** | **Primary Interactions** |
+| **Role** | **Key OIS Modules** | **Primary Interactions** |
 | --- | --- | --- |
 | Surveyor | Sensor Control, Output Monitoring, Online Log | Execute commands, review data, annotate logs. |
 | Senior Surveyor | Configuration Manager, Diagnostics & Health, Mission Deck | Supervise configuration, validate QC, oversee multiple missions. |

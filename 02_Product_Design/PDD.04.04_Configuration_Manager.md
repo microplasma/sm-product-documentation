@@ -94,7 +94,7 @@ Key capabilities include:
 
 ### 5. Thresholds & Health
 
-This tab centralizes **all health and QC parameters** used across SMP for health evaluation and visualization.
+This tab centralizes **all health and QC parameters** used across OIS for health evaluation and visualization.
 
 | Metric Group | Example Parameters | Description | Impact |
 |---------------|--------------------|--------------|--------|
@@ -139,7 +139,7 @@ Templates provide standardized configurations that ensure consistent setup acros
 - Template application and rollback are logged with timestamps.  
 - All configuration changes are traceable and reversible.  
 - Read-only mode remains accessible for inspection.  
-- Layout follows the SMP interface design standards for modularity and clarity.
+- Layout follows the OIS interface design standards for modularity and clarity.
 
 ---
 
@@ -157,7 +157,7 @@ Templates provide standardized configurations that ensure consistent setup acros
 
 ### Summary Statement
 
-> The **Configuration Manager** establishes a unified, structured framework for managing all mission configurations across the SMP.  
+> The **Configuration Manager** establishes a unified, structured framework for managing all mission configurations across the OIS.  
 > It ensures safe, auditable control of systems and sensors, supports standardized setups through templates, and centralizes quality thresholds for consistent QC and monitoring across the platform.
 
 ---

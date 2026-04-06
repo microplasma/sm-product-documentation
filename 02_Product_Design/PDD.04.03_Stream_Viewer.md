@@ -13,12 +13,12 @@ tags: [functional-specification, stream-viewer, monitoring, qc, sensor-visualiza
 The **Stream Viewer** provides real-time visualization of sensor data streams within the active mission.  
 It enables **Survey Operators** and **Senior Surveyors** to assess sensor performance, signal quality, and environmental consistency in live conditionsâ€”without interrupting ongoing data collection.
 
-The Stream Viewer is a mission-contextual, visual component of the SMP that converts live sensor telemetry into actionable situational awareness.
+The Stream Viewer is a mission-contextual, visual component of the OIS that converts live sensor telemetry into actionable situational awareness.
 
 ---
 
 ## Scope & Context
-The Stream Viewer belongs to the **Mission Layer** of the Survey Management Platform (SMP).  
+The Stream Viewer belongs to the **Mission Layer** of the OI Survey (OIS).  
 It is contextual to the **currently active mission** and automatically updates when a new mission is selected via the Triage Hub.  
 Each mission maintains its own layout and active feeds, which are restored when the mission is reactivated.
 
@@ -159,7 +159,7 @@ All thresholds and tolerance limits originate from the **Configuration Manager â
 ### Summary Statement
 
 > The **Stream Viewer** transforms raw sensor telemetry into a live, visual understanding of mission performance.  
-> Through sensor-specific QC overlays, surveyors can quickly identify signal issues, motion instability, or environmental drift, ensuring continuous, high-quality survey acquisition within the SMP ecosystem.
+> Through sensor-specific QC overlays, surveyors can quickly identify signal issues, motion instability, or environmental drift, ensuring continuous, high-quality survey acquisition within the OIS ecosystem.
 
 ---
 

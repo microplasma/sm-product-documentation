@@ -10,7 +10,7 @@ tags: [functional-specification, triage-hub, mission-selection, cross-mission, r
 # PDD.04.01_Triage_Hub
 
 ## Purpose
-The **Triage Hub** is the entry point and global overview of the Survey Management Platform (SMP).  
+The **Triage Hub** is the entry point and global overview of the OI Survey (OIS).  
 It allows surveyors operating from onshore facilities to view all missions assigned to them, assess mission health at a glance, and select which mission to actively monitor and control.
 
 The Triage Hub supports **multi-mission awareness**, **safe activation of mission contexts**, and **immediate visibility into system health**, forming the foundation of the platform’s command and control environment.
@@ -18,7 +18,7 @@ The Triage Hub supports **multi-mission awareness**, **safe activation of missio
 ---
 
 ## Scope & Context
-The Triage Hub exists within the **Global Layer** of the SMP, meaning it operates **outside any single mission context**.  
+The Triage Hub exists within the **Global Layer** of the OIS, meaning it operates **outside any single mission context**.  
 Its purpose is to:
 - Display an overview of all missions under a surveyor’s responsibility.  
 - Summarize health, performance, and alert states across missions.  
@@ -50,7 +50,7 @@ Core design intent:
 
 | Zone | Purpose | Example Components |
 |-------|----------|--------------------|
-| **Global Header** | Provides global context independent of missions. | SMP logo, operator name, UTC clock, system connection status. |
+| **Global Header** | Provides global context independent of missions. | OIS logo, operator name, UTC clock, system connection status. |
 | **Mission List Grid** | Displays mission cards/containers summarizing each mission’s status. | Mission title, ID, vessel name, health summary, alert badges. |
 | **Filter & Search Bar** | Allows quick access when managing many missions. | Text search, status filters (Active, Idle, Critical). |
 | **Action Bar / Footer** | Contains secondary utilities such as refresh, layout switch, or log shortcuts. | “Refresh Data,” “View Logs,” “Help.” |
@@ -109,7 +109,7 @@ These summaries are derived from Mission Deck and Stream Viewer data.
 ### 6. Mission Selection Workflow
 
 1. **Select Mission Card** – Operator clicks on a mission card.  
-2. **Context Broadcast** – SMP immediately updates all mission-scoped windows (Mission Deck, Stream Viewer, Navigation).  
+2. **Context Broadcast** – OIS immediately updates all mission-scoped windows (Mission Deck, Stream Viewer, Navigation).  
 3. **State Feedback** – Global header updates with mission name and timestamp; log entry automatically recorded for traceability.
 
 This workflow removes unnecessary friction and enables fast, safe transitions between missions during live operations.

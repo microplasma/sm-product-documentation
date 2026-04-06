@@ -4,7 +4,7 @@ version: 0.1.0
 last_updated: 2025-11-09
 status: draft
 owners: [research@survey-platform.io]
-tags: [ux-research, tasks, tools, matrix, smp]
+tags: [ux-research, tasks, tools, matrix, ois]
 ---
 
 # UXR.03 – Tasks and Tools Matrix
@@ -18,7 +18,7 @@ Changes made:
 
 **Version:** 1.0  
 **Date:** 2025-10-25  
-**Owner:** SMP Research & Design  
+**Owner:** OIS Research & Design  
 **Status:** Complete Baseline (with Pain & Opportunity Overlay)
 
 ---
@@ -27,7 +27,7 @@ Changes made:
 
 This document provides a **comprehensive matrix** connecting operational tasks, tools, and user roles across the three primary survey operation types — **Geophysical**, **Geotechnical**, and **Pipeline / IMR**.
 
-It identifies how current workflows function, where pain points occur, and highlights the **strategic opportunities for the Survey Management Platform (SMP)** to improve efficiency, safety, and collaboration.
+It identifies how current workflows function, where pain points occur, and highlights the **strategic opportunities for the OI Survey (OIS)** to improve efficiency, safety, and collaboration.
 
 This file serves as the factual and analytical backbone linking **User Research**, **Operational Workflows**, and **Feature Framework** design.
 
@@ -50,7 +50,7 @@ All findings are evidence-based and consolidated from verified operational resea
 
 ## 3. Operational Task Matrix
 
-| Operation Type                        | Role              | Task Type                 | Task Description                                   | Tool(s)                                | Pain Point                                                                        | SMP Opportunity                                                       |
+| Operation Type                        | Role              | Task Type                 | Task Description                                   | Tool(s)                                | Pain Point                                                                        | OIS Opportunity                                                       |
 | ------------------------------------- | ----------------- | ------------------------- | -------------------------------------------------- | -------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
 | Geophysical / Geotechnical / Pipeline | Surveyor          | Navigation                | Check current survey line                          | QINSy / Quantum                        | Switching between software for progress checks; poor line tracking visualization. | Unified line tracker with live completion % and deviation alerts.     |
 | Geotechnical                          | Surveyor          | Navigation                | Position vessel for sampling (CPT / Vibrocore)     | QINSy / Quantum                        | Manual positioning requires constant verbal communication with bridge.            | Integrated deck and survey alignment view with position confirmation. |
@@ -96,7 +96,7 @@ All findings are evidence-based and consolidated from verified operational resea
 4. **Lack of Standardization:** No consistent thresholds or templates across operation types.
 5. **Limited Visibility:** Supervisors lack a live mission overview.
 
-**Key SMP Opportunities:**
+**Key OIS Opportunities:**
 
 * Consolidate navigation, QC, and logging interfaces.
 * Automate event recording and file verification.
@@ -118,4 +118,4 @@ All findings are evidence-based and consolidated from verified operational resea
 ---
 
 **End of Document**
-*“From task reality to design clarity – SMP’s backbone begins with operator truth.”*
+*“From task reality to design clarity – OIS's backbone begins with operator truth.”*

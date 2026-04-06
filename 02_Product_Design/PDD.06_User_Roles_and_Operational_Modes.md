@@ -10,7 +10,7 @@ tags: [roles, operational-modes, permissions, workflows, remote-operations]
 # PDD.06_User_Roles_and_Operational_Modes
 
 ## Purpose
-This document defines the **user roles** and **operational modes** within the Survey Management Platform (SMP).  
+This document defines the **user roles** and **operational modes** within the OI Survey (OIS).  
 It describes how each role interacts with the platform, their core responsibilities, and how operational modes (Preparation, Active Logging, and Review) influence feature accessibility and decision-making authority.
 
 These definitions ensure operational safety, clear accountability, and efficient collaboration across distributed survey operations.
@@ -18,7 +18,7 @@ These definitions ensure operational safety, clear accountability, and efficient
 ---
 
 ## Scope & Context
-The SMP supports **multi-mission, multi-role collaboration** between onshore and offshore personnel.  
+The OIS supports **multi-mission, multi-role collaboration** between onshore and offshore personnel.  
 Access is governed by **global role-based permissions**, where users are assigned to missions with specific roles through a global user management layer.  
 
 Operational modes define system state and determine which functions are active or locked, ensuring safe transitions throughout the mission lifecycle.
@@ -42,7 +42,7 @@ Operational modes define system state and determine which functions are active o
 |------|----------------|------------------------|--------------------------|
 | **Survey Operator** | Execute and monitor live survey operations across one or more missions. | - Control sensors and manage logging.<br>- Monitor system and data health across multiple missions.<br>- Ensure the quality of acquired data.<br>- Add notes to Online Log.<br>- Apply configuration templates during preparation. | Triage Hub, Mission Deck, Stream Viewer, Navigation, Online Log. |
 | **Senior Surveyor** | Technical oversight and calibration. | - Lead mobilisation and sensor calibration.<br>- Support troubleshooting during operations.<br>- Validate configuration and QC thresholds. | Mission Deck, Configuration Manager, Diagnostics. |
-| **Project Execution Coordinator (PEC)** | Oversee operational coordination and mission performance. | - Track mission health and progress.<br>- Coordinate onshore/offshore communications.<br>- Oversee compliance and delivery progress. | Does not directly utilize the SMP |
+| **Project Execution Coordinator (PEC)** | Oversee operational coordination and mission performance. | - Track mission health and progress.<br>- Coordinate onshore/offshore communications.<br>- Oversee compliance and delivery progress. | Does not directly utilize the OIS |
 | **Data Processor** | Post-processing and validation. | - Verify data integrity and completeness.<br>- Review logs and file transfers.<br>- Validate QC outcomes and file naming compliance.<br>- Generate post-mission summaries. | Online Log, File Transfer Monitor, Data Archives. |
 
 > **Note:** Role permissions are managed through a **global RBAC system**, not mission-specific configuration.  
@@ -124,7 +124,7 @@ Operational modes define system state and determine which functions are active o
 
 ### Summary Statement
 
-> The **User Roles and Operational Modes** framework defines how SMP users operate safely and efficiently across multi-mission environments.  
+> The **User Roles and Operational Modes** framework defines how OIS users operate safely and efficiently across multi-mission environments.  
 > By introducing global role-based management and flexible mission assignments, the platform enables scalable operations, continuous oversight, and clear role accountability while maintaining mission-level isolation and safety.
 
 ---

@@ -10,7 +10,7 @@ tags: [information, architecture, system-model, mission-structure, data-flow]
 # PDD.02_Information_Architecture
 
 ## Purpose
-This document defines the **information structure and logical relationships** that underpin the Survey Management Platform (SMP).  
+This document defines the **information structure and logical relationships** that underpin the OI Survey (OIS).  
 It describes how missions, sensors, configurations, metrics, and logs relate to one another—establishing the conceptual data architecture that supports consistent situational awareness, traceability, and collaboration.
 
 The goal is to ensure that all design and functional specifications share a **common mental model** of the system’s information flow and dependencies.
@@ -18,7 +18,7 @@ The goal is to ensure that all design and functional specifications share a **co
 ---
 
 ## Scope & Context
-The SMP operates as a distributed, mission-centered ecosystem.  
+The OIS operates as a distributed, mission-centered ecosystem.  
 Each active mission aggregates and manages data from sensors, configurations, commands, and health metrics, while maintaining strict separation from other missions.
 
 The Information Architecture defines:
@@ -34,7 +34,7 @@ The Information Architecture defines:
 ### Core Entities
 | Entity | Description | Ownership | Notes |
 |---------|--------------|------------|-------|
-| **Mission** | The fundamental operational unit within SMP. Encapsulates objectives, configurations, and associated data. | Survey Operator / PEC | Always unique and traceable via Mission ID. |
+| **Mission** | The fundamental operational unit within OIS. Encapsulates objectives, configurations, and associated data. | Survey Operator / PEC | Always unique and traceable via Mission ID. |
 | **Sensor** | Physical or virtual device contributing data to a mission (e.g., MBES, SSS, INS). | Senior Surveyor / IT | Configured via templates, monitored continuously. |
 | **Subsystem** | Logical grouping of related sensors or systems (e.g., Navigation, Imaging, Motion). | Survey Operator | Simplifies monitoring at system level. |
 | **Metric** | A quantifiable value representing system or sensor performance. | Survey Operator | Derived from telemetry and threshold logic. |
@@ -49,7 +49,7 @@ The Information Architecture defines:
 
 ### 1. Hierarchical Model
 
-The SMP organizes its information in a hierarchical and contextual manner:
+The OIS organizes its information in a hierarchical and contextual manner:
 
 ├── Global Layer 
 │ ├── Triage Hub (cross-mission awareness) 
@@ -91,7 +91,7 @@ When a user activates a mission from the **Triage Hub**:
 - The **Online Log** continues collecting entries but tags them with `MissionID`.
 - **Cross-mission integrity** is enforced by context isolation—data or commands cannot affect non-active missions.
 
-> This mechanism ensures that SMP behaves as a single synchronized workspace while maintaining mission-level safety and traceability.
+> This mechanism ensures that OIS behaves as a single synchronized workspace while maintaining mission-level safety and traceability.
 
 ---
 
@@ -112,7 +112,7 @@ Each flow is event-driven and mission-scoped, ensuring deterministic traceabilit
 
 ### 5. Traceability Map
 
-Traceability is intrinsic to SMP’s architecture.  
+Traceability is intrinsic to OIS's architecture.  
 Each **event**, **action**, or **data object** carries metadata that allows reconstruction of full operational history.
 
 | Metadata Field | Description | Example |
@@ -125,12 +125,12 @@ Each **event**, **action**, or **data object** carries metadata that allows reco
 | **Outcome / Status** | Resulting condition. | `Success`, `Warning`, `Critical` |
 | **Reference Link** | Cross-reference to related objects. | `Alert → LogEntry`, `Command → FileTransfer` |
 
-All mission and system data adhere to this **traceability envelope**, forming the backbone of SMP’s auditability and quality assurance.
+All mission and system data adhere to this **traceability envelope**, forming the backbone of OIS's auditability and quality assurance.
 
 ---
 
 ## Acceptance Criteria
-- The document provides a complete and comprehensible view of SMP’s logical structure and entity relationships.  
+- The document provides a complete and comprehensible view of OIS's logical structure and entity relationships.  
 - Information flows are clearly defined and consistent with operational behavior described in [PDD.01.00 – System Overview].  
 - Traceability and mission context propagation are explicitly mapped.  
 - Roles and data ownership are visible for each major entity.
@@ -144,13 +144,13 @@ All mission and system data adhere to this **traceability envelope**, forming th
 | **Data Persistence Model** | Define retention policies for mission data once transferred to onshore systems. |
 | **File Transfer Object Scope** | Confirm how live monitoring integrates with onshore data processing validation. |
 | **Cross-Mission Data References** | Determine whether certain shared resources (e.g., vessel navigation feed) are globally referenced or duplicated per mission. |
-| **Event Prioritization Model** | Formalize how SMP categorizes simultaneous alerts for display priority. |
+| **Event Prioritization Model** | Formalize how OIS categorizes simultaneous alerts for display priority. |
 
 ---
 
 ### Summary Statement
 
-> The SMP Information Architecture establishes a mission-centric, traceable data model that ensures clarity, safety, and accountability across concurrent operations.  
+> The OIS Information Architecture establishes a mission-centric, traceable data model that ensures clarity, safety, and accountability across concurrent operations.  
 > Every mission operates within its own information boundary, yet all are unified under a common framework that promotes consistency, interoperability, and transparent collaboration between offshore and onshore teams.
 
 ---

@@ -10,7 +10,7 @@ tags: [user-experience, ux-framework, design-system, multi-screen, remote-operat
 # PDD.03_User_Experience_Framework
 
 ## Purpose
-This document defines the **user experience framework** for the Survey Management Platform (SMP).  
+This document defines the **user experience framework** for the OI Survey (OIS).  
 It establishes how users interact with the system across multiple screens, how mission context is propagated, and the guiding principles that ensure consistency, clarity, and operational safety—particularly within **remote onshore survey operations**.
 
 The goal is to enable surveyors and supporting roles to operate multiple survey missions concurrently, maintaining full situational awareness and data quality oversight from an onshore facility.
@@ -18,7 +18,7 @@ The goal is to enable surveyors and supporting roles to operate multiple survey 
 ---
 
 ## Scope & Context
-The SMP supports **remote survey operations**, where surveyors manage live missions running offshore.  
+The OIS supports **remote survey operations**, where surveyors manage live missions running offshore.  
 Operators work from an **onshore control center**, coordinating with the vessel’s bridge, operational crew, and sometimes the Data Processor team.  
 All interactions occur within a **multi-window environment**, where the mission context determines what data and controls are active at any given time.
 
@@ -31,7 +31,7 @@ This model simplifies the operator workspace and reduces unnecessary interface s
 
 ### 1. Multi-Screen Operational Concept
 
-The SMP is currently designed around an **8-screen layout** (4×2 grid), though screen allocation may evolve as testing and optimization continue.
+The OIS is currently designed around an **8-screen layout** (4×2 grid), though screen allocation may evolve as testing and optimization continue.
 
 | Screen | Function | Context |
 |---------|-----------|----------|
@@ -49,7 +49,7 @@ The SMP is currently designed around an **8-screen layout** (4×2 grid), though 
 
 ### 2. Context Propagation Model
 
-The SMP maintains a **single active mission context** at any time.  
+The OIS maintains a **single active mission context** at any time.  
 When the surveyor selects a mission from the **Triage Hub**:
 
 1. The **Mission Context** object is activated and broadcast to all mission-scoped modules.  
@@ -79,7 +79,7 @@ This design guarantees synchronization across all operational screens and preven
 
 ### 4. Interaction & Layout Flow
 
-While not all screens will share identical structures, SMP interfaces will adhere to a **left-to-right, top-to-bottom interaction rhythm**, promoting intuitive scanning and control access.
+While not all screens will share identical structures, OIS interfaces will adhere to a **left-to-right, top-to-bottom interaction rhythm**, promoting intuitive scanning and control access.
 
 | Zone | Function | Example Components |
 |-------|-----------|--------------------|
@@ -120,7 +120,7 @@ This flow reinforces **progressive disclosure**—operators start from overview 
 
 ### 7. Design System Guidelines
 
-The SMP’s interface language emphasizes **calm, legible, and consistent visual hierarchy**.  
+The OIS's interface language emphasizes **calm, legible, and consistent visual hierarchy**.  
 Key principles include:
 
 - **Color + Icon Redundancy:** Color used only in combination with iconography for accessibility (e.g., ⚠ red = critical, ! amber = warning, ✓ green = normal).  
@@ -146,7 +146,7 @@ Key principles include:
 
 | Topic | Pending Decision |
 |--------|------------------|
-| **Screen Allocation Flexibility** | Validate if Navigation will remain external (QINSy) or integrated in future SMP release. |
+| **Screen Allocation Flexibility** | Validate if Navigation will remain external (QINSy) or integrated in future OIS release. |
 | **Alert Dismissal Rules** | Define exact conditions where alerts must be resolved before dismissal. |
 | **Diagnostics Modal Behavior** | Confirm if diagnostic views can remain persistent alongside mission controls. |
 | **Layout Adaptability** | Determine how layouts adapt to reduced screen environments (e.g., laptop mode for testing). |
@@ -155,7 +155,7 @@ Key principles include:
 
 ### Summary Statement
 
-> The SMP User Experience Framework defines a mission-centric, remote-operational environment focused on safety, clarity, and accessibility.  
+> The OIS User Experience Framework defines a mission-centric, remote-operational environment focused on safety, clarity, and accessibility.  
 > It aligns all modules under shared interaction and visualization principles, ensuring that operators can manage multiple missions confidently—whether monitoring, commanding, or responding to system changes.
 
 ---

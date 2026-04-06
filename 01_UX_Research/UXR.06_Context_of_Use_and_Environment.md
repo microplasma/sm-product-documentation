@@ -4,7 +4,7 @@ version: 0.1.0
 last_updated: 2025-11-09
 status: draft
 owners: [research@survey-platform.io]
-tags: [ux-research, context-of-use, environment, smp]
+tags: [ux-research, context-of-use, environment, ois]
 ---
 
 # UXR.06 – Context of Use and Environment
@@ -19,18 +19,18 @@ Changes made:
 
 **Version:** 1.0  
 **Date:** 2025-10-25  
-**Owner:** SMP Research & Design  
+**Owner:** OIS Research & Design  
 **Status:** Complete (Operational Environment Overview)
 
 ---
 
 ## 1. Purpose & Scope
 
-This document defines the **context of use** for the Survey Management Platform (SMP) — the physical, technical, and cognitive environment in which offshore and remote survey operations occur.
+This document defines the **context of use** for the OI Survey (OIS) — the physical, technical, and cognitive environment in which offshore and remote survey operations occur.
 
 It describes constraints, environmental conditions, and collaboration patterns that directly influence the platform’s design decisions.
 
-The goal is to ensure SMP is built with an **accurate understanding of user conditions**, enabling effective, resilient, and safe operations both offshore and onshore.
+The goal is to ensure OIS is built with an **accurate understanding of user conditions**, enabling effective, resilient, and safe operations both offshore and onshore.
 
 ---
 
@@ -75,11 +75,11 @@ Cross-validated with operational feedback from online and offshore teams between
 
 ## 4. Human and Organizational Context
 
-| **Aspect**                  | **Description**                                                 | **SMP Design Consideration**                                  |
+| **Aspect**                  | **Description**                                                 | **OIS Design Consideration**                                  |
 | --------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------- |
 | **Shift Patterns**          | 12-hour rotations; frequent handovers with in-person briefings. | Persistent logs and handover snapshots.                       |
 | **Roles per Mission**       | 1–2 Surveyors, 1 Senior, 1 PEC (shared across missions).        | Multi-user concurrent sessions with hierarchical permissions. |
-| **Communication Channels**  | Intercom, OneNote, Online Log, chat apps.                       | Integrate key notes and events into central SMP log.          |
+| **Communication Channels**  | Intercom, OneNote, Online Log, chat apps.                       | Integrate key notes and events into central OIS log.          |
 | **Error Tolerance**         | High operational consequence for data loss or misalignment.     | Require confirmations, rollback, and visible action trails.   |
 | **Collaboration Pattern**   | Supervisor assists operators without taking control.            | Observation and assist mode design.                           |
 | **Attention Distribution**  | 70% monitoring, 30% control action.                             | Prioritize visibility and early-warning systems.              |
@@ -108,7 +108,7 @@ Cross-validated with operational feedback from online and offshore teams between
 | **System Navigation**   | Users prefer persistent screen layouts and minimal context switching.                   | Fixed panel layout, non-modal workflows.                          |
 | **Error Recovery**      | Users fear irreversible actions.                                                        | Undo/rollback and confirmation dialogues on all critical actions. |
 | **Learning Curve**      | Operators vary in experience across vessels and project types.                          | Use progressive disclosure and standardized templates.            |
-| **Collaboration Style** | Real-time verbal communication remains dominant.                                        | SMP notifications should mirror verbal status cues.               |
+| **Collaboration Style** | Real-time verbal communication remains dominant.                                        | OIS notifications should mirror verbal status cues.               |
 
 ---
 

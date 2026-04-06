@@ -4,7 +4,7 @@ version: 0.1.0
 last_updated: 2025-11-09
 status: draft
 owners: [research@survey-platform.io]
-tags: [ux-research, behavioral-insights, roles, smp]
+tags: [ux-research, behavioral-insights, roles, ois]
 ---
 
 # UXR.05 – Role-Based Insights
@@ -12,13 +12,13 @@ tags: [ux-research, behavioral-insights, roles, smp]
 <!--
 Changes made:
 1. Added standardized metadata block.
-2. Updated top-level heading to follow SMP documentation convention.
+2. Updated top-level heading to follow OIS documentation convention.
 3. All body content preserved verbatim.
 -->
 
 **Version:** 1.0  
 **Date:** 2025-10-25  
-**Owner:** SMP Research & Design  
+**Owner:** OIS Research & Design  
 **Status:** Draft (Synthesis Layer)
 
 ---
@@ -26,7 +26,7 @@ Changes made:
 ## 1. Purpose & Scope
 
 This document summarizes key behavioral insights and operational tendencies per role within offshore and remote survey operations.
-It translates observational data and workflow evidence into **design-relevant insights** for SMP, clarifying how each role interacts with systems, what they prioritize, and where their workflows break down.
+It translates observational data and workflow evidence into **design-relevant insights** for OIS, clarifying how each role interacts with systems, what they prioritize, and where their workflows break down.
 
 Each role insight includes:
 
@@ -34,7 +34,7 @@ Each role insight includes:
 * **Operational context and mental model**
 * **Pain patterns**
 * **System dependencies and limitations**
-* **Design principles to support this role in SMP**
+* **Design principles to support this role in OIS**
 
 ---
 
@@ -70,7 +70,7 @@ Surveyors think in **timelines and thresholds**: time on line, line completion, 
 * Manual Online Log entries prone to gaps and inconsistency.
 * Disjointed alarms and lack of unified health awareness.
 
-### SMP Design Implications
+### OIS Design Implications
 
 | Design Principle                  | Implementation Example                                                  |
 | --------------------------------- | ----------------------------------------------------------------------- |
@@ -100,7 +100,7 @@ They see themselves as system guardians — maintaining correctness and ensuring
 * Time lost verifying settings across UIs.
 * No ability to isolate and assist remotely without interrupting the operator.
 
-### SMP Design Implications
+### OIS Design Implications
 
 | Design Principle                     | Implementation Example                                           |
 | ------------------------------------ | ---------------------------------------------------------------- |
@@ -129,7 +129,7 @@ They operate at a **macro level**, assessing mission readiness and completion me
 * Manual vessel reallocation based on verbal updates.
 * Fragmented communication with data teams.
 
-### SMP Design Implications
+### OIS Design Implications
 
 | Design Principle                     | Implementation Example                                          |
 | ------------------------------------ | --------------------------------------------------------------- |
@@ -158,7 +158,7 @@ They rely heavily on logs, folder structures, and reports, often performing redu
 * Non-standardized metadata and file naming.
 * Time-intensive QC report generation.
 
-### SMP Design Implications
+### OIS Design Implications
 
 | Design Principle               | Implementation Example                                      |
 | ------------------------------ | ----------------------------------------------------------- |
@@ -185,7 +185,7 @@ IT supports secure access and network connectivity. Their operational pain comes
 * No visibility into sensor network status.
 * Limited diagnostic tools for remote users.
 
-### SMP Design Implications
+### OIS Design Implications
 
 | Design Principle            | Implementation Example                                        |
 | --------------------------- | ------------------------------------------------------------- |
@@ -229,4 +229,4 @@ IT supports secure access and network connectivity. Their operational pain comes
 ---
 
 **End of Document**
-*“Every role sees the system differently — SMP must make those views align without friction.”*
+*“Every role sees the system differently — OIS must make those views align without friction.”*

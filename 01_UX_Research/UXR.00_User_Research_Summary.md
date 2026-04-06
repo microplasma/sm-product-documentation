@@ -4,7 +4,7 @@ version: 0.1.0
 last_updated: 2025-11-09
 status: draft
 owners: [research@survey-platform.io]
-tags: [ux-research, user-insights, smp, operator-workflows]
+tags: [ux-research, user-insights, ois, operator-workflows]
 ---
 
 # UXR.00 – User Research Summary
@@ -16,18 +16,16 @@ Changes made:
 3. Retained all source content verbatim.
 -->
 
-*(Originally titled “Ocean Infinity – Survey Management Platform (SMP)”)*
-  
 **Version:** 1.1  
 **Date:** 2025-10-25  
-**Owner:** SMP Research & Design  
+**Owner:** OIS Research & Design  
 **Status:** Updated — Includes Task–Tool Mapping
 
 ---
 
 ## 1. Purpose & Scope
 
-This document consolidates user research for SMP. It summarizes **who our users are**, **how they work** (operations, tasks, and tools), **their pain points**, and **opportunity areas** that inform product pillars and feature design.
+This document consolidates user research for OIS. It summarizes **who our users are**, **how they work** (operations, tasks, and tools), **their pain points**, and **opportunity areas** that inform product pillars and feature design.
 
 Derived from validated internal studies, operational data, and workshop results.
 
@@ -118,9 +116,9 @@ Key friction themes: network whitelisting, multi-tool integration, manual report
 
 ---
 
-## 9. Implications for SMP Strategy
+## 9. Implications for OIS Strategy
 
-- **Reduce tool count** and centralize control and QC tasks within SMP.
+- **Reduce tool count** and centralize control and QC tasks within OIS.
 - **Design for multi-mission workspaces** and triage management.
 - **Automate log consistency checks** and system traceability.
 - **Support remote assist and session sharing** natively.
@@ -149,4 +147,4 @@ Key friction themes: network whitelisting, multi-tool integration, manual report
 
 **End of Document**
 
-*“Ground truth captured — SMP design anchored in operator reality.”*
+*“Ground truth captured — OIS design anchored in operator reality.”*

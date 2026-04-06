@@ -4,7 +4,7 @@ version: 0.1.0
 last_updated: 2025-11-09
 status: draft
 owners: [research@survey-platform.io]
-tags: [ux-research, workflows, operation-types, smp]
+tags: [ux-research, workflows, operation-types, ois]
 ---
 
 # UXR.02 – Operation Types and Workflows
@@ -18,21 +18,21 @@ Changes made:
 
 **Version:** 1.0  
 **Date:** 2025-10-25  
-**Owner:** SMP Research & Design  
+**Owner:** OIS Research & Design  
 **Status:** Conceptual Overview (System Design Perspective)
 
 ---
 
 ## 1. Purpose & Scope
-This document defines the major **operation types** managed within the Survey Management Platform (SMP) and describes their **core workflow structures** at a system-design level.  
+This document defines the major **operation types** managed within the OI Survey (OIS) and describes their **core workflow structures** at a system-design level.  
 
-The objective is to provide a **conceptual view** of how SMP supports survey operations across distinct domains (Geophysical, Geotechnical, Pipeline / IMR) while aligning workflows to SMP modules such as **Command & Control (C&C)**, **Active Monitoring (AM)**, and **Online Log Integration**.
+The objective is to provide a **conceptual view** of how OIS supports survey operations across distinct domains (Geophysical, Geotechnical, Pipeline / IMR) while aligning workflows to OIS modules such as **Command & Control (C&C)**, **Active Monitoring (AM)**, and **Online Log Integration**.
 
 ---
 
 ## 2. Operation Type Overview
 
-| **Operation Type** | **Purpose / Characteristics** | **Key SMP Relevance** |
+| **Operation Type** | **Purpose / Characteristics** | **Key OIS Relevance** |
 |---|---|---|
 | **Geophysical** | High-speed, wide-area seabed mapping using acoustic sensors (MBES, SSS, SBP). Requires multi-sensor synchronization and coverage tracking. | Emphasis on real-time monitoring, line planning, and QC validation tools. |
 | **Geotechnical** | Sampling and soil investigation for construction planning. Lower tempo, more mechanical operations (CPT, coring). | Focus on event logging, equipment positioning, and coordination between survey and deck teams. |
@@ -42,7 +42,7 @@ The objective is to provide a **conceptual view** of how SMP supports survey ope
 
 ## 3. General Workflow Phases (Shared Across Types)
 
-| **Phase** | **Purpose** | **Representative Actions** | **SMP Interaction Layer** |
+| **Phase** | **Purpose** | **Representative Actions** | **OIS Interaction Layer** |
 |---|---|---|---|
 | **Startup & Planning** | Prepare mission parameters, equipment configs, and line plans. | Configure QINSy projects, verify IP/MAC permissions, review line files. | Configuration Manager, User Roles & Access. |
 | **Mobilisation** | System calibration, equipment validation, and readiness checks. | Calibrate sensors (USBL, INS, MBES); confirm logging paths. | Diagnostics & Health, Config Templates. |
@@ -52,11 +52,11 @@ The objective is to provide a **conceptual view** of how SMP supports survey ope
 
 ---
 
-## 4. SMP Interaction Layers by Operation Type
+## 4. OIS Interaction Layers by Operation Type
 
 ### 4.1 Geophysical
 - **Focus:** Real-time QC and efficiency (coverage and quality).  
-- **Key SMP Features:**
+- **Key OIS Features:**
   - Multi-sensor sync (MBES, SSS, SBP).
   - Auto-validation of parameters (ping rate, SNR, line deviation).
   - Integrated log of calibration and event markers.
@@ -68,7 +68,7 @@ The objective is to provide a **conceptual view** of how SMP supports survey ope
 
 ### 4.2 Geotechnical
 - **Focus:** Data integrity and coordination between survey and deck operations.  
-- **Key SMP Features:**
+- **Key OIS Features:**
   - Position and event logging for each sampling station.
   - Config templates for standard borehole operations.
   - Integration with vessel control and deck activity scheduling.
@@ -80,7 +80,7 @@ The objective is to provide a **conceptual view** of how SMP supports survey ope
 
 ### 4.3 Pipeline / IMR
 - **Focus:** Live visual and positional inspection.  
-- **Key SMP Features:**
+- **Key OIS Features:**
   - ON/OFF/Restart commands for sensors and cameras.
   - Live stream viewer with overlay controls (KP references, pipe names, depth data).
   - Alert-based QC and status indication.
@@ -100,13 +100,13 @@ The objective is to provide a **conceptual view** of how SMP supports survey ope
 | **Pace** | High-speed, continuous | Slow, discrete events | Moderate, decision-heavy |
 | **Risk Profile** | Low | Medium (equipment jams) | High (infrastructure proximity) |
 | **Operational Dependency** | Navigation accuracy | Deck coordination | Real-time situational awareness |
-| **Primary SMP Modules** | Active Monitoring | Online Log | Command & Control, Active Monitoring |
+| **Primary OIS Modules** | Active Monitoring | Online Log | Command & Control, Active Monitoring |
 
 ---
 
 ## 6. Multi-Mission Implications
 
-| **Operational Challenge** | **Impact of Multi-Mission Work** | **SMP Strategy** |
+| **Operational Challenge** | **Impact of Multi-Mission Work** | **OIS Strategy** |
 |---|---|---|
 | Attention management | Operators must divide focus across simultaneous missions. | Mission Deck with multi-mission views and alerts prioritization. |
 | Configuration drift | Risk of inconsistent settings across missions. | Centralized Configuration Manager with templates. |
@@ -115,7 +115,7 @@ The objective is to provide a **conceptual view** of how SMP supports survey ope
 
 ---
 
-## 7. Strategic Implications for SMP Design
+## 7. Strategic Implications for OIS Design
 1. **Workflow harmonization**: unify core phases across operation types for consistency.  
 2. **Automation of routine checks**: reduce manual QC and verification steps.  
 3. **Role adaptability**: enable one operator to manage multiple missions through modular interfaces.  
@@ -134,4 +134,4 @@ The objective is to provide a **conceptual view** of how SMP supports survey ope
 ---
 
 **End of Document**  
-_"Clarity through structure – unified workflows as the foundation for SMP design."_
+_"Clarity through structure – unified workflows as the foundation for OIS design."_

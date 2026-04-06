@@ -4,7 +4,7 @@ version: 0.1.0
 last_updated: 2025-11-09
 status: draft
 owners: [research@survey-platform.io]
-tags: [ux-research, pain-points, opportunities, smp]
+tags: [ux-research, pain-points, opportunities, ois]
 ---
 
 # UXR.04 – Pain Points and Opportunities
@@ -12,22 +12,22 @@ tags: [ux-research, pain-points, opportunities, smp]
 <!--
 Changes made:
 1. Added standardized front-matter for repository uniformity.
-2. Updated H1 heading to align with SMP documentation naming convention.
+2. Updated H1 heading to align with OIS documentation naming convention.
 3. No textual, tabular, or semantic changes.
 -->
 
 **Version:** 1.0  
 **Date:** 2025-10-25  
-**Owner:** SMP Research & Design  
+**Owner:** OIS Research & Design  
 **Status:** Consolidated Summary (Strategic Layer)
 
 ---
 
 ## 1. Purpose & Scope
 
-This document consolidates pain points identified across research, workflow analyses, and workshops, translating them into **strategic opportunity areas** for the Survey Management Platform (SMP).
+This document consolidates pain points identified across research, workflow analyses, and workshops, translating them into **strategic opportunity areas** for the OI Survey (OIS).
 
-It complements `01.03_Tasks_and_Tools_Matrix.md` by organizing findings into clusters that reflect operational stages and align with SMP’s **core product pillars** — **Command & Control (C&C)**, **Active Monitoring (AM)**, **Online Log & Traceability**, and **Collaboration & Multi-Mission Enablement**.
+It complements `01.03_Tasks_and_Tools_Matrix.md` by organizing findings into clusters that reflect operational stages and align with OIS's **core product pillars** — **Command & Control (C&C)**, **Active Monitoring (AM)**, **Online Log & Traceability**, and **Collaboration & Multi-Mission Enablement**.
 
 ---
 
@@ -52,7 +52,7 @@ Pain points were categorized according to operational phase, user role, and syst
 | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
 | **Startup & Planning**          | - Network whitelisting delays  - Redundant configuration effort across sensors - Manual setup of folder structures                             | - IT dependency and lack of automation - No standardized templates          | **Configuration Automation & Access Readiness** – Predefined configuration templates, network pre-check routines.           |
 | **Mobilisation**                | - Manual calibration and validation (USBL, INS, MBES) - Missing integration visibility - Poor handover between setup and operation             | - Tool isolation - Lack of diagnostic automation                            | **Automated Calibration & Health Checks** – Embedded diagnostic and status verification tools.                              |
-| **Operation (Live)**            | - Fragmented tool landscape (8–12 active tools) - Repeated parameter checks across UIs - Logging inconsistencies - No centralized alert system | - Legacy architecture - Manual quality assurance - Limited interoperability | **Unified Operational Interface** – Single SMP workspace integrating control, monitoring, and logging with alert hierarchy. |
+| **Operation (Live)**            | - Fragmented tool landscape (8–12 active tools) - Repeated parameter checks across UIs - Logging inconsistencies - No centralized alert system | - Legacy architecture - Manual quality assurance - Limited interoperability | **Unified Operational Interface** – Single OIS workspace integrating control, monitoring, and logging with alert hierarchy. |
 | **Shift Handover**              | - Disconnected systems (OneNote, Online Log) - Inconsistent event documentation - Reliance on memory and verbal briefings                      | - Lack of structured handover interface - No continuity of context          | **Integrated Handover & Traceability** – Shared session state, auto-log summaries, role-based access continuity.            |
 | **Reporting & Post-Processing** | - Manual compilation of daily reports - Folder validation - Inconsistent metadata standards                                                    | - Disparate data sources - Lack of automation                               | **Automated Reporting & Data Integrity Validation** – Auto-generated QC summaries, file traceability verification.          |
 
@@ -60,7 +60,7 @@ Pain points were categorized according to operational phase, user role, and syst
 
 ## 4. Cross-Role Pain & Opportunity Mapping
 
-| **Role**                | **Primary Pain Points**                                               | **Opportunity Direction (SMP Intervention)**                        |
+| **Role**                | **Primary Pain Points**                                               | **Opportunity Direction (OIS Intervention)**                        |
 | ----------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | **Surveyor (Operator)** | - Manual data validation, repetitive UI switching, fragmented alarms  | Unified mission console combining control, QC, and alerts.          |
 | **Senior Surveyor**     | - No cross-mission visibility, repeated oversight of surveyor actions | Multi-mission supervisory view and configuration templates.         |
@@ -72,7 +72,7 @@ Pain points were categorized according to operational phase, user role, and syst
 
 ## 5. Opportunity Themes (Strategic Grouping)
 
-| **Theme**                                        | **Problem Addressed**                                             | **Example SMP Features / Modules**                                               |
+| **Theme**                                        | **Problem Addressed**                                             | **Example OIS Features / Modules**                                               |
 | ------------------------------------------------ | ----------------------------------------------------------------- | -------------------------------------------------------------------------------- |
 | **1. Configuration Automation & Control Safety** | Manual setup, inconsistent configuration, error-prone calibration | Configuration Templates, Configuration Lock, Rollback, Auto-Diagnostics          |
 | **2. Unified Operational Environment**           | Multi-tool fragmentation, manual validation                       | Mission Deck, Command & Control Core, Multi-Sensor Dashboard                     |
@@ -98,7 +98,7 @@ Pain points were categorized according to operational phase, user role, and syst
 
 ## 7. Strategic Design Implications
 
-1. **SMP as the single operational environment:** unify fragmented tool landscape into a cohesive workspace.
+1. **OIS as the single operational environment:** unify fragmented tool landscape into a cohesive workspace.
 2. **Shift from reactive QC to proactive health monitoring:** embed diagnostics, auto-thresholds, and alerts.
 3. **Enable operator efficiency scaling:** through automation, template-driven configuration, and multi-mission support.
 4. **Institutionalize traceability:** every event, action, and change is auto-logged with role attribution.

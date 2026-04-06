@@ -4,13 +4,13 @@ version: 0.1.0
 last_updated: 2025-11-09
 status: draft
 owners: [design@survey-platform.io]
-tags: [future-directions, design-research, open-items, roadmap-alignment, smp-evolution]
+tags: [future-directions, design-research, open-items, roadmap-alignment, ois-evolution]
 ---
 
 # PDD.07_Future_Directions_and_Open_Items
 
 ## Purpose
-This document consolidates all **outstanding design questions, open topics, and future directions** identified across the Survey Management Platform (SMP) design documentation.  
+This document consolidates all **outstanding design questions, open topics, and future directions** identified across the OI Survey (OIS) design documentation.  
 It provides a single reference for tracking unresolved items, guiding validation, and prioritizing design research activities during the next stages of product definition.
 
 ---
@@ -157,7 +157,7 @@ Each open item includes:
 
 ### Summary Statement
 
-> The **Future Directions and Open Items** document provides a structured overview of all unresolved design elements within the SMP ecosystem.  
+> The **Future Directions and Open Items** document provides a structured overview of all unresolved design elements within the OIS ecosystem.  
 > It connects conceptual design with future implementation, ensuring continuity, traceability, and clarity as the platform evolves toward field validation and production readiness.
 
 ---

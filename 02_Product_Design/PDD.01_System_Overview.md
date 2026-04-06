@@ -10,13 +10,13 @@ tags: [system, overview, architecture, missions, structure]
 # PDD.01_System_Overview
 
 ## Purpose
-This document provides a high-level overview of the **Survey Management Platform (SMP)** system—its structure, major components, and operational flow.  
-It defines how the SMP functions as an integrated environment for **multi-mission command, control, monitoring, and traceability** within offshore survey operations.
+This document provides a high-level overview of the **OI Survey (OIS)** system—its structure, major components, and operational flow.  
+It defines how the OIS functions as an integrated environment for **multi-mission command, control, monitoring, and traceability** within offshore survey operations.
 
 ---
 
 ## Scope & Context
-The SMP enables survey teams to manage **multiple survey missions** within a unified operational framework.  
+The OIS enables survey teams to manage **multiple survey missions** within a unified operational framework.  
 It coordinates real-time interaction between control functions, monitoring interfaces, data assurance tools, and mission logging.
 
 The system is conceptually divided into three core layers:
@@ -29,7 +29,7 @@ The system is conceptually divided into three core layers:
 ## Key Concepts / Framework
 
 ### System Purpose
-SMP centralizes control, health awareness, and traceability of all ongoing survey missions.  
+OIS centralizes control, health awareness, and traceability of all ongoing survey missions.  
 It allows operators to:
 - Select and manage active missions.
 - Execute commands on sensors and subsystems.
@@ -70,7 +70,7 @@ Each mission maintains an isolated operational context, ensuring **traceability 
 - **Online Log** remains global, consolidating cross-mission traceability.
 
 #### 3. Data Flow Overview
-Conceptually, the SMP operates as a **closed feedback loop**:
+Conceptually, the OIS operates as a **closed feedback loop**:
 1. **Command issued** → through Mission Deck or tool.
 2. **Action executed** → sensor/system responds.
 3. **Feedback observed** → through Health metrics or Stream Viewer.
@@ -102,7 +102,7 @@ Conceptually, the SMP operates as a **closed feedback loop**:
 
 ## Acceptance Criteria
 
-- System overview accurately represents current SMP architecture and design intent.  
+- System overview accurately represents current OIS architecture and design intent.  
 - Mission lifecycle and context propagation are clearly defined.  
 - Core modules and their relationships are understandable to both product and engineering stakeholders.  
 - Data and control flow provide a conceptual baseline for detailed UX and functional documents.  
@@ -122,7 +122,7 @@ Conceptually, the SMP operates as a **closed feedback loop**:
 
 ### Summary Statement
 
-> The SMP operates as an integrated mission ecosystem—combining command, monitoring, diagnostics, and logging into a synchronized multi-mission environment. Each module fulfills a clear role in maintaining safety, transparency, and data integrity across complex offshore survey operations.
+> The OIS operates as an integrated mission ecosystem—combining command, monitoring, diagnostics, and logging into a synchronized multi-mission environment. Each module fulfills a clear role in maintaining safety, transparency, and data integrity across complex offshore survey operations.
 
 ---
 

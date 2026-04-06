@@ -10,7 +10,7 @@ tags: [data-architecture, configuration, telemetry, thresholds, traceability, de
 # PDD.05_Data_and_Configuration_Structure
 
 ## Purpose
-This document defines the **data and configuration framework** that underpins the Survey Management Platform (SMP).  
+This document defines the **data and configuration framework** that underpins the OI Survey (OIS).  
 It establishes how configurations, telemetry, and mission-related data are structured, validated, and synchronized across modules to ensure consistency, reliability, and traceability during remote survey operations.
 
 The goal is to maintain a **single source of truth** for system and mission configuration, allowing for safe real-time monitoring, rollback, and cross-mission comparability.
@@ -18,7 +18,7 @@ The goal is to maintain a **single source of truth** for system and mission conf
 ---
 
 ## Scope & Context
-The SMP operates across two data layers:
+The OIS operates across two data layers:
 
 | Layer | Description | Example |
 |-------|--------------|----------|
@@ -35,7 +35,7 @@ This document defines the structure and behavior of these layers, including how 
 
 ## Data Model Overview
 
-The SMP data model follows a **mission-centric hierarchy**, where all telemetry, configuration, and log entries are tied to a specific mission context.  
+The OIS data model follows a **mission-centric hierarchy**, where all telemetry, configuration, and log entries are tied to a specific mission context.  
 Below is the conceptual entity relationship summary.
 
 ### 🔗 Primary Entities
@@ -54,7 +54,7 @@ Below is the conceptual entity relationship summary.
 
 ## Configuration Data Schema
 
-The SMP uses structured, modular configuration types.  
+The OIS uses structured, modular configuration types.  
 Each type maintains parameter consistency, validation, and inheritance rules.
 
 | Category | Example Parameters | Description |
@@ -140,7 +140,7 @@ Snapshots and logs are linked for full operational replay and auditability.
 | **Mission Deck** | Consumes configuration and thresholds; publishes operational events. | Displays real-time system and health metrics. |
 | **Stream Viewer** | Consumes telemetry and threshold data. | Uses threshold definitions to render QC overlays. |
 | **Configuration Manager** | Consumes templates and thresholds; publishes configuration versions. | Central configuration control. |
-| **Online Log** | Consumes all event and configuration change messages. | Acts as the audit trail for SMP activity. |
+| **Online Log** | Consumes all event and configuration change messages. | Acts as the audit trail for OIS activity. |
 | **Triage Hub** | Consumes mission summary data and health status. | Displays cross-mission awareness. |
 
 These inter-module connections ensure that a single change in configuration or telemetry is reflected consistently across the platform.
@@ -172,7 +172,7 @@ These inter-module connections ensure that a single change in configuration or t
 
 ### Summary Statement
 
-> The **Data & Configuration Structure** defines the backbone of the SMP’s information integrity—ensuring all modules operate on synchronized, validated, and auditable data.  
+> The **Data & Configuration Structure** defines the backbone of the OIS's information integrity—ensuring all modules operate on synchronized, validated, and auditable data.  
 > Through versioning, structured schemas, and consistent threshold management, it supports reliable multi-mission operations and long-term traceability of configuration and telemetry across the entire platform.
 
 ---

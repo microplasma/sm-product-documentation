@@ -10,7 +10,7 @@ tags: [functional-specification, mission-deck, command-control, health-monitorin
 # PDD.04.02_Mission_Deck
 
 ## Purpose
-The **Mission Deck** is the central operational workspace of the Survey Management Platform (SMP).  
+The **Mission Deck** is the central operational workspace of the OI Survey (OIS).  
 It enables surveyors to control sensors, execute mission-level actions, monitor system and data health, manage alerts, and supervise live data recording and transfer—all within the active mission context.
 
 The Mission Deck integrates **Command & Control**, **Health and Quality Monitoring**, **Alert Management**, and **Traceability** into one synchronized view, ensuring safe, transparent, and efficient mission operations.
@@ -18,7 +18,7 @@ The Mission Deck integrates **Command & Control**, **Health and Quality Monitori
 ---
 
 ## Scope & Context
-The Mission Deck belongs to the **Mission Layer** of the SMP and operates strictly within the currently active mission.  
+The Mission Deck belongs to the **Mission Layer** of the OIS and operates strictly within the currently active mission.  
 It is primarily used by **Survey Operators** and **Senior Surveyors** during mission preparation, execution, and live data acquisition.
 
 Functions include:

@@ -10,13 +10,13 @@ tags: [introduction, principles, foundation, design]
 # PDD.00_Introduction_and_Principles
 
 ## Purpose
-This document introduces the **Survey Management Platform (SMP)**—a unified operational environment that enables marine survey teams to **plan, execute, monitor, and manage multiple concurrent survey missions** with full situational awareness and data traceability.  
+This document introduces the **OI Survey (OIS)**—a unified operational environment that enables marine survey teams to **plan, execute, monitor, and manage multiple concurrent survey missions** with full situational awareness and data traceability.  
 It defines the **design philosophy**, **core principles**, and **context of use** that underpin all subsequent design and functional specifications.
 
 ---
 
 ## Scope & Context
-The SMP serves as the operator’s central **command, monitoring, and assurance system**, designed for real-time management of offshore survey operations.  
+The OIS serves as the operator’s central **command, monitoring, and assurance system**, designed for real-time management of offshore survey operations.  
 It provides:
 - Mission-level **Command & Control** for safe and consistent execution.  
 - Continuous **Active Monitoring** of system and sensor health.  
@@ -48,14 +48,14 @@ The platform is used by survey teams operating from **offshore vessels**, **remo
 ### Product Vision
 > “A single operational platform that empowers survey teams to command, monitor, and validate multiple marine survey missions safely, transparently, and with full confidence in data quality.”
 
-SMP combines mission control with assurance capabilities—enabling surveyors to:
+OIS combines mission control with assurance capabilities—enabling surveyors to:
 - **Execute** actions across missions with consistent workflows.  
 - **Monitor** key metrics that indicate system health and sensor quality.  
 - **Record and verify** every event for audit and collaboration.  
 
 ### Target User Roles
 
-| Role | Responsibilities | SMP Perspective |
+| Role | Responsibilities | OIS Perspective |
 |------|------------------|-----------------|
 | **Project Execution Coordinator (PEC)** | Coordinates project execution and communication between onshore and offshore teams. | Oversees global mission states in the **Triage Hub**; ensures operational alignment. |
 | **Senior Surveyor** | Responsible for mobilisation, calibration, and problem-solving during operations. | Uses **Mission Deck** and **Diagnostics** tools to validate readiness and troubleshoot issues. |
@@ -97,7 +97,7 @@ Typical workstation layout consists of **8 screens arranged in a 4×2 grid**, al
 
 ## Acceptance Criteria
 
-- SMP principles are clearly documented and understood by all design and engineering stakeholders.  
+- OIS principles are clearly documented and understood by all design and engineering stakeholders.  
 - Roles, responsibilities, and operational contexts are explicitly mapped.  
 - The relationship between Command & Control, Active Monitoring, and Traceability is clearly expressed.  
 - The multi-screen, multi-mission context is fully defined for future reference in UX and functional design files.  
@@ -117,7 +117,7 @@ Typical workstation layout consists of **8 screens arranged in a 4×2 grid**, al
 
 ### Summary Statement
 
-> The **Survey Management Platform (SMP)** is designed to unify marine survey operations under a single, operator-centered environment—balancing command precision, monitoring clarity, and end-to-end traceability across concurrent missions.
+> The **OI Survey (OIS)** is designed to unify marine survey operations under a single, operator-centered environment—balancing command precision, monitoring clarity, and end-to-end traceability across concurrent missions.
 
 ---
 
