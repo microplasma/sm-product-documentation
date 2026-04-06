@@ -1,4 +1,4 @@
----
+﻿---
 doc_id: PFD.01
 version: 0.1.0
 last_updated: 2025-11-09
@@ -7,20 +7,20 @@ owners: [design@survey-platform.io]
 tags: [product-vision, ois, remote-operations, design-principles]
 ---
 
-# PFD.01 – Product Vision
+# PFD.01 - Product Vision
 
 **Version:** 2.1  
 **Date:** 2025-10-25  
-**Owner:** Product Design & Strategy – OIS Core Team  
+**Owner:** Product Design & Strategy - OIS Core Team  
 **Status:** Updated Draft
 
 ---
 
 ## 1. Vision Statement
 
-> **OI Survey (OIS)** enables Ocean Infinity’s teams to manage, monitor, and control complex marine survey operations — across vessels, systems, and missions — from anywhere, with confidence, safety, and efficiency.
+> **OI Survey (OIS)** enables Ocean Infinity's teams to manage, monitor, and control complex marine survey operations - across vessels, systems, and missions - from anywhere, with confidence, safety, and efficiency.
 
-OIS transforms how offshore, onshore, and remote surveyors collaborate. It replaces fragmented, tool-heavy workflows with a unified, intelligent environment that connects data, sensors, and people through real-time awareness, automation, and **safe multi-mission operations**.
+OIS is intended to transform how offshore, onshore, and remote surveyors collaborate. It aims to replace fragmented, tool-heavy workflows with a unified, intelligent environment that connects data, sensors, and people through real-time awareness, automation, and **safe multi-mission operations**.
 
 ---
 
@@ -32,7 +32,7 @@ OIS is designed to:
 * Unify data and operational control across the fleet.  
 * Reduce cognitive and procedural load on operators.  
 * Ensure data integrity and operational safety.  
-* Enable **surveyors to manage multiple missions simultaneously**.  
+* Enable future-state workflows where surveyors can manage multiple missions safely.  
 * Scale from single-vessel operations to fully remote, multi-mission environments.
 
 ---
@@ -40,7 +40,7 @@ OIS is designed to:
 ## 3. Strategic Context
 
 Marine survey operations are transitioning from vessel-based execution to distributed, remote, and autonomous control models.  
-OIS sits at the center of this transformation — **reducing operational complexity while enabling multi-mission oversight by individual operators**.
+OIS sits at the center of this transformation as a future-state product direction - **reducing operational complexity while enabling operator-level multi-mission oversight where it can be done safely and credibly**.
 
 | Trend                                       | OIS Response                                               |
 | ------------------------------------------- | ---------------------------------------------------------- |
@@ -55,68 +55,68 @@ OIS sits at the center of this transformation — **reducing operational complex
 
 ### 4.1 What OIS Is
 
-A **mission-oriented operating system** for remote and autonomous survey operations, designed to unify control, monitoring, and collaboration.
+A **mission-oriented operating system** for remote and autonomous survey operations, designed to unify control, monitoring, and collaboration through a coherent operational layer.
 
 ### 4.2 What OIS Is Not
 
 * Not a replacement for acquisition or navigation software.  
 * Not a reporting platform, though it feeds report generation.  
-* Not a long-term data repository — it synchronizes and validates operational data in real time.
+* Not a long-term data repository - it synchronizes and validates operational data in real time.
 
 ### 4.3 Core Role
 
-> **To orchestrate people, systems, and data across the survey lifecycle — through control, visibility, and automation.**
+> **To orchestrate people, systems, and data across the survey lifecycle - through control, visibility, and automation.**
 
 ---
 
 ## 5. Core Vision Pillars
 
-| **Pillar**                       | **Purpose**                                                        | **Outcome**                                           |
-| -------------------------------- | ------------------------------------------------------------------ | ----------------------------------------------------- |
-| **Command & Control**            | Centralized, safe execution of survey operations.                  | Reduced manual intervention and faster setup.         |
-| **Active Monitoring**            | Unified awareness of data, sensors, and system health.             | Early anomaly detection and improved data quality.    |
-| **Collaboration & Traceability** | Seamless teamwork with full visibility of actions.                 | Fewer interruptions, easier handovers.                |
-| **Scalability & Resilience**     | **Operator-level mission concurrency** and distributed operations. | Maintain operational throughput with fewer personnel. |
+| **Pillar**                       | **Purpose** | **Outcome** |
+| -------------------------------- | ----------- | ----------- |
+| **Command & Control**            | Centralized, safe execution of survey operations. | Reduced manual intervention and faster setup. |
+| **Active Monitoring**            | Unified awareness of data, sensors, and system health. | Early anomaly detection and improved data quality. |
+| **Collaboration & Traceability** | Seamless teamwork with full visibility of actions. | Fewer interruptions, easier handovers. |
+| **Scalability & Resilience**     | Distributed operations and future operator-level mission concurrency where validated. | Maintain operational throughput with fewer personnel while preserving safety and control integrity. |
 
 ---
 
 ## 6. Guiding Design Principles
 
-| **Principle**                  | **Description**                                                          |
-| ------------------------------ | ------------------------------------------------------------------------ |
-| **Unified Context**            | All critical mission data is accessible in one environment.              |
-| **Non-Blocking Collaboration** | Users can assist or supervise without disrupting active operations.      |
-| **Acknowledged Control**       | All commands follow a clear feedback loop (Send → Ack → Working → Done). |
-| **Reduced Complexity**         | Consolidated interfaces simplify control and awareness across missions.  |
-| **Role-Based Trust**           | Permissions ensure safe command authority and auditability.              |
-| **System Memory**              | Every change, configuration, and event is recorded and restorable.       |
+| **Principle** | **Description** |
+| ------------- | --------------- |
+| **Unified Context** | All critical mission data is accessible in one environment. |
+| **Non-Blocking Collaboration** | Users can assist or supervise without disrupting active operations. |
+| **Acknowledged Control** | All commands follow a clear feedback loop (Send -> Ack -> Working -> Done). |
+| **Reduced Complexity** | Consolidated interfaces simplify control and awareness across missions. |
+| **Role-Based Trust** | Permissions ensure safe command authority and auditability. |
+| **System Memory** | Every change, configuration, and event is recorded and restorable. |
 
 ---
 
 ## 7. Success Metrics
 
-| **Category**               | **Metric**                        | **Target**                               |
-| -------------------------- | --------------------------------- | ---------------------------------------- |
-| **Operational Efficiency** | Mobilization time reduction       | ≥ 30%                                    |
-| **Operational Efficiency** | **Average missions per operator** | ≥ 2 concurrent missions sustained safely |
-| **Situational Awareness**  | Mean time to detect anomaly       | ≤ 2 minutes                              |
-| **Reliability**            | Fault recovery time               | ≤ 10 minutes                             |
-| **User Experience**        | Operator satisfaction             | ≥ 90% positive                           |
-| **Traceability**           | Automated event capture           | 100%                                     |
+| **Category** | **Metric** | **Target** |
+| ------------ | ---------- | ---------- |
+| **Operational Efficiency** | Mobilization time reduction | >= 30% |
+| **Operational Efficiency** | **Average missions per operator** | Target future state: >= 2 concurrent missions sustained safely |
+| **Situational Awareness** | Mean time to detect anomaly | <= 2 minutes |
+| **Reliability** | Fault recovery time | <= 10 minutes |
+| **User Experience** | Operator satisfaction | >= 90% positive |
+| **Traceability** | Automated event capture | 100% |
 
 ---
 
 ## 8. Roadmap Snapshot
 
-| **Phase**                 | **Focus**                                | **Key Deliverables**                        |
-| ------------------------- | ---------------------------------------- | ------------------------------------------- |
-| **Phase 1 (MVP)**         | Core operational control and monitoring  | Mission Deck v1, Online Log, Sensor Control |
-| **Phase 2 (Expansion)**   | Multi-user collaboration and diagnostics | RBAC, Configuration Templates, Rollback     |
-| **Phase 3 (Scalability)** | Operator-level multi-mission capability  | Mission concurrency, triage interface       |
+| **Phase** | **Focus** | **Key Deliverables** |
+| --------- | --------- | -------------------- |
+| **Phase 1 (MVP)** | Core operational control and monitoring | Mission Deck v1, Online Log, Sensor Control |
+| **Phase 2 (Expansion)** | Multi-user collaboration and diagnostics | RBAC, Configuration Templates, Rollback |
+| **Phase 3 (Scalability)** | Operator-level multi-mission capability | Mission concurrency, triage interface |
 
 **Note:** Roadmap phases are indicative and subject to validation through feature prioritization workshops.
 
 ---
 
 **End of Document**  
-*"Simplifying control, enabling surveyors to manage more — safely and efficiently."*
+*"Simplifying control, enabling surveyors to manage more, safely and efficiently."*
