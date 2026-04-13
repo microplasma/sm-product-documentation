@@ -1,4 +1,4 @@
-﻿---
+---
 doc_id: PFD.02
 version: 0.1.0
 last_updated: 2025-11-09
@@ -100,7 +100,7 @@ The following roadmap is **indicative only** and will be validated against **fea
 | **Phase** | **Focus** | **Indicative Milestones** |
 | --------- | --------- | ------------------------- |
 | **Phase 1 - Core Operations** | Establish unified mission control and monitoring. | Mission Deck v1, Online Log integration, Sensor Control, QC Dashboard. |
-| **Phase 2 - Collaboration & Concurrency** | Enable multi-user and multi-mission operation. | Triage Hub, Ack Loop, Config Templates, operator-level multi-mission sessions where validated. |
+| **Phase 2 - Collaboration & Concurrency** | Enable multi-user and multi-mission operation. | Multi-Mission Context, Ack Loop, Config Templates, operator-level multi-mission sessions where validated. |
 | **Phase 3 - Intelligent Operations** | Introduce automation and predictive diagnostics. | AI Diagnostics, auto-triage, fleet orchestration. |
 
 **Note:** Final roadmap structure will be derived from workshop validation sessions.
@@ -132,3 +132,4 @@ The following roadmap is **indicative only** and will be validated against **fea
 
 **End of Document**
 *"From complexity to clarity - enabling every surveyor to manage more, safely and efficiently."*
+

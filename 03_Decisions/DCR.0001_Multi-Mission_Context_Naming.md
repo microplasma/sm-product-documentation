@@ -1,4 +1,4 @@
-﻿---
+---
 decision_id: DCR.0001
 title: Multi-Mission Context Naming
 status: accepted
@@ -6,7 +6,7 @@ visibility: internal
 owners: ["design@survey-platform.io"]
 tags: ["decision", "naming", "product-design", "multi-mission"]
 created: 2026-04-06
-last_updated: 2026-04-06
+last_updated: 2026-04-08
 links:
   - rel: evidence
     href: 01_UX_Research/UXR.08_Senior_Surveyor_Workshop_Feature_Themes.md
@@ -39,5 +39,12 @@ The updated term better reflects the surveyor's actual job: maintaining awarenes
 - Keep `Triage Hub`
 - Use `Mission Overview`
 
+## Product Naming Note
+Use `OI Survey` as the primary full product name in product and UI copy. `OIS` remains approved shorthand, not a competing visible product title.
+
 ## Follow-Up
 - Validate the terminology with a broader stakeholder group as the product language matures.
+
+
+
+

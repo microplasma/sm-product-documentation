@@ -1,4 +1,4 @@
-﻿---
+---
 doc_id: PFD.03
 version: 0.1.0
 last_updated: 2025-11-09
@@ -74,9 +74,9 @@ The **Mission Deck** is the operator's live workspace environment. Each operator
 
 ---
 
-### 4.2 Triage Hub
+### 4.2 Multi-Mission Context
 
-The **Triage Hub** enables situational overview and support across active missions:
+The **Multi-Mission Context** enables situational overview and support across active missions:
 
 * Aggregates mission states, alerts, and health scores.  
 * Provides real-time prioritization of missions needing attention.  
@@ -217,3 +217,4 @@ The OIS architecture defines a **modular, mission-oriented, and scalable system*
 
 **End of Document**  
 *"Designed for operational efficiency - empowering surveyors to manage more, with less complexity."*
+

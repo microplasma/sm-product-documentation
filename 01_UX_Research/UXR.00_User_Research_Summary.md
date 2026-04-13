@@ -1,4 +1,4 @@
-﻿---
+---
 doc_id: UXR.00
 version: 0.3.0
 last_updated: 2026-04-06
@@ -158,7 +158,7 @@ The sensor catalog and Planner-derived usage summary are useful because they sha
 | **Active Monitoring and QC** | AM -> Output Monitoring, Diagnostics & Health | Live multi-sensor views, thresholds, auto-validation of parameters. |
 | **Traceability and Auditability** | Cross -> Online Log, File Monitoring | Auto-log commands + events for seamless handover. |
 | **Collaborative Operations** | Cross -> RBAC & Collaboration | Supervisors join sessions without interrupting others. |
-| **Operational Efficiency** | Platform -> Mission Deck / Triage Hub | Enable multi-mission operation (2-4 missions per operator). |
+| **Operational Efficiency** | Platform -> Mission Deck / Multi-Mission Context | Enable multi-mission operation (2-4 missions per operator). |
 | **Sensor-Aware Modeling** | Cross -> Sensor Control, Active Monitoring, File Monitoring | Differentiate between controllable devices, coupled subsystems, dependency systems, and delayed-ingest assets. |
 
 ---
@@ -200,3 +200,4 @@ The sensor catalog and Planner-derived usage summary are useful because they sha
 **End of Document**
 
 *"Ground truth captured - OIS design anchored in operator reality."*
+
