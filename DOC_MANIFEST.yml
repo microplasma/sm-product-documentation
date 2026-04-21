@@ -66,7 +66,7 @@ sections:
         title: Design Principles and Documentation Model
         path: 02_Product_Design/PDD.00_Design_Principles_and_Documentation_Model.md
       - doc_id: PDD.01
-        title: OIS Product Topology
+        title: OI Survey Product Topology
         path: 02_Product_Design/PDD.01_OIS_Product_Topology.md
       - doc_id: PDD.02
         title: Operational Information Model
@@ -110,6 +110,12 @@ sections:
       - decision_id: DCR.0001
         title: Multi-Mission Context Naming
         path: 03_Decisions/DCR.0001_Multi-Mission_Context_Naming.md
+      - decision_id: DCR.0002
+        title: Product Surface Model
+        path: 03_Decisions/DCR.0002_Product_Surface_Model.md
+      - decision_id: DCR.0003
+        title: Hydrosens Placement Model
+        path: 03_Decisions/DCR.0003_Hydrosens_Placement_Model.md
 
 root_docs:
   - doc_id: RD.ROOT

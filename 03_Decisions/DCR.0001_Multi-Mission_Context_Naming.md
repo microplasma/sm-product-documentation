@@ -3,7 +3,7 @@ decision_id: DCR.0001
 title: Multi-Mission Context Naming
 status: accepted
 visibility: internal
-owners: ["design@survey-platform.io"]
+owners: ["pedro.baptista@oceaninfinity.com"]
 tags: ["decision", "naming", "product-design", "multi-mission"]
 created: 2026-04-06
 last_updated: 2026-04-08
@@ -44,7 +44,6 @@ Use `OI Survey` as the primary full product name in product and UI copy. `OIS` r
 
 ## Follow-Up
 - Validate the terminology with a broader stakeholder group as the product language matures.
-
 
 
 

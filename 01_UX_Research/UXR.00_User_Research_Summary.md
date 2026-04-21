@@ -3,7 +3,7 @@ doc_id: UXR.00
 version: 0.3.0
 last_updated: 2026-04-06
 status: draft
-owners: [research@survey-platform.io]
+owners: [pedro.baptista@oceaninfinity.com]
 tags: [ux-research, user-insights, ois, operator-workflows]
 ---
 
@@ -200,4 +200,3 @@ The sensor catalog and Planner-derived usage summary are useful because they sha
 **End of Document**
 
 *"Ground truth captured - OIS design anchored in operator reality."*
-

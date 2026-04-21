@@ -3,18 +3,11 @@ doc_id: PFD.04
 version: 0.1.0
 last_updated: 2025-11-09
 status: draft
-owners: [design@survey-platform.io]
+owners: [pedro.baptista@oceaninfinity.com]
 tags: [product-pillars, command-and-control, active-monitoring, strategy]
 ---
 
 # PFD.04 - Product Pillars
-
-<!--
-Changes made:
-1) Added standardized front-matter for consistency across the repository.
-2) Updated heading formatting to clean ASCII.
-3) Lightly softened over-committed wording while preserving the future-state design intent.
--->
 
 **Version:** 2.1  
 **Date:** 2025-10-25  
@@ -25,21 +18,21 @@ Changes made:
 
 ## 1. Purpose
 
-This document defines the **core product pillars** that guide OI Survey (OIS) - specifically the two operational priorities identified in the workshop:
+This document defines the **core product pillars** that guide OI Survey (OIS), specifically the two operational priorities identified in the workshop:
 
 1. **Command & Control (C&C)**
 2. **Active Monitoring (AM)**
 
-Each pillar integrates validated workshop priorities (short-term and long-term) and reflects the strategic goal of **reducing operational complexity** while enabling **operator-level multi-mission efficiency** as a future-state ambition.
+These pillars should now be understood within the updated product model: OI Survey as a **unified operational ecosystem** expressed through operational surfaces, with mission-level clarity and multi-mission support developing together.
 
 ---
 
 ## 2. Overview of Pillars
 
 | **Pillar** | **Goal** | **Strategic Outcome** |
-| ---------- | -------- | --------------------- |
-| **Command & Control** | Simplify and centralize the safe execution of operational commands across missions. | Empower surveyors to manage multiple missions efficiently through automation and role-based control where appropriate. |
-| **Active Monitoring** | Provide real-time, unified awareness of data, sensor health, and mission progress. | Enhance data integrity, QC consistency, and early anomaly detection across concurrent operations. |
+| --- | --- | --- |
+| **Command & Control** | Support safe, legible operational action through the right mission-time surfaces. | Faster intervention, clearer consequence understanding, and stronger recovery behavior. |
+| **Active Monitoring** | Provide real-time awareness of data quality, system health, and evidence. | Better mission-time judgment, earlier anomaly detection, and stronger survey confidence. |
 
 ---
 
@@ -47,49 +40,46 @@ Each pillar integrates validated workshop priorities (short-term and long-term) 
 
 ### 3.1 Vision
 
-To enable safe, centralized, and efficient execution of mission control actions across connected operational systems - allowing a single operator to perform coordinated, traceable operations over multiple concurrent missions where this mode is validated.
+Enable safe, centralized, and efficient mission-time action across operational systems through surfaces that match the work being done, especially the **Systems** surface inside **Mission Deck**.
 
 ### 3.2 Design Intent
 
-* **Simplify operational complexity** by integrating control functions into a single environment.
-* **Standardize control behavior** through role-based permissions and feedback loops.
-* **Ensure safety** through validation and acknowledgement loops.
-* **Support collaboration** by allowing assistance and shared diagnostics without disrupting mission workflows.
+* **Simplify operational complexity** by reducing fragmentation between issue recognition, system context, and action.
+* **Place action in the right surface** so overview and deep control do not compete for the same interaction role.
+* **Ensure safety** through clear consequence language, validation, and acknowledgement patterns where needed.
+* **Support collaboration** by making authority and traceability legible during mission-time work.
 
 ### 3.3 Short-Term Priorities (Workshop-Aligned)
 
 | **Capability** | **Purpose** | **Outcome** |
-| -------------- | ----------- | ----------- |
+| --- | --- | --- |
+| **Mission Overview -> Systems handoff** | Move from decision surface to deep operational action without reconstructing context. | Faster, safer intervention. |
 | **ON/OFF/Restart Commands** | Execute safe control of operational systems where direct command is appropriate. | Streamlined recovery and reduced manual intervention. |
-| **Start/Stop Logging Commands** | Manage mission logging manually or automatically. | Prevents data loss and standardizes workflow. |
-| **Multi-User Accessibility** | Allow supervisors or seniors to access and troubleshoot operational contexts without interference. | Faster resolution and reduced downtime. |
-| **Configuration Templates / Profiles** | Save and apply predefined setups for mission types (e.g., Pipeline Inspection). | Consistent configurations and faster mobilization. |
-| **Online Log Integration** | Automatically record key operational events such as line start, line end, and deviation. | Seamless traceability and audit history. |
-| **I/O Tool from Sensor to Sensor** | Conceptually support routing or output relationships between systems. | Improved integration and flexibility across operational contexts. |
+| **Start/Stop Logging Commands** | Manage mission logging coherently with mission-time work. | Better continuity between operation and traceability. |
+| **Configuration Templates / Profiles** | Save and apply predefined setups for mission types. | Consistent configurations and faster mobilization. |
+| **Online Log Integration** | Automatically record key operational events and user actions. | Seamless traceability and audit history. |
+| **Authority and Lock Visibility** | Make role boundaries visible where live changes carry consequence. | Safer collaboration and fewer accidental edits. |
 
 ### 3.4 Long-Term Priorities (Workshop-Aligned)
 
 | **Capability** | **Purpose** | **Outcome** |
-| -------------- | ----------- | ----------- |
+| --- | --- | --- |
 | **Requesting Setting Changes (Ack Loop)** | Send -> Ack -> Working -> Finished confirmation flow. | Increased safety and transparency of remote operations. |
-| **Auto-Diagnostics / Health Check** | Routine connection and driver checks. | Early fault detection and proactive maintenance. |
-| **User-Defined Metrics (Advanced)** | Define custom derived values (e.g., INS drift rate). | Power-user customization and advanced QC. |
-| **Configurable Thresholds** | Define acceptable operational ranges. | Early identification of off-nominal conditions. |
+| **Auto-Diagnostics / Health Check** | Routine connection and driver checks. | Earlier fault detection and proactive maintenance. |
+| **Configurable Thresholds** | Define acceptable operational ranges. | Stronger readiness and QC interpretation. |
 | **Configuration Lock / Permission System** | Prevent unauthorized edits during live acquisition. | Operational safety and control integrity. |
-| **File Configuration (Split/Size/Time)** | Define file storage and splitting logic. | Streamlined data management and backup. |
-| **Auto-Pilot / DP System Integration** | Interface with DP systems for line/position holding. | Enhanced vessel stability during autonomous survey lines. |
-| **Read/Write Permissions** | Restrict edit/delete rights by role. | Role-based safety enforcement. |
 | **Changelog Journal** | Record all configuration changes over time. | Full operational traceability. |
 | **Rollback to Previous Config** | Restore last working configuration after issue. | Rapid recovery and minimal downtime. |
+| **Broader validated multi-mission control patterns** | Extend command models beyond the active mission package where credible. | Future-state scale without weakening near-term mission clarity. |
 
 ### 3.5 Success Metrics
 
 | **Category** | **Metric** | **Target** |
-| ------------ | ---------- | ---------- |
+| --- | --- | --- |
 | **Setup Efficiency** | Average setup time per mission | -30% |
 | **Safety & Reliability** | Command execution success rate | >= 99.5% |
 | **Traceability** | Logged control actions per mission | 100% |
-| **Operational Efficiency** | Missions controlled per operator | Target future state: >= 2 sustained safely |
+| **Operational Clarity** | Reduced context reconstruction during intervention | Qualitative validation through operator review |
 
 ---
 
@@ -97,80 +87,68 @@ To enable safe, centralized, and efficient execution of mission control actions 
 
 ### 4.1 Vision
 
-Deliver unified, real-time situational awareness across all mission contexts - allowing operators to detect, prioritize, and respond to issues faster while maintaining multi-mission oversight.
+Deliver unified, real-time situational awareness across the mission package through the right combination of **Mission Overview**, **Data Monitor**, **Systems**, and related evidence/QC capabilities.
 
 ### 4.2 Design Intent
 
-* **Enable clarity at scale**: visualize multiple missions without cognitive overload.
-* **Focus attention dynamically**: surface only critical events and thresholds.
-* **Provide continuous awareness**: unify QC, health, and sensor data views.
-* **Integrate traceability**: every alert, anomaly, and QC deviation logged automatically.
+* **Enable clarity at mission time** by showing what matters now before overwhelming users with raw telemetry.
+* **Focus attention dynamically** through issue, readiness, and QC signals that support judgment.
+* **Provide stronger evidence interpretation** through Data Monitor capabilities and detached evidence workflows where needed.
+* **Integrate traceability** so alerts, anomalies, and manual observations contribute to the operational record.
 
 ### 4.3 Short-Term Priorities (Workshop-Aligned)
 
 | **Capability** | **Purpose** | **Outcome** |
-| -------------- | ----------- | ----------- |
-| **Live Sensor Stream Viewer** | Display live operational data and evidence surfaces where they are meaningful to the mission context. | Immediate fault and data awareness. |
-| **Configurable Thresholds** | Define metric limits (e.g., SNR > 25dB). | Flexible QC monitoring. |
-| **Connection & Sync State** | Show clock drift, timing sync, and heartbeats. | Early detection of system issues. |
-| **Auto-Validation of Parameters** | Highlight values outside recommended ranges. | Automatic QC and reduced manual checks. |
-| **Sensor Quickview** | Display essential operational system details (status, downtime, etc.). | Rapid visual context for multiple missions. |
-| **Deviation Indicator** | Alert when vessel deviates from line tolerance. | Real-time navigation accuracy. |
-| **Alert Severity Levels** | Distinguish minor vs. critical issues. | Prioritized operator focus. |
-| **Status Indicators (Health)** | Traffic-light style system states. | Quick situational understanding. |
-| **Alert Markers** | Visual flags for data dropouts or anomalies. | Easier incident traceability. |
-| **Quality Status Indicator** | Simple color flag (Green/Amber/Red) based on thresholds. | Standardized QC summary. |
-| **Auto-Diagnostics / Health Check** | Routine connection integrity verification. | Preventive awareness before failure. |
-| **Quality Scoring (Optional)** | Weighted index summarizing overall mission data quality. | Quantified QC performance measure. |
+| --- | --- | --- |
+| **Mission Overview issue posture** | Summarize state, attention, issues, and next action for the active mission. | Faster mission-time orientation. |
+| **Live Sensor Stream Viewer** | Display live operational evidence where it is meaningful to the mission context. | Immediate fault and data awareness. |
+| **Stream QC / Detached Evidence Views** | Support deeper evidence interpretation without overloading Mission Overview or Systems. | Stronger confidence in QC decisions. |
+| **Connection & Sync State** | Show timing, sync, and heartbeat confidence. | Early detection of infrastructure and data issues. |
+| **Alert Severity Levels** | Distinguish minor vs critical issues. | Prioritized operator focus. |
+| **Status and Quality Indicators** | Make readiness and confidence easier to interpret. | Faster situational judgment. |
 
 ### 4.4 Long-Term Priorities (Workshop-Aligned)
 
 | **Capability** | **Purpose** | **Outcome** |
-| -------------- | ----------- | ----------- |
-| **Overlay Controls** | Toggle navigation, intensity, or grid layers. | Enhanced spatial context. |
-| **Snapshot Capture** | Take instant timestamped stills of operational outputs. | Quick reference for anomalies. |
-| **Weather/Tidal Overlay** | Integrate environmental data layers. | Broader situational context. |
-| **Cross-Sensor Correlation** | Overlay correlated metrics (e.g., INS drift vs. MBES noise). | Identify cause-and-effect patterns. |
-| **Track History Replay** | Review recent vessel paths and anomalies. | Short-term post-mission validation. |
-| **Linked Navigation View** | Mini-map overlay showing acquisition locations. | Geospatial awareness. |
-| **Multi-Sensor Split View** | Display multiple data sources side-by-side. | Comparative awareness between sensors. |
-| **Waypoint Management** | Create and manage mission reference points. | Simplified navigation and survey planning. |
-| **Survey Area Completion View** | Visualize heatmap of covered vs. remaining areas. | Operational progress insight. |
-| **Line Progress Indicator** | Show % line completed, deviation, distance remaining. | Performance monitoring. |
-| **Signal Flow Diagram (Interactive)** | Visualize signal or system relationships across acquisition, network, and storage contexts. | Diagnostic insight and issue tracing. |
-| **Color-Coded Quality Layer** | Overlay color-based QC metrics (e.g., density, SNR). | Unified data quality visualization. |
+| --- | --- | --- |
+| **Cross-Sensor Correlation** | Relate evidence across systems and modalities. | Better cause-and-effect understanding. |
+| **Multi-Sensor Split View** | Display multiple data sources side-by-side. | Stronger comparative monitoring. |
+| **Color-Coded Quality Layer** | Overlay quality metrics over evidence and monitoring views. | Unified QC interpretation. |
+| **Survey Area Completion View** | Show progress and remaining work. | Stronger mission posture awareness. |
+| **Broader cross-mission monitoring patterns** | Extend awareness beyond one mission where validated. | Future-state supervisory scale. |
 
 ### 4.5 Success Metrics
 
 | **Category** | **Metric** | **Target** |
-| ------------ | ---------- | ---------- |
+| --- | --- | --- |
 | **Situational Awareness** | Time to detect anomaly | <= 2 minutes |
 | **Data Quality** | QC alert accuracy | >= 95% |
-| **Operator Efficiency** | Missions monitored per operator | Target future state: >= 2 sustained safely |
 | **Resilience** | Downtime before alert escalation | <= 1 minute |
+| **Evidence Trust** | Reduced need for manual re-checking of "green" states | Qualitative validation through research follow-up |
 
 ---
 
 ## 5. Inter-Pillar Dependencies
 
 | **Dependency Area** | **Relationship** | **Impact** |
-| ------------------- | ---------------- | ---------- |
-| **Online Log & Traceability** | Common infrastructure supporting both pillars. | Ensures visibility and auditability across missions. |
-| **Alerts & Command Feedback** | Monitoring drives control responses; control actions feed monitoring logs. | Closed operational feedback loop. |
-| **Configuration Templates & Permissions** | Shared foundation for safety and efficiency. | Consistent configurations and safe concurrent operations. |
-| **RBAC & Collaboration Framework** | Enables multi-user session support and assistance. | Prevents interference and ensures accountability. |
+| --- | --- | --- |
+| **Mission Overview <-> Systems** | Monitoring informs action; action should remain connected to issue context. | Closed mission-time feedback loop. |
+| **Data Monitor <-> Systems** | Evidence supports intervention and validation. | Better judgment at the point of action. |
+| **Online Log & Traceability** | Common backbone supporting both pillars. | Visibility and auditability across mission work. |
+| **Configuration Templates & Permissions** | Shared foundation for safety and efficiency. | Consistent setup and safe collaboration. |
+| **Multi-Mission Context** | Extends awareness patterns beyond the active mission package. | Future supervisory scale without replacing single-mission focus. |
 
 ---
 
 ## 6. Strategic Outcomes
 
-1. **Operational Efficiency:** Fewer operators managing more missions safely where that mode is validated.
-2. **Situational Awareness:** Faster detection and triage of mission-critical issues.
-3. **Traceability:** Complete log of all control, alert, and QC events.
-4. **Collaboration:** Cross-role assistance and supervision with minimal disruption.
-5. **Simplicity at Scale:** Operators remain focused through clear, contextual interfaces.
+1. **Operational Efficiency:** Faster mission-time understanding and recovery through clearer surface roles.
+2. **Situational Awareness:** Better issue recognition and QC interpretation across overview, systems, and evidence surfaces.
+3. **Traceability:** Complete narrative of control, alert, and QC events.
+4. **Collaboration:** Safer cross-role support with clearer authority and accountability.
+5. **Scalable Product Structure:** A strong active-mission package that can later support broader cross-mission patterns.
 
 ---
 
 **End of Document**
-*"Command and control what matters; monitor everything that does."*
+*"Act where action belongs; monitor where evidence is clearest."*

@@ -4,6 +4,8 @@ last_updated: 2026-04-06
 
 This section describes how OI Survey should work for remote survey operations. It is written for both human readers and AI agents, and is organized around surveyor needs rather than a flat list of screens.
 
+The current product-design framing treats OI Survey as a unified operational ecosystem expressed through connected operational surfaces. Within that model, Mission Deck remains the active mission-time container, with Mission Overview as the default decision surface and Systems as the deeper operational/control surface, while Multi-Mission Context evolves in parallel from the same attention model.
+
 ## Documentation Model
 The Product Design section is layered so that mature concepts, evolving concepts, specialized subsystems, and shared services can live together without being treated as equally fixed.
 
@@ -75,7 +77,7 @@ The Product Design section is layered so that mature concepts, evolving concepts
 
 - **PDD.07 - Design Bets, Gaps and Future Directions**  
   [`PDD.07_Design_Bets_Gaps_and_Future_Directions.md`](./PDD.07_Design_Bets_Gaps_and_Future_Directions.md)  
-  *Active bets, prototype gaps, unresolved product questions, and future-facing ideas worth preserving.*
+  *Active bets, prototype gaps, promoted unresolved architecture questions, and future-facing ideas worth preserving.*
 
 ## Navigation
 - Upstream: **UX Research** -> [`../01_UX_Research/README.md`](../01_UX_Research/README.md)
@@ -85,5 +87,6 @@ The Product Design section is layered so that mature concepts, evolving concepts
 - Read `PDD.00` and `PDD.01` first when the question is about product shape or scope.
 - Read `PDD.03` when the question is about shared interaction rules or surface behavior.
 - Read `PDD.04.*` when the question is about a specific surface, service, or subsystem.
+- Read `PDD.07` when the question is about unresolved architecture, product-fit gaps, or future-facing design questions that are important but not yet settled.
 - Treat this folder as product-design truth, not a 1:1 reflection of the current prototype.
 - Preserve heading structure and keep tables intact for retrieval.

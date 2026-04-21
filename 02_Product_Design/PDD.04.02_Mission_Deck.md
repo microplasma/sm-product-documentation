@@ -4,7 +4,7 @@ title: Mission Deck
 version: 0.2.0
 status: draft
 visibility: internal
-owners: ["design@survey-platform.io"]
+owners: ["pedro.baptista@oceaninfinity.com"]
 tags: ["design", "mission-deck", "operations", "intervention"]
 created: 2025-11-09
 last_updated: 2026-04-06
@@ -28,11 +28,12 @@ links:
 **Core**
 
 ## Purpose
-Mission Deck is the primary mission-time workspace in OI Survey. It is where the surveyor supervises the active mission, understands selected system state, interprets key evidence, and performs safe interventions.
+Mission Deck is the primary mission-time container in OI Survey. It should hold together the active mission package while keeping different operational questions in the right internal surfaces rather than collapsing everything into one flat cockpit.
 
 ## Surveyor Need
-During live operations the surveyor needs one dependable workspace to answer:
+During live operations the surveyor needs one dependable mission-time package to answer:
 - What is happening in this mission right now?
+- What needs attention now?
 - Which system or dependency is causing concern?
 - What action is safe to take now?
 - What evidence supports or challenges my understanding?
@@ -40,48 +41,96 @@ During live operations the surveyor needs one dependable workspace to answer:
 
 ## Operational Role
 Mission Deck should coordinate:
-- mission posture and status
+- mission posture and issue awareness
 - selected-system understanding
 - intervention and recovery actions
 - readiness and dependency awareness
-- quick launch to deeper evidence or specialized workflows
+- movement to deeper evidence, traceability, or specialist workflows
 - traceable mission-time action
 
 ## Core Experience Model
 
+Mission Deck should be understood as a mission-time container composed primarily of two internal surfaces:
+
 | Area | Purpose |
 | --- | --- |
-| **Mission identity and posture** | Establishes active mission context, phase, and confidence. |
-| **Selected-system context** | Focuses the surveyor on the currently relevant operational system. |
-| **Intervention surfaces** | Supports actions that must be taken during mission time. |
-| **Evidence and health summaries** | Provide enough understanding to act or escalate without overloading the surveyor. |
-| **Links to deeper tools** | Launches detached evidence, Online Log, Hydrosens, or external navigation context when needed. |
+| **Mission Overview** | The default decision surface for active mission posture, issue recognition, and next attention target. |
+| **Systems** | The deep operational and control surface for selected-system action, recovery, configuration, and dependency understanding. |
+
+This means Mission Deck should support movement from overview to deeper operational action without forcing all mission-time work into one undifferentiated screen.
+
+## Internal Surface Roles
+
+### Mission Overview
+Mission Overview should:
+- establish active mission context
+- summarize posture, state, and confidence
+- highlight issues, attention, and next likely action
+- help the surveyor decide whether deeper system action is needed
+
+### Environmental Readiness
+Mission Overview should also be the primary place where **environmental readiness** is surfaced at mission level.
+
+This should include, where relevant:
+- current active profile age / freshness
+- trust state or validity of the currently relevant environmental profile
+- whether a newer cast is pending review
+- whether an approved profile has been distributed or applied to affected systems
+- mission consequence when profile truth is stale, missing, or questioned
+- a clear path to `Open Hydrosens`
+
+### Systems
+Systems should:
+- focus the surveyor on the currently relevant operational system
+- support intervention and recovery
+- expose consequence, dependency, and readiness meaning clearly
+- support system-specific variation while still feeling like one product
+
+For affected acoustic systems, `Systems` should:
+- show `SVP` as a dependency and readiness factor
+- show applied profile status where operationally meaningful
+- explain the consequence of stale, missing, or questioned environmental profile truth
+- provide a deep link into `Hydrosens`
+
+`Systems` should not absorb the full Hydrosens workflow. It should express dependency meaning, not subsystem ownership.
 
 ## Relationship To Other Product Elements
-- **Multi-Mission Context** chooses or shifts mission focus.
-- **Detached Evidence Surfaces** support deep inspection when evidence should detach from control.
+- **Multi-Mission Context** chooses or shifts mission focus at cross-mission level and should progressively reflect the most important mission-level signals that Mission Overview helps define.
+- **Data Monitor / Detached Evidence Surfaces** support deeper evidence review when interpretation should detach from the main mission-time surfaces.
 - **Online Log** captures the narrative of mission-time actions, alerts, and notes.
-- **Hydrosens** informs environmental readiness where sound velocity and related profiles matter.
+- **Hydrosens** informs environmental readiness where sound velocity and related profiles matter, while retaining the specialist workflow for acquisition, review, approval, and distribution.
 - **Qinsy** remains an external but essential navigation context for current operations.
 
 ## Design Requirements
 - The surveyor should be able to move from awareness to intervention without reconstructing context.
+- Mission Deck should not be treated as one flat cockpit where every function competes for the same interaction role.
+- Mission Overview should remain the default decision surface.
+- Systems should remain the deeper operational and control surface.
+- Environmental readiness should be visible at mission level without forcing the full Hydrosens workflow into Mission Deck.
+- Systems should express `SVP` dependency meaning for affected sensors without treating Hydrosens as a normal system pane.
 - Actions should expose consequence and downstream impact clearly.
-- Mission Deck should not try to fully absorb every specialized workflow.
-- It should support selected-system experiences that vary by system type while still feeling like one product.
-- The deck should remain effective in dense operational environments and support multiple-screen setups without depending on a rigid layout definition.
+- Mission Deck should not try to fully absorb every specialist workflow.
+- The package should remain effective in dense operational environments and support multiple-screen setups without depending on a rigid layout definition.
 
 ## Current Direction
-Mission Deck remains one of the most important and stable concepts in OI Survey. While the exact internal structure has evolved through prototyping, the product role remains clear: it is the surveyor's central mission-time workspace.
+Mission Deck remains one of the most important and stable concepts in OI Survey, but its internal structure is now clearer than earlier versions of the documentation suggested.
+
+The current direction is:
+- **Mission Overview** as the default primary decision surface
+- **Systems** as the deep operational/control surface
+- **Online Log** and **Data Monitor** as connected but distinct parts of the broader mission-time package
+- **Hydrosens** as a specialized environmental readiness subsystem connected through mission-level readiness and system-level dependency meaning
+
+This does not mean Mission Deck and Multi-Mission Context are being designed on separate timelines. The mission-level model should help shape what cross-mission aggregation needs to show and support.
 
 ## Research Implications
 The senior surveyor workshop strongly supports Mission Deck as the primary home for:
-- mission-time control and recovery
-- trustworthy selected-system understanding
-- visible consequence of start/stop/restart and related interventions
-- fast movement between intervention, diagnostics, evidence, and traceability
+- mission-time understanding and intervention
+- trustworthy selected-system context
+- visible consequence of start/stop/restart and related actions
+- fast movement between issue recognition, deep system work, evidence, and traceability
 
-The workshop does not require Mission Deck to absorb every specialist tool, but it does reinforce the need for one central mission-time operating surface where surveyors can understand and act without reconstructing context.
+The workshop supports one central mission-time package, but it does not require every mission-time need to live in one flat surface.
 
 ## Summary Statement
-> Mission Deck should be the surveyor's dependable mission-time cockpit: a place where state, evidence, intervention, and operational confidence come together without forcing deep specialist workflows into one flat surface.
+> Mission Deck should be the active mission package in OI Survey: a mission-time container that brings together Mission Overview, Systems, traceability, and connected evidence workflows without forcing all work into one overloaded surface.

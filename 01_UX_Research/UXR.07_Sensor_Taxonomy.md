@@ -3,7 +3,7 @@ doc_id: UXR.07
 version: 0.1.0
 last_updated: 2026-04-06
 status: draft
-owners: [research@survey-platform.io]
+owners: [pedro.baptista@oceaninfinity.com]
 tags: [ux-research, sensors, taxonomy, ois]
 ---
 

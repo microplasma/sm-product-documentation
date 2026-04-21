@@ -3,7 +3,7 @@ doc_id: UXR.06
 version: 0.1.0
 last_updated: 2025-11-09
 status: draft
-owners: [research@survey-platform.io]
+owners: [pedro.baptista@oceaninfinity.com]
 tags: [ux-research, context-of-use, environment, ois]
 ---
 

@@ -1,4 +1,4 @@
-# SM Product Documentation: Project Knowledge Bundle
+# OI Survey Product Documentation: Project Knowledge Bundle
 
 This file is a retrieval-optimized merged export for ChatGPT Projects or GPT Knowledge.
 It preserves canonical document order, stable identifiers, source paths, and section boundaries.
@@ -29,7 +29,7 @@ It preserves canonical document order, stable identifiers, source paths, and sec
   - `UXR.08` | Senior Surveyor Workshop Feature Themes | `01_UX_Research/UXR.08_Senior_Surveyor_Workshop_Feature_Themes.md`
 - `02PD` | Product Design | base_path: `02_Product_Design` | tags: [design, architecture, ux, operations]
   - `PDD.00` | Design Principles and Documentation Model | `02_Product_Design/PDD.00_Design_Principles_and_Documentation_Model.md`
-  - `PDD.01` | OIS Product Topology | `02_Product_Design/PDD.01_OIS_Product_Topology.md`
+  - `PDD.01` | OI Survey Product Topology | `02_Product_Design/PDD.01_OIS_Product_Topology.md`
   - `PDD.02` | Operational Information Model | `02_Product_Design/PDD.02_Operational_Information_Model.md`
   - `PDD.03` | Interaction Framework and Surface Grammar | `02_Product_Design/PDD.03_Interaction_Framework_and_Surface_Grammar.md`
   - `PDD.04.01` | Multi-Mission Context | `02_Product_Design/PDD.04.01_Multi-Mission_Context.md`
@@ -43,6 +43,8 @@ It preserves canonical document order, stable identifiers, source paths, and sec
   - `PDD.07` | Design Bets, Gaps and Future Directions | `02_Product_Design/PDD.07_Design_Bets_Gaps_and_Future_Directions.md`
 - `03DC` | Decisions | base_path: `03_Decisions` | tags: [decisions, product, design, governance]
   - `DCR.0001` | Multi-Mission Context Naming | `03_Decisions/DCR.0001_Multi-Mission_Context_Naming.md`
+  - `DCR.0002` | Product Surface Model | `03_Decisions/DCR.0002_Product_Surface_Model.md`
+  - `DCR.0003` | Hydrosens Placement Model | `03_Decisions/DCR.0003_Hydrosens_Placement_Model.md`
 - `ROOT` | Repository-level docs
   - `RD.ROOT` | Repository README | `README.md`
   - `SRC.ROOT` | Sources README | `sources/README.md`
@@ -56,9 +58,9 @@ It preserves canonical document order, stable identifiers, source paths, and sec
 - title: `Repository README`
 - path: `README.md`
 - canonical_role: `repository_context`
-- estimated_tokens: `745`
+- estimated_tokens: `747`
 
-# SM Product Documentation
+# OI Survey Product Documentation
 version: 0.3.0  
 last_updated: 2026-04-06
 
@@ -188,14 +190,14 @@ The canonical layers remain:
 - section_id: `00PF`
 - section_title: `Product Foundation`
 - canonical_role: `canonical_doc`
-- estimated_tokens: `1434`
+- estimated_tokens: `1776`
 
 ---
 doc_id: PFD.01
 version: 0.1.0
 last_updated: 2025-11-09
 status: draft
-owners: [design@survey-platform.io]
+owners: [pedro.baptista@oceaninfinity.com]
 tags: [product-vision, ois, remote-operations, design-principles]
 ---
 
@@ -210,9 +212,11 @@ tags: [product-vision, ois, remote-operations, design-principles]
 
 ## 1. Vision Statement
 
-> **OI Survey (OIS)** enables Ocean Infinity's teams to manage, monitor, and control complex marine survey operations - across vessels, systems, and missions - from anywhere, with confidence, safety, and efficiency.
+> **OI Survey (OIS)** enables Ocean Infinity's teams to manage, monitor, and control complex marine survey operations through a unified operational ecosystem of connected surfaces and services - with confidence, safety, and efficiency.
 
-OIS is intended to transform how offshore, onshore, and remote surveyors collaborate. It aims to replace fragmented, tool-heavy workflows with a unified, intelligent environment that connects data, sensors, and people through real-time awareness, automation, and **safe multi-mission operations**.
+OIS is intended to transform how offshore, onshore, and remote surveyors collaborate. It aims to replace fragmented, tool-heavy workflows with a **unified operational ecosystem** that connects data, systems, and people through real-time awareness, safer intervention, and defensible traceability.
+
+Current product direction develops **mission-level clarity and multi-mission awareness in parallel**. Mission Overview and Multi-Mission Context should reinforce each other: the first clarifies what matters inside one mission, while the second should progressively combine the most important mission-level signals across several missions.
 
 ---
 
@@ -221,25 +225,28 @@ OIS is intended to transform how offshore, onshore, and remote surveyors collabo
 Modern survey operations span multiple vessels, remote hubs, and autonomous assets.  
 OIS is designed to:
 
-* Unify data and operational control across the fleet.  
-* Reduce cognitive and procedural load on operators.  
-* Ensure data integrity and operational safety.  
-* Enable future-state workflows where surveyors can manage multiple missions safely.  
-* Scale from single-vessel operations to fully remote, multi-mission environments.
+* reduce operational fragmentation across mission-time work
+* give surveyors dependable mission-level understanding and action support
+* improve confidence in data integrity, operational safety, and traceability
+* connect decision, control, evidence, and logging surfaces coherently
+* support cross-mission and multi-mission workflows as part of the evolving operating model
 
 ---
 
 ## 3. Strategic Context
 
-Marine survey operations are transitioning from vessel-based execution to distributed, remote, and autonomous control models.  
-OIS sits at the center of this transformation as a future-state product direction - **reducing operational complexity while enabling operator-level multi-mission oversight where it can be done safely and credibly**.
+Marine survey operations are transitioning from vessel-based execution to distributed, remote, and increasingly autonomous operating models.  
+OIS sits at the center of this transition as a product direction that should reduce operational complexity without pretending every workflow belongs inside one flat application shell.
 
-| Trend                                       | OIS Response                                               |
-| ------------------------------------------- | ---------------------------------------------------------- |
-| Fragmented workflows and high operator load | Unified modular platform with automated context management |
-| Increasing mission concurrency              | Operator-level multi-mission capability                    |
-| Remote collaboration challenges             | Role-based access and shared assistance workflows          |
-| Manual logging and QC overhead              | Automated logging and live event traceability              |
+The current product direction frames OIS as a **unified operational ecosystem** structured through connected operational surfaces, with mission-level and cross-mission models evolving together rather than as strictly separate time horizons.
+
+| Trend | OIS Response |
+| --- | --- |
+| Fragmented workflows and high operator load | Unified operational ecosystem with clearer boundary between decision, control, evidence, and traceability |
+| Need for stronger mission-time confidence | Mission Overview as the primary decision surface for the active mission |
+| Complex system recovery and control | Systems as the deep operational and control surface |
+| Manual logging and weak handovers | Online Log as a traceability backbone rather than an optional side feature |
+| Growing need for broader mission oversight | Multi-Mission Context as the cross-mission surface that recombines the most important mission-level signals |
 
 ---
 
@@ -247,71 +254,71 @@ OIS sits at the center of this transformation as a future-state product directio
 
 ### 4.1 What OIS Is
 
-A **mission-oriented operating system** for remote and autonomous survey operations, designed to unify control, monitoring, and collaboration through a coherent operational layer.
+A **unified operational ecosystem** for remote and distributed survey work, structured through connected mission-time surfaces, shared services, and specialist subsystems rather than a single undifferentiated application.
 
 ### 4.2 What OIS Is Not
 
-* Not a replacement for acquisition or navigation software.  
-* Not a reporting platform, though it feeds report generation.  
-* Not a long-term data repository - it synchronizes and validates operational data in real time.
+* Not a replacement for acquisition or navigation software.
+* Not a reporting platform, though it supports reporting through traceability and exportable records.
+* Not a long-term data repository - it coordinates operational truth, intervention, evidence, and traceability during survey work.
 
 ### 4.3 Core Role
 
-> **To orchestrate people, systems, and data across the survey lifecycle - through control, visibility, and automation.**
+> **To help survey teams understand what matters now, act safely in the active mission, interpret evidence with confidence, and preserve a trustworthy operational record.**
 
 ---
 
 ## 5. Core Vision Pillars
 
-| **Pillar**                       | **Purpose** | **Outcome** |
-| -------------------------------- | ----------- | ----------- |
-| **Command & Control**            | Centralized, safe execution of survey operations. | Reduced manual intervention and faster setup. |
-| **Active Monitoring**            | Unified awareness of data, sensors, and system health. | Early anomaly detection and improved data quality. |
-| **Collaboration & Traceability** | Seamless teamwork with full visibility of actions. | Fewer interruptions, easier handovers. |
-| **Scalability & Resilience**     | Distributed operations and future operator-level mission concurrency where validated. | Maintain operational throughput with fewer personnel while preserving safety and control integrity. |
+| **Pillar** | **Purpose** | **Outcome** |
+| --- | --- | --- |
+| **Command & Control** | Support safe operational action through the right mission-time surfaces. | Faster, clearer intervention with stronger consequence visibility. |
+| **Active Monitoring** | Make data quality, system health, and evidence easier to interpret. | Earlier detection of degraded conditions and stronger survey confidence. |
+| **Collaboration & Traceability** | Preserve a defensible operational narrative across shifts, roles, and services. | Better handovers, clearer accountability, fewer context gaps. |
+| **Scalability & Resilience** | Support growth in both mission-level and cross-mission operating models. | A credible path toward multi-mission work without reducing the value of either layer. |
 
 ---
 
 ## 6. Guiding Design Principles
 
 | **Principle** | **Description** |
-| ------------- | --------------- |
-| **Unified Context** | All critical mission data is accessible in one environment. |
-| **Non-Blocking Collaboration** | Users can assist or supervise without disrupting active operations. |
-| **Acknowledged Control** | All commands follow a clear feedback loop (Send -> Ack -> Working -> Done). |
-| **Reduced Complexity** | Consolidated interfaces simplify control and awareness across missions. |
-| **Role-Based Trust** | Permissions ensure safe command authority and auditability. |
-| **System Memory** | Every change, configuration, and event is recorded and restorable. |
+| --- | --- |
+| **Mission-Level Clarity With Cross-Mission Continuity** | The active mission should be easy to understand, and that clarity should inform how broader cross-mission awareness is built. |
+| **Surface-Specific Purpose** | Different operational questions should be served by the right surface, not collapsed into one flat workspace. |
+| **Evidence Supports Intervention** | Control actions should stay connected to the evidence needed to judge them safely. |
+| **Traceability Is Product-Critical** | Logging, event capture, and narrative continuity are part of the operating model. |
+| **Role-Based Trust** | Permissions and authority should protect live work while preserving collaboration. |
+| **System Memory** | Every meaningful action, configuration, and event should remain reviewable and reconstructable. |
 
 ---
 
 ## 7. Success Metrics
 
 | **Category** | **Metric** | **Target** |
-| ------------ | ---------- | ---------- |
+| --- | --- | --- |
 | **Operational Efficiency** | Mobilization time reduction | >= 30% |
-| **Operational Efficiency** | **Average missions per operator** | Target future state: >= 2 concurrent missions sustained safely |
 | **Situational Awareness** | Mean time to detect anomaly | <= 2 minutes |
 | **Reliability** | Fault recovery time | <= 10 minutes |
 | **User Experience** | Operator satisfaction | >= 90% positive |
 | **Traceability** | Automated event capture | 100% |
+| **Scalability** | Safe multi-mission capability | Evolving target, developed in parallel with mission-level operating clarity |
 
 ---
 
 ## 8. Roadmap Snapshot
 
 | **Phase** | **Focus** | **Key Deliverables** |
-| --------- | --------- | -------------------- |
-| **Phase 1 (MVP)** | Core operational control and monitoring | Mission Deck v1, Online Log, Sensor Control |
-| **Phase 2 (Expansion)** | Multi-user collaboration and diagnostics | RBAC, Configuration Templates, Rollback |
-| **Phase 3 (Scalability)** | Operator-level multi-mission capability | Mission concurrency, triage interface |
+| --- | --- | --- |
+| **Phase 1 (Core Operating Ecosystem)** | Strong mission-level and cross-mission foundations | Mission Deck, Mission Overview, Systems, Online Log, Multi-Mission Context direction, early Data Monitor direction |
+| **Phase 2 (Connected Operational Surfaces)** | Stronger evidence, configuration, service, and aggregation models | Expanded Data Monitor capability, configuration governance, deeper traceability and stronger Multi-Mission Context integration |
+| **Phase 3 (Broader Operational Scale)** | More mature supervisory and validated concurrency patterns | Multi-Mission Context maturity, cross-mission prioritization, future multi-mission operating support where validated |
 
-**Note:** Roadmap phases are indicative and subject to validation through feature prioritization workshops.
+**Note:** Roadmap phases are indicative and subject to validation through feature prioritization and operational review.
 
 ---
 
 **End of Document**  
-*"Simplifying control, enabling surveyors to manage more, safely and efficiently."*
+*"One operational ecosystem, with mission-level and cross-mission confidence evolving together."*
 
 ### DOCUMENT END | PFD.01
 
@@ -324,14 +331,14 @@ A **mission-oriented operating system** for remote and autonomous survey operati
 - section_id: `00PF`
 - section_title: `Product Foundation`
 - canonical_role: `canonical_doc`
-- estimated_tokens: `1745`
+- estimated_tokens: `2027`
 
 ---
 doc_id: PFD.02
 version: 0.1.0
 last_updated: 2025-11-09
 status: draft
-owners: [design@survey-platform.io]
+owners: [pedro.baptista@oceaninfinity.com]
 tags: [product-strategy, ois, design, operations, transformation]
 ---
 
@@ -346,9 +353,9 @@ tags: [product-strategy, ois, design, operations, transformation]
 
 ## 1. Purpose
 
-This document defines the **strategic intent** of OI Survey (OIS), describing how it delivers operational, technological, and experiential transformation across Ocean Infinity's survey operations.
+This document defines the **strategic intent** of OI Survey (OIS), describing how it should deliver operational, technological, and experiential transformation across Ocean Infinity's survey operations.
 
-It translates OIS's **vision** ("to unify control, monitoring, and collaboration across survey operations") into **actionable strategic objectives** and **guiding principles**.
+It translates OIS's vision into a strategy grounded in a clearer product model: **OI Survey as a unified operational ecosystem** expressed through distinct but connected surfaces, not as one flat application shell.
 
 ---
 
@@ -356,41 +363,42 @@ It translates OIS's **vision** ("to unify control, monitoring, and collaboration
 
 ### 2.1 Industry Transformation
 
-The marine survey industry is shifting from on-vessel operations to distributed, remote, and increasingly autonomous workflows. Ocean Infinity's operational model requires scalability, efficiency, and resilience to maintain mission throughput with fewer personnel.
+The marine survey industry is shifting from vessel-based execution to distributed, remote, and increasingly autonomous workflows. Ocean Infinity's operating model requires better mission-time clarity, stronger traceability, and a credible cross-mission operating model.
 
-OIS is intended to enable this model - consolidating fragmented tools into a coherent environment that supports multi-user work and future **multi-mission operations at the operator level** where safely validated.
+OIS should support that transition by reducing fragmentation across survey work while preserving the operational nuance of different tasks, systems, and specialist workflows.
 
 ### 2.2 The Strategic Opportunity
 
-Surveyors currently manage complex toolchains across multiple systems and displays, leading to inefficiency and fatigue. OIS's strategic opportunity is to:
+Surveyors currently manage complex toolchains across multiple systems and displays, leading to inefficiency, re-checking, and fatigue. OIS's strategic opportunity is to:
 
-* **Reduce operational complexity.**
-* **Enable surveyors to manage multiple concurrent missions safely and effectively where validated.**
-* **Preserve situational awareness** through unified control and monitoring.
-* **Allow seamless peer assistance and supervisory support** without interrupting active missions.
+* **reduce operational complexity**
+* **improve mission-level decision quality and intervention confidence**
+* **strengthen traceability and handover continuity**
+* **separate decision, control, evidence, and service concerns more clearly**
+* **develop cross-mission and future multi-mission work as part of the same evolving operating model**
 
 ---
 
 ## 3. Strategic Objectives
 
 | **Objective** | **Goal** | **Outcome** |
-| ------------- | -------- | ----------- |
-| **1. Operational Efficiency** | Simplify workflows and reduce manual intervention. | Faster mobilization and reduced crew size. |
-| **2. Multi-Mission Readiness** | Allow individual operators to manage multiple concurrent missions where it is safe and operationally credible. | Maintain operational throughput with fewer personnel. |
-| **3. Situational Awareness** | Unify visibility across systems, missions, and roles. | Early anomaly detection and faster recovery. |
-| **4. Traceable Collaboration** | Enable safe, auditable, and distributed teamwork. | Seamless assistance and handovers. |
-| **5. Scalable Architecture** | Ensure the system can expand across fleet and shore nodes. | Sustained efficiency at scale. |
+| --- | --- | --- |
+| **1. Mission-Level Clarity** | Give surveyors a dependable operating model for the active mission. | Faster understanding of state, issue, and next safe action. |
+| **2. Operational Efficiency** | Simplify workflows and reduce manual intervention across mission-time surfaces. | Faster mobilization, fewer tool switches, reduced procedural overhead. |
+| **3. Situational Awareness** | Improve visibility across systems, evidence, health, and quality. | Earlier anomaly detection and better recovery decisions. |
+| **4. Traceable Collaboration** | Enable auditable distributed teamwork and stronger handovers. | Better continuity across shifts, roles, and interventions. |
+| **5. Scalable Product Structure** | Build a product model that can grow across mission-level and cross-mission workflows together. | Strong product coherence with broader operational range. |
 
 ---
 
 ## 4. Strategic Pillars
 
 | **Pillar** | **Focus** | **Strategic Intent** |
-| ---------- | --------- | -------------------- |
-| **Command & Control** | Safe execution of commands and configurations. | Standardize and automate operational workflows where direct control is appropriate. |
-| **Active Monitoring** | Real-time data, system, and QC visibility. | Deliver unified awareness across missions with intelligent triage. |
-| **Collaboration & Traceability** | Shared operations and historical transparency. | Introduce multi-user assistance, shared logs, and change tracking. |
-| **Scalability & Resilience** | Multi-mission and multi-user scalability. | Support operator-level concurrency and distributed fleet control as a future-state capability. |
+| --- | --- | --- |
+| **Command & Control** | Safe mission-time action and recovery. | Place operational intervention in the right surfaces, especially Systems inside Mission Deck. |
+| **Active Monitoring** | Real-time data, health, and QC interpretation. | Strengthen evidence and quality understanding through Mission Overview and Data Monitor capabilities. |
+| **Collaboration & Traceability** | Shared operations and historical continuity. | Make Online Log and related traceability services part of the operating model, not administrative add-ons. |
+| **Scalability & Resilience** | Strong mission-level and cross-mission ecosystem growth. | Expand toward broader multi-mission support without treating cross-mission awareness as a distant layer. |
 
 ---
 
@@ -398,68 +406,69 @@ Surveyors currently manage complex toolchains across multiple systems and displa
 
 ### 5.1 Design Strategy
 
-* **Reduced Operational Complexity:** Consolidate essential functions to reduce switching between tools.
-* **Role-Based Workspaces:** Interfaces adapt to each user's function (Operator, Senior, PEC).
-* **Multi-Mission Readiness:** Design for safe concurrent mission handling by individual surveyors where validated.
-* **Collaborative Assistance:** Enable shared control and supervision without disruption.
-* **Cognitive Efficiency:** Focus user attention through triage, priority alerts, and contextual visibility.
+* **Unified Ecosystem:** Treat OI Survey as one operational ecosystem expressed through coordinated surfaces, services, and subsystems.
+* **Parallel Mission and Cross-Mission Development:** Build Mission Overview and Multi-Mission Context together as related layers of the same attention model.
+* **Surface-Based Product Model:** Treat Mission Overview, Systems, Online Log, Data Monitor, and Multi-Mission Context as purpose-built parts of one ecosystem.
+* **Evidence-Backed Intervention:** Keep operational action close to the evidence needed for confidence.
+* **Traceable Workflows:** Ensure actions, changes, and observations contribute to a defensible narrative.
+* **Validated Scale:** Preserve multi-mission as a strategic direction without forcing it to dominate near-term design decisions.
 
 ### 5.2 Technology Strategy
 
-* **Mission Containerization:** Each mission runs in an isolated workspace with synchronized state.
-* **Pub/Sub Data Model:** Live updates and non-blocking synchronization between modules.
-* **RBAC Enforcement:** Command and view permissions controlled by roles and session context.
-* **Diagnostic Automation:** Health checks and safe rollback capabilities.
-* **Interoperability:** Abstract heterogeneous acquisition, navigation, and telemetry systems into a coherent operational layer.
+* **Mission-Oriented State Handling:** Maintain coherent mission context across connected surfaces and services.
+* **Shared Service Backbone:** Treat logging, configuration governance, and synchronization as cross-cutting product infrastructure.
+* **RBAC Enforcement:** Make role boundaries and authority visible where operationally necessary.
+* **Evidence and Monitoring Extensibility:** Allow Data Monitor capabilities to mature incrementally rather than forcing one early monolith.
+* **Interoperability:** Abstract heterogeneous acquisition, navigation, telemetry, and specialist tooling into product-level operational concepts.
 
 ### 5.3 Operational Strategy
 
-* **Remote-First Model:** Designed for onshore and offshore collaboration.
-* **Incremental Adoption:** OIS integrates progressively with existing workflows.
-* **Standardization:** Configuration templates and predefined mission profiles reduce variance.
-* **Data Integrity:** Automated event logging ensures traceability across missions.
+* **Remote-First Collaboration:** Support distributed work between offshore, onshore, and specialist roles.
+* **Incremental Adoption:** Improve mission-time work without requiring all external dependencies to be absorbed immediately.
+* **Operational Trust:** Reduce manual re-checking by making readiness, impact, and traceability more credible.
+* **Integrated Cross-Mission Track:** Continue developing Multi-Mission Context alongside mission-level surfaces so the two models inform each other.
 
 ---
 
 ## 6. Roadmap Framework
 
-The following roadmap is **indicative only** and will be validated against **feature prioritization workshops** (Command & Control and Active Monitoring short-/long-term scopes).
+The following roadmap is **indicative only** and should be validated against operator research, workshop priorities, and prototype maturity.
 
 | **Phase** | **Focus** | **Indicative Milestones** |
-| --------- | --------- | ------------------------- |
-| **Phase 1 - Core Operations** | Establish unified mission control and monitoring. | Mission Deck v1, Online Log integration, Sensor Control, QC Dashboard. |
-| **Phase 2 - Collaboration & Concurrency** | Enable multi-user and multi-mission operation. | Multi-Mission Context, Ack Loop, Config Templates, operator-level multi-mission sessions where validated. |
-| **Phase 3 - Intelligent Operations** | Introduce automation and predictive diagnostics. | AI Diagnostics, auto-triage, fleet orchestration. |
+| --- | --- | --- |
+| **Phase 1 - Core Operating Ecosystem** | Establish the primary mission-level and cross-mission foundations. | Mission Deck structure, Mission Overview, Systems, Online Log, package-level Data Monitor framing, Multi-Mission Context direction. |
+| **Phase 2 - Connected Operational Surfaces** | Strengthen evidence, configuration, specialist workflow, and aggregation connections. | Expanded Data Monitor capabilities, stronger configuration governance, clearer service integration, stronger Multi-Mission Context integration. |
+| **Phase 3 - Broader Operational Scale** | Mature cross-mission awareness and validated concurrency patterns. | Multi-Mission Context growth, prioritization patterns, future multi-mission operating support where validated. |
 
-**Note:** Final roadmap structure will be derived from workshop validation sessions.
+**Note:** Final roadmap structure will be derived from feature prioritization and stakeholder validation sessions.
 
 ---
 
 ## 7. Success Criteria
 
 | **Category** | **Metric** | **Target** |
-| ------------ | ---------- | ---------- |
+| --- | --- | --- |
 | **Efficiency** | Mobilization time reduction | >= 30% |
-| **Operational Efficiency** | **Average concurrent missions per operator** | Target future state: >= 2 sustained safely |
 | **Reliability** | Mean fault recovery time | <= 10 min |
 | **Situational Awareness** | Time to detect anomaly | <= 2 min |
 | **User Experience** | Operator satisfaction | >= 90% positive |
 | **Traceability** | Logged actions automatically captured | 100% |
+| **Scalability** | Multi-mission support | Evolving target, developed alongside mission-level clarity |
 
 ---
 
 ## 8. Strategic Outcomes
 
-1. **Unified Operational Command:** Operators manage core mission actions and awareness through one platform layer.
-2. **Operational Efficiency:** Multi-mission concurrency reduces crew needs while maintaining throughput where it can be introduced safely.
-3. **Fleet-Level Awareness:** Supervisors triage and assist across distributed missions.
-4. **Predictive Resilience:** Faults detected, logged, and triaged before impact.
-5. **Cultural Transformation:** A shift toward distributed, data-driven, remote operations.
+1. **Clearer Mission-Time Operations:** Surveyors can understand and act inside one coherent active-mission package.
+2. **Stronger Operational Trust:** Readiness, evidence, and traceability reduce re-checking and ambiguity.
+3. **Better Service Backbone:** Online Log and related shared services support live use, handover, and downstream reporting.
+4. **More Credible Product Structure:** Different operational questions are served by the right surface rather than one overloaded workspace.
+5. **Scalable Direction:** The product can grow toward cross-mission and multi-mission modes while keeping mission-level and cross-mission models connected.
 
 ---
 
 **End of Document**
-*"From complexity to clarity - enabling every surveyor to manage more, safely and efficiently."*
+*"One ecosystem, clarified through connected mission-level and cross-mission surfaces."*
 
 ### DOCUMENT END | PFD.02
 
@@ -472,14 +481,14 @@ The following roadmap is **indicative only** and will be validated against **fea
 - section_id: `00PF`
 - section_title: `Product Foundation`
 - canonical_role: `canonical_doc`
-- estimated_tokens: `3228`
+- estimated_tokens: `3226`
 
 ---
 doc_id: PFD.03
 version: 0.1.0
 last_updated: 2025-11-09
 status: draft
-owners: [design@survey-platform.io]
+owners: [pedro.baptista@oceaninfinity.com]
 tags: [architecture, ois, system-design, remote-operations, multi-mission]
 ---
 
@@ -488,49 +497,49 @@ tags: [architecture, ois, system-design, remote-operations, multi-mission]
 **Version:** 2.1  
 **Date:** 2025-10-25  
 **Owner:** OIS Product Design & Strategy  
-**Status:** Updated Draft - Reflecting Operator-Level Multi-Mission Capability
+**Status:** Updated Draft - Surface Model Alignment
 
 ---
 
 ## 1. Purpose
 
-This document defines the **conceptual architecture** of OI Survey (OIS).  
-It describes how the platform is structured to deliver safe, efficient, and scalable multi-mission marine survey operations, emphasizing the ability for **surveyors to manage multiple missions simultaneously** without losing situational awareness or operational safety.
+This document defines the **conceptual product architecture** of OI Survey (OIS).  
+It describes how the product should be structured as a unified operational ecosystem expressed through connected operational surfaces that support mission-time survey work, traceability, evidence interpretation, and broader cross-mission awareness.
 
-OIS aims to:
+The architecture is intended to:
 
-* Simplify operational workflows and reduce tool fragmentation.  
-* Support remote, multi-user, and **multi-mission operations at the operator level** as a future-state capability.  
-* Maintain integrity, traceability, and safety of all survey control actions.  
-* Enable collaborative assistance and support across distributed teams.
+* simplify operational workflows and reduce tool fragmentation
+* give the active mission a stronger, clearer operating model
+* separate decision, control, evidence, and traceability responsibilities more cleanly
+* support cross-mission and multi-mission workflows as part of the same evolving ecosystem
 
 ---
 
 ## 2. Architectural Principles
 
 | **Principle** | **Description** |
-| ------------- | --------------- |
-| **Modularity** | Each OIS capability exists as an independent module. Modules can evolve or be replaced without redesigning the entire system. |
-| **Mission-Centric Design** | Operations revolve around missions - virtualized representations of ongoing surveys. Every action, log, and configuration is contextualized within a mission workspace. |
-| **Reduced Complexity** | OIS simplifies operators' interaction with complex systems by integrating key workflows, minimizing tool-switching, and ensuring consistency across functions. |
-| **Concurrent Mission Operations** | Individual surveyors may be able to safely manage, monitor, and control multiple active missions at once. The system should manage focus, alerts, and data synchronization to preserve operational safety and efficiency. |
-| **Distributed Collaboration** | Multiple users (onboard, onshore, remote) can safely observe, assist, or command without conflict. Access and actions are governed by role-based permissions. |
-| **Traceable State Management** | All actions, configurations, and events are automatically recorded - forming a continuous operational record. |
-| **Scalable Architecture** | The system expands from single-vessel control to multi-mission fleet operations through modular orchestration and scalable data management. |
-| **Interoperability** | OIS should connect heterogeneous acquisition, navigation, and IT systems through coherent product abstractions. |
+| --- | --- |
+| **Modularity** | OI Survey should behave as a unified ecosystem of connected surfaces and services rather than one flat application shell. |
+| **Mission-Centric Design** | The active mission remains the primary operational context for decision, control, evidence, and traceability. |
+| **Surface-Specific Purpose** | Different operational questions should be answered by the right surface: overview, control, evidence, or cross-mission awareness. |
+| **Reduced Complexity** | The architecture should reduce tool-switching and context reconstruction, especially inside single-mission workflows. |
+| **Traceable State Management** | Actions, events, configuration changes, and observations should remain linked to mission context and reviewable later. |
+| **Distributed Collaboration** | Multiple users and services should be able to contribute safely without collapsing authority boundaries. |
+| **Scalable Architecture** | The product should expand across mission-level and cross-mission capability together, with future validated concurrency patterns building on both. |
+| **Interoperability** | OIS should connect heterogeneous acquisition, navigation, telemetry, and specialist systems through coherent product abstractions. |
 
 ---
 
 ## 3. Conceptual Overview
 
-OIS functions as an **orchestration layer** connecting people, systems, and data across multiple concurrent survey missions. It reduces operational complexity while ensuring every mission remains contextually distinct, safe, and traceable.
+OI Survey functions as a **unified operational ecosystem composed of connected surfaces and shared services**. The architecture should preserve a clear distinction between:
 
-The architecture is intended to enable:
+* the **active mission operating package**
+* **evidence and QC capabilities**
+* **traceability and service backbones**
+* **cross-mission awareness**
 
-* Simultaneous mission sessions per operator where operationally appropriate.  
-* Synchronized data and alerts across missions.  
-* Context preservation when switching between missions.  
-* Peer or supervisor assistance without workflow disruption.
+This means the architecture should not treat every operational need as a feature inside one workspace. Instead, it should organize work across purpose-built surfaces that remain mission-aware and operationally coherent.
 
 ---
 
@@ -538,161 +547,190 @@ The architecture is intended to enable:
 
 ### 4.1 Mission Deck
 
-The **Mission Deck** is the operator's live workspace environment. Each operator may run multiple mission decks in parallel, switching between them seamlessly.
+**Mission Deck** is the mission-time container for the active mission. It is not one flat cockpit. It should coordinate the surfaces that matter most while a surveyor is working inside a single mission context.
 
-* Each deck represents a single mission context: controls, logs, and monitoring views.  
-* Operators may manage several missions concurrently within the same interface session where that mode is validated.  
-* Alerts and task queues dynamically triage focus between missions.  
-* Assistance from peers or seniors can be initiated contextually (view-only or shared control modes).  
-* Each mission deck maintains independent command safety and data isolation.
+Mission Deck contains, at minimum:
 
-**Outcome:** The target future state is higher operational volume per operator without loss of safety or traceability.
+* **Mission Overview** as the default decision surface
+* **Systems** as the deep operational and control surface
 
----
+Mission Deck should help the surveyor understand the mission, move toward intervention safely, and stay oriented while related surfaces such as Online Log or Data Monitor are in use.
 
-### 4.2 Multi-Mission Context
+### 4.2 Mission Overview
 
-The **Multi-Mission Context** enables situational overview and support across active missions:
+**Mission Overview** is the primary decision surface for the active mission.
 
-* Aggregates mission states, alerts, and health scores.  
-* Provides real-time prioritization of missions needing attention.  
-* Allows supervisors or peers to assist in a mission temporarily without interrupting others.  
-* Forms the backbone for distributed operations and workload balancing.
+Its role is to answer:
 
----
+* what is happening in this mission right now
+* what needs attention now
+* what issue or readiness concern is emerging
+* what the next sensible action likely is
 
-### 4.3 Online Log
+It should summarize mission posture, attention, and issue context without becoming the deep control surface itself.
 
-The **Online Log** captures every system and user event across all active missions:
+### 4.3 Systems
 
-* Consolidates mission event data in real time.  
-* Maintains a single source of truth for operational review, audit, and handover.  
-* Supports mission switching without losing event continuity.  
-* Enables traceability across parallel operations.
+**Systems** is the deep operational and control surface inside Mission Deck.
+
+Its role is to support:
+
+* selected-system understanding
+* direct operational action and recovery
+* system-specific configuration and dependency review
+* mission-time investigation when action needs deeper operational context
+
+### 4.4 Online Log
+
+**Online Log** is the traceability service and operational record for the mission package.
+
+It should:
+
+* capture automated and user-generated events
+* preserve the mission narrative across actions, anomalies, and handovers
+* support downstream reporting and accountability
+
+### 4.5 Data Monitor
+
+**Data Monitor** is the package-level evidence and QC capability family.
+
+It should cover:
+
+* evidence viewing and monitoring
+* stream-oriented interpretation
+* QC review and comparison
+* evolving forms such as stream viewers, QC surfaces, and detached evidence views
+
+The current product direction should treat Data Monitor as the package-level capability name, even where implementation still appears through multiple specialized evidence surfaces rather than one consolidated module.
+
+### 4.6 Multi-Mission Context
+
+**Multi-Mission Context** is the cross-mission awareness surface.
+
+Its role is to:
+
+* show relative mission posture
+* help prioritize where attention should shift
+* support broader supervision patterns
+
+It should remain parallel to the active mission package rather than becoming a detached future layer. As Mission Overview matures, Multi-Mission Context should progressively recombine the most important mission-level signals across several missions.
 
 ---
 
 ## 5. Module Architecture
 
-Each OIS **module** is independent but interoperable across missions.  
-Modules subscribe to mission contexts and can operate concurrently for multiple missions within the same user session.
-
-| **Module** | **Primary Purpose** | **Multi-Mission Role** |
-| ---------- | ------------------- | ---------------------- |
-| **Sensor Control** | Provide a coherent command layer for systems and devices that are appropriate to represent as direct operational controls. | Manages mission-specific command surfaces across active contexts. |
-| **Output Monitoring** | Visualize live sensor streams and QC metrics. | Displays parallel data streams across active missions. |
-| **Navigation Display** | Track vessel position, planned lines, and coverage completion. | Multi-context navigation visualization with safe focus transitions. |
-| **Online Log** | Capture, annotate, and search all operational events (system + human). | Maintains continuous, per-mission audit trails across concurrent missions; supports auto-logging from commands/alerts. |
-| **File Monitoring** | Verify data creation, integrity, and sync status. | Cross-mission file state monitoring and transfer validation. |
-| **Diagnostics & Health** | Run automated system checks and highlight degraded connections. | Supports aggregated fleet or mission-level health overview. |
-| **Configuration Manager** | Manage mission templates, locks, and rollback functions. | Enables shared template application across missions. |
-| **Alerts & QC** | Surface deviations, thresholds, and critical events. | Aggregates alert streams and highlights priority missions. |
-| **RBAC & Collaboration Engine** | Enforce permissions and multi-user session control. | Supports peer assistance, view-only joins, and escalation workflows. |
+| **Product Element** | **Primary Purpose** | **Architectural Role** |
+| --- | --- | --- |
+| **Mission Deck** | Active mission-time container | Coordinates the mission package and keeps active context coherent within the broader ecosystem. |
+| **Mission Overview** | Primary decision surface | Summarizes posture, issue state, and next attention target for the active mission. |
+| **Systems** | Deep operational/control surface | Hosts selected-system intervention, recovery, configuration, and dependency understanding. |
+| **Online Log** | Traceability service | Preserves operational narrative, handover continuity, and downstream reporting support. |
+| **Data Monitor** | Evidence and QC capability family | Supports evidence interpretation, monitoring, comparison, and QC-focused review. |
+| **Multi-Mission Context** | Cross-mission awareness surface | Supports prioritization and safe attention shifting across missions by aggregating the most important mission-level signals. |
+| **Specialized Subsystems** | Domain-specific workflows such as Hydrosens | Maintain deep workflow integrity while remaining connected to the broader package. |
 
 ---
 
 ## 6. Data and State Management
 
-OIS maintains synchronized mission states across multiple concurrent sessions using a publish/subscribe (Pub/Sub) architecture.
+OIS should maintain coherent mission context across connected surfaces and services.
 
 | **Function** | **Description** |
-| ------------ | --------------- |
-| **Mission Context Containers** | Each mission operates in its own isolated container, with state synchronized to subscribed modules. |
-| **Multi-Context State Engine** | Operators can maintain multiple mission states concurrently without conflict or data loss. |
-| **Event Logging** | All mission actions and state transitions are captured with timestamps and user attribution. |
-| **Resilient Synchronization** | Network or bandwidth interruptions trigger local caching and auto-reconciliation once reconnected. |
-| **Cross-Mission Event Bus** | Centralized event routing enables prioritization, triage, and alert focus across missions. |
+| --- | --- |
+| **Mission Context Propagation** | The active mission should remain identifiable and stable across Mission Deck, Online Log, Data Monitor, and related workflows. |
+| **State Separation** | Overview state, deep system state, evidence state, and cross-mission state should remain distinct enough to avoid confusion. |
+| **Event Logging** | Actions, alerts, annotations, and service events should be captured with timestamps and attribution. |
+| **Resilient Synchronization** | Surfaces and services should tolerate degraded connectivity without losing operational continuity. |
+| **Cross-Surface Linking** | Users should be able to move between decision, control, evidence, and traceability without reconstructing context manually. |
 
 ---
 
 ## 7. Collaboration and Access Control
 
-The collaboration framework supports **safe, shared operations** between surveyors and supervisors across multiple active missions.
+The collaboration model should support safe distributed work across surfaces and services.
 
-* **Role-Based Access (RBAC):** Defines authority levels for command, view, and assistance.  
-* **Session Sharing:** Another surveyor or senior can join a mission context without seizing control.  
-* **Acknowledgement Loop:** All control actions follow Send -> Ack -> Working -> Done confirmation.  
-* **Focus Retention:** User interface surfaces only relevant missions or alerts requiring attention.
+* **Role-Based Access (RBAC):** Defines who can view, intervene, validate, or configure.
+* **Shared Mission Context:** Users and services should operate against the same mission understanding.
+* **Acknowledgement and Traceability:** Higher-consequence actions should remain legible and attributable.
+* **Cross-Mission Awareness Without Overreach:** Multi-Mission Context should support supervision without replacing mission-time operating clarity.
 
 | **Role** | **Capabilities** |
-| -------- | ---------------- |
-| **Surveyor / Operator** | Manage mission work, execute permitted commands, and monitor QC and alerts. |
-| **Senior Surveyor** | Oversee and support surveyors, assist on-demand without disrupting mission control. |
-| **PEC / Supervisor** | Triage and allocate missions, monitor overall system health. |
-| **System Admin** | Manage configuration, RBAC permissions, and integrations. |
+| --- | --- |
+| **Surveyor / Operator** | Uses Mission Overview and Systems to supervise and intervene in the active mission. |
+| **Senior Surveyor** | Validates setup, supports recovery, interprets evidence, and helps govern higher-consequence decisions. |
+| **PEC / Supervisor** | Uses cross-mission and narrative surfaces for coordination and progress confidence. |
+| **System Admin / Support** | Supports configuration, RBAC, and integration integrity across the package. |
 
 ---
 
 ## 8. Integration Model
 
-OIS integrates with existing acquisition, navigation, and IT systems.  
-Conceptually, these integrations are abstracted through a coherent operational layer that supports simultaneous mission data exchange.
+OIS integrates with existing acquisition, navigation, telemetry, and specialist systems.  
+These integrations should be abstracted into the product architecture without pretending every dependency is already absorbed into one native surface.
 
-* **Upstream Systems:** Sensor data acquisition, navigation, positioning, telemetry.  
-* **Downstream Systems:** Log archives, QA pipelines, performance reporting.  
-* **Inter-Mission Interfaces:** Data sharing, diagnostic sync, and template distribution.
+* **Upstream Systems:** Sensor data, navigation context, telemetry, environmental inputs.
+* **Shared Services:** Logging, configuration governance, synchronization, and traceability.
+* **Specialist Dependencies:** Hydrosens, Qinsy context, and other domain tools that remain operationally essential.
 
 ---
 
 ## 9. Scalability Framework
 
-OIS scales **horizontally across missions and operators**.
+OIS should scale across mission-level and cross-mission operation together.
 
 | **Level** | **Scaling Function** |
-| --------- | -------------------- |
-| **Operator-Level** | Multiple concurrent mission contexts per user session where validated. |
-| **Mission-Level** | Independent mission containers executed in parallel. |
-| **Fleet-Level** | Aggregation of mission health, data, and alerts across all active operations. |
-| **System-Level** | Load-balanced service architecture distributing mission orchestration across nodes. |
+| --- | --- |
+| **Mission-Level** | Strong active-mission package with clear internal surface roles. |
+| **Cross-Mission Level** | Multi-Mission Context supports prioritization and attention management across assigned missions using a subset of the most important mission-level signals. |
+| **Fleet-Level** | Shared services and broader operational views can support distributed oversight over time. |
+| **Future Multi-Mission Level** | Operator-level multi-mission work remains a strategic future capability subject to validation. |
 
-This architecture supports the operational goal of increasing output volume per operator while preserving safety and control integrity.
+This framework preserves the path toward scale without turning cross-mission capability into a disconnected later-stage concern.
 
 ---
 
 ## 10. Security and Compliance Principles
 
-* **RBAC Enforcement:** Role-based authentication for all commands and session joins.  
-* **Audit Trail:** Immutable logging of all control and mission events.  
-* **Fail-Safe Commands:** Validation of all actions before execution.  
-* **Secure Communications:** Encrypted mission data channels.  
-* **Data Integrity:** Automated verification during sync and rollback.
+* **RBAC Enforcement:** Role-based authentication and authority boundaries across surfaces and services.
+* **Audit Trail:** Immutable or defensible logging of operational and mission events.
+* **Fail-Safe Actions:** Validation of higher-consequence actions before execution.
+* **Secure Communications:** Protected mission data and service channels.
+* **Data Integrity:** Strong linkage between action, evidence, configuration, and traceability.
 
 ---
 
 ## 11. Evolution Path
 
-> **Note:** The following is an **indicative capability progression**, not a committed roadmap. Final phasing will be validated against the **workshop feature priorities** (Command & Control and Active Monitoring short-/long-term lists) and subsequent stakeholder reviews.
+> **Note:** The following is an indicative capability progression, not a committed roadmap.
 
 | **Capability Area** | **Initial Focus** | **Next Maturity Step** | **Future (Subject to Validation)** |
-| ------------------- | ----------------- | ---------------------- | ---------------------------------- |
-| **Command & Control** | Core command surfaces for systems where direct control is appropriate, start/stop logging, config templates, online log integration | Ack Loop for settings, configuration lock/permissions, rollback | Auto-diagnostics routines, safe auto-actions based on state |
-| **Active Monitoring** | Live streams, status/health indicators, configurable thresholds, deviation indicators | Alert hierarchy and triage across missions, parameter auto-validation | Cross-sensor correlation, quality scoring, color-coded QC layers |
-| **Collaboration & Traceability** | Multi-user session join (view/assist), unified Online Log | Changelog journal, clearer role-based write permissions | Distributed assistance patterns, mission handover automation |
-| **Scalability & Resilience** | Single mission container per operator session | Operator-level **multi-mission concurrency** with triage where validated | Fleet-wide orchestration and workload balancing |
-
-**Roadmap Status:** *TBD / Not yet validated*. A formal roadmap will be created after consolidating workshop priorities into a Feature Prioritization Matrix and running validation sessions with operators and supervisors.
+| --- | --- | --- | --- |
+| **Mission Package** | Clear Mission Deck structure with Mission Overview and Systems | Stronger configuration and subsystem integration | Broader adaptive mission orchestration |
+| **Evidence and QC** | Data Monitor expressed through stream views, QC surfaces, and detached evidence | Clearer package-level consolidation and cross-surface workflows | Richer cross-sensor interpretation and automation |
+| **Traceability** | Online Log as service backbone | Deeper automation, reporting, and service integrations | Analytics and operational intelligence on top of traceability data |
+| **Cross-Mission Awareness** | Parallel Multi-Mission Context development informed by mission-level signals | Stronger prioritization and supervisory patterns | Validated operator-level multi-mission support |
 
 | **Phase** | **Description** | **Goal** |
-| ---------- | --------------- | -------- |
-| **Phase 1 (MVP)** | Single mission per operator, unified control and monitoring. | Establish mission container model and foundational modules. |
-| **Phase 2 (Concurrent Operations)** | Multi-mission concurrency for operators, collaboration framework. | Multi-context orchestration and alert triage. |
-| **Phase 3 (Intelligent Operations)** | Predictive diagnostics and automated prioritization. | Adaptive triage and AI-assisted task routing. |
+| --- | --- | --- |
+| **Phase 1 (Core Operating Ecosystem)** | Strong active-mission structure across Mission Deck, Mission Overview, Systems, Online Log, and Multi-Mission Context direction. | Establish credible ecosystem clarity across mission-level and cross-mission work. |
+| **Phase 2 (Connected Surfaces)** | Expand Data Monitor, subsystem links, configuration/service coherence, and cross-mission aggregation logic. | Strengthen evidence and operational continuity. |
+| **Phase 3 (Cross-Mission Scale)** | Mature Multi-Mission Context and future concurrency patterns where validated. | Extend operational reach without losing ecosystem coherence. |
 
 ---
 
 ## 12. Summary
 
-The OIS architecture defines a **modular, mission-oriented, and scalable system** designed to:
+The OIS architecture defines a **modular operational package** designed to:
 
-* Simplify operations and reduce complexity.  
-* Allow individual surveyors to manage multiple missions where that mode is validated and safe.  
-* Enable collaborative, distributed assistance without loss of control.  
-* Ensure traceability, safety, and operational resilience across missions.
+* strengthen the active mission operating model
+* separate overview, control, evidence, and cross-mission responsibilities clearly
+* preserve traceability and service coherence across the package
+* support cross-mission and multi-mission capability as part of one evolving ecosystem
 
 ---
 
 **End of Document**  
-*"Designed for operational efficiency - empowering surveyors to manage more, with less complexity."*
+*"One ecosystem, clarified through connected surfaces rather than one overloaded workspace."*
 
 ### DOCUMENT END | PFD.03
 
@@ -705,25 +743,18 @@ The OIS architecture defines a **modular, mission-oriented, and scalable system*
 - section_id: `00PF`
 - section_title: `Product Foundation`
 - canonical_role: `canonical_doc`
-- estimated_tokens: `2722`
+- estimated_tokens: `2225`
 
 ---
 doc_id: PFD.04
 version: 0.1.0
 last_updated: 2025-11-09
 status: draft
-owners: [design@survey-platform.io]
+owners: [pedro.baptista@oceaninfinity.com]
 tags: [product-pillars, command-and-control, active-monitoring, strategy]
 ---
 
 # PFD.04 - Product Pillars
-
-<!--
-Changes made:
-1) Added standardized front-matter for consistency across the repository.
-2) Updated heading formatting to clean ASCII.
-3) Lightly softened over-committed wording while preserving the future-state design intent.
--->
 
 **Version:** 2.1  
 **Date:** 2025-10-25  
@@ -734,21 +765,21 @@ Changes made:
 
 ## 1. Purpose
 
-This document defines the **core product pillars** that guide OI Survey (OIS) - specifically the two operational priorities identified in the workshop:
+This document defines the **core product pillars** that guide OI Survey (OIS), specifically the two operational priorities identified in the workshop:
 
 1. **Command & Control (C&C)**
 2. **Active Monitoring (AM)**
 
-Each pillar integrates validated workshop priorities (short-term and long-term) and reflects the strategic goal of **reducing operational complexity** while enabling **operator-level multi-mission efficiency** as a future-state ambition.
+These pillars should now be understood within the updated product model: OI Survey as a **unified operational ecosystem** expressed through operational surfaces, with mission-level clarity and multi-mission support developing together.
 
 ---
 
 ## 2. Overview of Pillars
 
 | **Pillar** | **Goal** | **Strategic Outcome** |
-| ---------- | -------- | --------------------- |
-| **Command & Control** | Simplify and centralize the safe execution of operational commands across missions. | Empower surveyors to manage multiple missions efficiently through automation and role-based control where appropriate. |
-| **Active Monitoring** | Provide real-time, unified awareness of data, sensor health, and mission progress. | Enhance data integrity, QC consistency, and early anomaly detection across concurrent operations. |
+| --- | --- | --- |
+| **Command & Control** | Support safe, legible operational action through the right mission-time surfaces. | Faster intervention, clearer consequence understanding, and stronger recovery behavior. |
+| **Active Monitoring** | Provide real-time awareness of data quality, system health, and evidence. | Better mission-time judgment, earlier anomaly detection, and stronger survey confidence. |
 
 ---
 
@@ -756,49 +787,46 @@ Each pillar integrates validated workshop priorities (short-term and long-term) 
 
 ### 3.1 Vision
 
-To enable safe, centralized, and efficient execution of mission control actions across connected operational systems - allowing a single operator to perform coordinated, traceable operations over multiple concurrent missions where this mode is validated.
+Enable safe, centralized, and efficient mission-time action across operational systems through surfaces that match the work being done, especially the **Systems** surface inside **Mission Deck**.
 
 ### 3.2 Design Intent
 
-* **Simplify operational complexity** by integrating control functions into a single environment.
-* **Standardize control behavior** through role-based permissions and feedback loops.
-* **Ensure safety** through validation and acknowledgement loops.
-* **Support collaboration** by allowing assistance and shared diagnostics without disrupting mission workflows.
+* **Simplify operational complexity** by reducing fragmentation between issue recognition, system context, and action.
+* **Place action in the right surface** so overview and deep control do not compete for the same interaction role.
+* **Ensure safety** through clear consequence language, validation, and acknowledgement patterns where needed.
+* **Support collaboration** by making authority and traceability legible during mission-time work.
 
 ### 3.3 Short-Term Priorities (Workshop-Aligned)
 
 | **Capability** | **Purpose** | **Outcome** |
-| -------------- | ----------- | ----------- |
+| --- | --- | --- |
+| **Mission Overview -> Systems handoff** | Move from decision surface to deep operational action without reconstructing context. | Faster, safer intervention. |
 | **ON/OFF/Restart Commands** | Execute safe control of operational systems where direct command is appropriate. | Streamlined recovery and reduced manual intervention. |
-| **Start/Stop Logging Commands** | Manage mission logging manually or automatically. | Prevents data loss and standardizes workflow. |
-| **Multi-User Accessibility** | Allow supervisors or seniors to access and troubleshoot operational contexts without interference. | Faster resolution and reduced downtime. |
-| **Configuration Templates / Profiles** | Save and apply predefined setups for mission types (e.g., Pipeline Inspection). | Consistent configurations and faster mobilization. |
-| **Online Log Integration** | Automatically record key operational events such as line start, line end, and deviation. | Seamless traceability and audit history. |
-| **I/O Tool from Sensor to Sensor** | Conceptually support routing or output relationships between systems. | Improved integration and flexibility across operational contexts. |
+| **Start/Stop Logging Commands** | Manage mission logging coherently with mission-time work. | Better continuity between operation and traceability. |
+| **Configuration Templates / Profiles** | Save and apply predefined setups for mission types. | Consistent configurations and faster mobilization. |
+| **Online Log Integration** | Automatically record key operational events and user actions. | Seamless traceability and audit history. |
+| **Authority and Lock Visibility** | Make role boundaries visible where live changes carry consequence. | Safer collaboration and fewer accidental edits. |
 
 ### 3.4 Long-Term Priorities (Workshop-Aligned)
 
 | **Capability** | **Purpose** | **Outcome** |
-| -------------- | ----------- | ----------- |
+| --- | --- | --- |
 | **Requesting Setting Changes (Ack Loop)** | Send -> Ack -> Working -> Finished confirmation flow. | Increased safety and transparency of remote operations. |
-| **Auto-Diagnostics / Health Check** | Routine connection and driver checks. | Early fault detection and proactive maintenance. |
-| **User-Defined Metrics (Advanced)** | Define custom derived values (e.g., INS drift rate). | Power-user customization and advanced QC. |
-| **Configurable Thresholds** | Define acceptable operational ranges. | Early identification of off-nominal conditions. |
+| **Auto-Diagnostics / Health Check** | Routine connection and driver checks. | Earlier fault detection and proactive maintenance. |
+| **Configurable Thresholds** | Define acceptable operational ranges. | Stronger readiness and QC interpretation. |
 | **Configuration Lock / Permission System** | Prevent unauthorized edits during live acquisition. | Operational safety and control integrity. |
-| **File Configuration (Split/Size/Time)** | Define file storage and splitting logic. | Streamlined data management and backup. |
-| **Auto-Pilot / DP System Integration** | Interface with DP systems for line/position holding. | Enhanced vessel stability during autonomous survey lines. |
-| **Read/Write Permissions** | Restrict edit/delete rights by role. | Role-based safety enforcement. |
 | **Changelog Journal** | Record all configuration changes over time. | Full operational traceability. |
 | **Rollback to Previous Config** | Restore last working configuration after issue. | Rapid recovery and minimal downtime. |
+| **Broader validated multi-mission control patterns** | Extend command models beyond the active mission package where credible. | Future-state scale without weakening near-term mission clarity. |
 
 ### 3.5 Success Metrics
 
 | **Category** | **Metric** | **Target** |
-| ------------ | ---------- | ---------- |
+| --- | --- | --- |
 | **Setup Efficiency** | Average setup time per mission | -30% |
 | **Safety & Reliability** | Command execution success rate | >= 99.5% |
 | **Traceability** | Logged control actions per mission | 100% |
-| **Operational Efficiency** | Missions controlled per operator | Target future state: >= 2 sustained safely |
+| **Operational Clarity** | Reduced context reconstruction during intervention | Qualitative validation through operator review |
 
 ---
 
@@ -806,83 +834,71 @@ To enable safe, centralized, and efficient execution of mission control actions 
 
 ### 4.1 Vision
 
-Deliver unified, real-time situational awareness across all mission contexts - allowing operators to detect, prioritize, and respond to issues faster while maintaining multi-mission oversight.
+Deliver unified, real-time situational awareness across the mission package through the right combination of **Mission Overview**, **Data Monitor**, **Systems**, and related evidence/QC capabilities.
 
 ### 4.2 Design Intent
 
-* **Enable clarity at scale**: visualize multiple missions without cognitive overload.
-* **Focus attention dynamically**: surface only critical events and thresholds.
-* **Provide continuous awareness**: unify QC, health, and sensor data views.
-* **Integrate traceability**: every alert, anomaly, and QC deviation logged automatically.
+* **Enable clarity at mission time** by showing what matters now before overwhelming users with raw telemetry.
+* **Focus attention dynamically** through issue, readiness, and QC signals that support judgment.
+* **Provide stronger evidence interpretation** through Data Monitor capabilities and detached evidence workflows where needed.
+* **Integrate traceability** so alerts, anomalies, and manual observations contribute to the operational record.
 
 ### 4.3 Short-Term Priorities (Workshop-Aligned)
 
 | **Capability** | **Purpose** | **Outcome** |
-| -------------- | ----------- | ----------- |
-| **Live Sensor Stream Viewer** | Display live operational data and evidence surfaces where they are meaningful to the mission context. | Immediate fault and data awareness. |
-| **Configurable Thresholds** | Define metric limits (e.g., SNR > 25dB). | Flexible QC monitoring. |
-| **Connection & Sync State** | Show clock drift, timing sync, and heartbeats. | Early detection of system issues. |
-| **Auto-Validation of Parameters** | Highlight values outside recommended ranges. | Automatic QC and reduced manual checks. |
-| **Sensor Quickview** | Display essential operational system details (status, downtime, etc.). | Rapid visual context for multiple missions. |
-| **Deviation Indicator** | Alert when vessel deviates from line tolerance. | Real-time navigation accuracy. |
-| **Alert Severity Levels** | Distinguish minor vs. critical issues. | Prioritized operator focus. |
-| **Status Indicators (Health)** | Traffic-light style system states. | Quick situational understanding. |
-| **Alert Markers** | Visual flags for data dropouts or anomalies. | Easier incident traceability. |
-| **Quality Status Indicator** | Simple color flag (Green/Amber/Red) based on thresholds. | Standardized QC summary. |
-| **Auto-Diagnostics / Health Check** | Routine connection integrity verification. | Preventive awareness before failure. |
-| **Quality Scoring (Optional)** | Weighted index summarizing overall mission data quality. | Quantified QC performance measure. |
+| --- | --- | --- |
+| **Mission Overview issue posture** | Summarize state, attention, issues, and next action for the active mission. | Faster mission-time orientation. |
+| **Live Sensor Stream Viewer** | Display live operational evidence where it is meaningful to the mission context. | Immediate fault and data awareness. |
+| **Stream QC / Detached Evidence Views** | Support deeper evidence interpretation without overloading Mission Overview or Systems. | Stronger confidence in QC decisions. |
+| **Connection & Sync State** | Show timing, sync, and heartbeat confidence. | Early detection of infrastructure and data issues. |
+| **Alert Severity Levels** | Distinguish minor vs critical issues. | Prioritized operator focus. |
+| **Status and Quality Indicators** | Make readiness and confidence easier to interpret. | Faster situational judgment. |
 
 ### 4.4 Long-Term Priorities (Workshop-Aligned)
 
 | **Capability** | **Purpose** | **Outcome** |
-| -------------- | ----------- | ----------- |
-| **Overlay Controls** | Toggle navigation, intensity, or grid layers. | Enhanced spatial context. |
-| **Snapshot Capture** | Take instant timestamped stills of operational outputs. | Quick reference for anomalies. |
-| **Weather/Tidal Overlay** | Integrate environmental data layers. | Broader situational context. |
-| **Cross-Sensor Correlation** | Overlay correlated metrics (e.g., INS drift vs. MBES noise). | Identify cause-and-effect patterns. |
-| **Track History Replay** | Review recent vessel paths and anomalies. | Short-term post-mission validation. |
-| **Linked Navigation View** | Mini-map overlay showing acquisition locations. | Geospatial awareness. |
-| **Multi-Sensor Split View** | Display multiple data sources side-by-side. | Comparative awareness between sensors. |
-| **Waypoint Management** | Create and manage mission reference points. | Simplified navigation and survey planning. |
-| **Survey Area Completion View** | Visualize heatmap of covered vs. remaining areas. | Operational progress insight. |
-| **Line Progress Indicator** | Show % line completed, deviation, distance remaining. | Performance monitoring. |
-| **Signal Flow Diagram (Interactive)** | Visualize signal or system relationships across acquisition, network, and storage contexts. | Diagnostic insight and issue tracing. |
-| **Color-Coded Quality Layer** | Overlay color-based QC metrics (e.g., density, SNR). | Unified data quality visualization. |
+| --- | --- | --- |
+| **Cross-Sensor Correlation** | Relate evidence across systems and modalities. | Better cause-and-effect understanding. |
+| **Multi-Sensor Split View** | Display multiple data sources side-by-side. | Stronger comparative monitoring. |
+| **Color-Coded Quality Layer** | Overlay quality metrics over evidence and monitoring views. | Unified QC interpretation. |
+| **Survey Area Completion View** | Show progress and remaining work. | Stronger mission posture awareness. |
+| **Broader cross-mission monitoring patterns** | Extend awareness beyond one mission where validated. | Future-state supervisory scale. |
 
 ### 4.5 Success Metrics
 
 | **Category** | **Metric** | **Target** |
-| ------------ | ---------- | ---------- |
+| --- | --- | --- |
 | **Situational Awareness** | Time to detect anomaly | <= 2 minutes |
 | **Data Quality** | QC alert accuracy | >= 95% |
-| **Operator Efficiency** | Missions monitored per operator | Target future state: >= 2 sustained safely |
 | **Resilience** | Downtime before alert escalation | <= 1 minute |
+| **Evidence Trust** | Reduced need for manual re-checking of "green" states | Qualitative validation through research follow-up |
 
 ---
 
 ## 5. Inter-Pillar Dependencies
 
 | **Dependency Area** | **Relationship** | **Impact** |
-| ------------------- | ---------------- | ---------- |
-| **Online Log & Traceability** | Common infrastructure supporting both pillars. | Ensures visibility and auditability across missions. |
-| **Alerts & Command Feedback** | Monitoring drives control responses; control actions feed monitoring logs. | Closed operational feedback loop. |
-| **Configuration Templates & Permissions** | Shared foundation for safety and efficiency. | Consistent configurations and safe concurrent operations. |
-| **RBAC & Collaboration Framework** | Enables multi-user session support and assistance. | Prevents interference and ensures accountability. |
+| --- | --- | --- |
+| **Mission Overview <-> Systems** | Monitoring informs action; action should remain connected to issue context. | Closed mission-time feedback loop. |
+| **Data Monitor <-> Systems** | Evidence supports intervention and validation. | Better judgment at the point of action. |
+| **Online Log & Traceability** | Common backbone supporting both pillars. | Visibility and auditability across mission work. |
+| **Configuration Templates & Permissions** | Shared foundation for safety and efficiency. | Consistent setup and safe collaboration. |
+| **Multi-Mission Context** | Extends awareness patterns beyond the active mission package. | Future supervisory scale without replacing single-mission focus. |
 
 ---
 
 ## 6. Strategic Outcomes
 
-1. **Operational Efficiency:** Fewer operators managing more missions safely where that mode is validated.
-2. **Situational Awareness:** Faster detection and triage of mission-critical issues.
-3. **Traceability:** Complete log of all control, alert, and QC events.
-4. **Collaboration:** Cross-role assistance and supervision with minimal disruption.
-5. **Simplicity at Scale:** Operators remain focused through clear, contextual interfaces.
+1. **Operational Efficiency:** Faster mission-time understanding and recovery through clearer surface roles.
+2. **Situational Awareness:** Better issue recognition and QC interpretation across overview, systems, and evidence surfaces.
+3. **Traceability:** Complete narrative of control, alert, and QC events.
+4. **Collaboration:** Safer cross-role support with clearer authority and accountability.
+5. **Scalable Product Structure:** A strong active-mission package that can later support broader cross-mission patterns.
 
 ---
 
 **End of Document**
-*"Command and control what matters; monitor everything that does."*
+*"Act where action belongs; monitor where evidence is clearest."*
 
 ### DOCUMENT END | PFD.04
 
@@ -905,14 +921,14 @@ Deliver unified, real-time situational awareness across all mission contexts - a
 - section_id: `01UX`
 - section_title: `UX Research`
 - canonical_role: `canonical_doc`
-- estimated_tokens: `3518`
+- estimated_tokens: `3519`
 
 ---
 doc_id: UXR.00
 version: 0.3.0
 last_updated: 2026-04-06
 status: draft
-owners: [research@survey-platform.io]
+owners: [pedro.baptista@oceaninfinity.com]
 tags: [ux-research, user-insights, ois, operator-workflows]
 ---
 
@@ -1121,14 +1137,14 @@ The sensor catalog and Planner-derived usage summary are useful because they sha
 - section_id: `01UX`
 - section_title: `UX Research`
 - canonical_role: `canonical_doc`
-- estimated_tokens: `2464`
+- estimated_tokens: `2466`
 
 ---
 doc_id: UXR.01
 version: 0.1.0
 last_updated: 2025-11-09
 status: draft
-owners: [research@survey-platform.io]
+owners: [pedro.baptista@oceaninfinity.com]
 tags: [ux-research, roles, workflows, responsibilities, ois]
 ---
 
@@ -1408,14 +1424,14 @@ As OIS introduces automation and multi-mission control:
 - section_id: `01UX`
 - section_title: `UX Research`
 - canonical_role: `canonical_doc`
-- estimated_tokens: `6144`
+- estimated_tokens: `6145`
 
 ---
 doc_id: UXR.02
 version: 0.2.0
 last_updated: 2026-04-06
 status: draft
-owners: [research@survey-platform.io]
+owners: [pedro.baptista@oceaninfinity.com]
 tags: [ux-research, workflows, operation-types, ois]
 ---
 
@@ -1753,14 +1769,14 @@ _"Clarity through structure – unified workflows as the foundation for OIS desi
 - section_id: `01UX`
 - section_title: `UX Research`
 - canonical_role: `canonical_doc`
-- estimated_tokens: `3591`
+- estimated_tokens: `3592`
 
 ---
 doc_id: UXR.03
 version: 0.2.0
 last_updated: 2026-04-06
 status: draft
-owners: [research@survey-platform.io]
+owners: [pedro.baptista@oceaninfinity.com]
 tags: [ux-research, tasks, tools, matrix, ois]
 ---
 
@@ -1914,14 +1930,14 @@ For OBN, ROV-, ROTV-, and AUV-assisted workflows, the added rows below are groun
 - section_id: `01UX`
 - section_title: `UX Research`
 - canonical_role: `canonical_doc`
-- estimated_tokens: `2155`
+- estimated_tokens: `2156`
 
 ---
 doc_id: UXR.04
 version: 0.2.0
 last_updated: 2026-04-06
 status: draft
-owners: [research@survey-platform.io]
+owners: [pedro.baptista@oceaninfinity.com]
 tags: [ux-research, pain-points, opportunities, ois]
 ---
 
@@ -2055,14 +2071,14 @@ Pain points were categorized according to operational phase, user role, and syst
 - section_id: `01UX`
 - section_title: `UX Research`
 - canonical_role: `canonical_doc`
-- estimated_tokens: `2893`
+- estimated_tokens: `2894`
 
 ---
 doc_id: UXR.05
 version: 0.2.0
 last_updated: 2026-04-06
 status: draft
-owners: [research@survey-platform.io]
+owners: [pedro.baptista@oceaninfinity.com]
 tags: [ux-research, behavioral-insights, roles, ois]
 ---
 
@@ -2327,14 +2343,14 @@ IT supports secure access and network connectivity. Their operational pain comes
 - section_id: `01UX`
 - section_title: `UX Research`
 - canonical_role: `canonical_doc`
-- estimated_tokens: `2104`
+- estimated_tokens: `2106`
 
 ---
 doc_id: UXR.06
 version: 0.1.0
 last_updated: 2025-11-09
 status: draft
-owners: [research@survey-platform.io]
+owners: [pedro.baptista@oceaninfinity.com]
 tags: [ux-research, context-of-use, environment, ois]
 ---
 
@@ -2477,14 +2493,14 @@ Cross-validated with operational feedback from online and offshore teams between
 - section_id: `01UX`
 - section_title: `UX Research`
 - canonical_role: `canonical_doc`
-- estimated_tokens: `2544`
+- estimated_tokens: `2545`
 
 ---
 doc_id: UXR.07
 version: 0.1.0
 last_updated: 2026-04-06
 status: draft
-owners: [research@survey-platform.io]
+owners: [pedro.baptista@oceaninfinity.com]
 tags: [ux-research, sensors, taxonomy, ois]
 ---
 
@@ -2785,7 +2801,7 @@ Open questions:
 - section_id: `01UX`
 - section_title: `UX Research`
 - canonical_role: `canonical_doc`
-- estimated_tokens: `3223`
+- estimated_tokens: `3224`
 
 ---
 doc_id: UXR.08
@@ -2793,7 +2809,7 @@ title: Senior Surveyor Workshop Feature Themes
 version: 0.1.0
 status: draft
 visibility: internal
-owners: ["research@survey-platform.io"]
+owners: ["pedro.baptista@oceaninfinity.com"]
 tags: ["ux-research", "workshop", "senior-surveyor", "feature-themes"]
 created: 2026-04-06
 last_updated: 2026-04-06
@@ -3040,7 +3056,7 @@ The workshop synthesis supports the current layered design direction:
 - section_id: `02PD`
 - section_title: `Product Design`
 - canonical_role: `canonical_doc`
-- estimated_tokens: `1229`
+- estimated_tokens: `1231`
 
 ---
 doc_id: PDD.00
@@ -3048,7 +3064,7 @@ title: Design Principles and Documentation Model
 version: 0.2.0
 status: draft
 visibility: internal
-owners: ["design@survey-platform.io"]
+owners: ["pedro.baptista@oceaninfinity.com"]
 tags: ["design", "principles", "documentation", "survey-operations"]
 created: 2025-11-08
 last_updated: 2026-04-06
@@ -3124,24 +3140,24 @@ This section is not intended to mirror the current prototype one-to-one. Instead
 
 ### DOCUMENT END | PDD.00
 
-### DOCUMENT START | PDD.01 | OIS Product Topology
+### DOCUMENT START | PDD.01 | OI Survey Product Topology
 
 - kind: `doc_id`
 - id: `PDD.01`
-- title: `OIS Product Topology`
+- title: `OI Survey Product Topology`
 - path: `02_Product_Design/PDD.01_OIS_Product_Topology.md`
 - section_id: `02PD`
 - section_title: `Product Design`
 - canonical_role: `canonical_doc`
-- estimated_tokens: `1208`
+- estimated_tokens: `1739`
 
 ---
 doc_id: PDD.01
-title: OIS Product Topology
+title: OI Survey Product Topology
 version: 0.2.0
 status: draft
 visibility: internal
-owners: ["design@survey-platform.io"]
+owners: ["pedro.baptista@oceaninfinity.com"]
 tags: ["design", "topology", "product-model", "survey-operations"]
 created: 2025-11-08
 last_updated: 2026-04-06
@@ -3157,38 +3173,56 @@ links:
     href: 02_Product_Design/PDD.04.05_Online_Log_and_Traceability_Service.md
 ---
 
-# PDD.01 - OIS Product Topology
+# PDD.01 - OI Survey Product Topology
 
 ## Purpose
 This document describes the OI Survey product ecosystem and the relationship between its core surfaces, specialized subsystems, and shared services.
 
 ## Topology Overview
-OI Survey is not a single screen or a single application panel. It is an operational ecosystem that helps survey teams supervise missions, interpret evidence, intervene safely, manage critical environmental data, and preserve traceability.
+OI Survey is not one screen or one flat application shell. It is a **unified operational ecosystem** composed of mission-time surfaces, evidence and QC capabilities, shared services, and specialist subsystems that together support remote survey work.
 
 | Product Element | Type | Primary Role |
 | --- | --- | --- |
-| **OI Survey Core / Foundational App** | Core workspace | The central mission-time operating environment for survey supervision and intervention. |
-| **Multi-Mission Context** | Core surface | Cross-mission awareness, prioritization, and safe attention management. |
-| **Mission Deck** | Core surface | Active mission workspace for supervision, intervention, and selected-system context. |
-| **Detached Evidence Surfaces** | Core / Evolving surface family | Views where evidence must detach from control to support interpretation, comparison, or extended monitoring. |
+| **Mission Deck** | Core mission-time container | The active mission package that coordinates the primary mission-time surfaces. |
+| **Mission Overview** | Core surface | Default decision surface for active mission posture, issue state, and next attention target. |
+| **Systems** | Core surface | Deep operational and control surface for selected-system understanding, intervention, and recovery. |
+| **Data Monitor** | Core / Evolving surface family | Package-level evidence and QC capability family, including stream-oriented and detached evidence views. |
+| **Multi-Mission Context** | Core / Evolving surface | Cross-mission awareness, prioritization, and safe attention management. |
 | **Online Log** | Shared service | Structured operational traceability, event capture, annotation, and reporting backbone. |
-| **Hydrosens** | Specialized / Active subsystem | SVP and environmental profile acquisition, QC, preparation, and downstream distribution. |
+| **Hydrosens** | Specialized / Active subsystem | Specialized environmental readiness subsystem for SVP acquisition, QC, preparation, approval, and downstream distribution. |
 | **Qinsy Navigation Context** | External operational dependency | Navigation view and infrastructure dependency used during survey execution. |
 
 ## Product Layers
 
-### OI Survey Core
-The core product is the surveyor's primary workspace. It should help a surveyor answer:
-- Which mission needs my attention?
+### Mission-Time Package
+The core mission-time package should help a surveyor answer:
 - What is happening in the active mission right now?
-- What system is degraded, and why?
+- What needs attention now?
+- Which system or dependency is causing concern?
 - What action is safe to take now?
+
+Mission Deck is the container for that mission-time package. Within it:
+- **Mission Overview** is the primary decision surface.
+- **Systems** is the deep operational and control surface.
+
+### Evidence and QC Capability
+Evidence interpretation should not be flattened into the same surface that owns all control.  
+**Data Monitor** is the package-level name for the evidence and QC capability family. It can include stream viewers, QC-focused surfaces, and detached evidence views that remain mission-aware without overloading Mission Deck.
+
+### Cross-Mission Awareness
+**Multi-Mission Context** remains a core concept for broader awareness and prioritization across assigned missions. It should develop in parallel to the active mission package, using a subset of the most important mission-level signals rather than replacing the active mission model.
 
 ### Specialized Operational Subsystems
 Some workflows remain deep, domain-specific, and operationally central. Hydrosens is the clearest current example. These workflows should remain connected to the OI Survey experience without being flattened into generic controls.
 
+Hydrosens should be treated specifically as:
+- a specialized environmental readiness subsystem
+- not a generic `Systems` pane
+- not merely an evidence-monitoring surface under `Data Monitor`
+- a workflow that supports acquisition, review, preparation, approval, export, and distribution of environmental profile truth
+
 ### Shared Services
-Online Log is not merely a UI panel. It is the traceability service that binds together automated events, user actions, manual annotations, and downstream reporting. Similar shared services may grow around state synchronization, configuration governance, and analytics.
+Online Log is not merely a panel. It is the traceability service that binds together automated events, user actions, manual annotations, and downstream reporting. Similar shared services may grow around state synchronization, configuration governance, and analytics.
 
 ### External Dependencies
 Not every operationally essential function needs to be absorbed into OI Survey UI scope immediately. Qinsy remains a major navigation and infrastructure dependency and should be documented as such.
@@ -3197,22 +3231,25 @@ Not every operationally essential function needs to be absorbed into OI Survey U
 
 | From | To | Relationship |
 | --- | --- | --- |
-| **Multi-Mission Context** | **Mission Deck** | Selects or shifts operational focus to a mission. |
-| **Mission Deck** | **Detached Evidence Surfaces** | Launches or coordinates deeper evidence review when dense interpretation should detach from control. |
-| **Mission Deck** | **Online Log** | Produces operational actions, system events, and operator notes that become part of the mission narrative. |
-| **Mission Deck** | **Hydrosens** | Consumes environmental profile readiness and distribution truth where sound velocity affects survey confidence. |
+| **Mission Overview** | **Systems** | Escalates from summary posture and issue recognition to deeper operational action. |
+| **Mission Deck** | **Mission Overview / Systems** | Coordinates the active mission package without collapsing both surfaces into one flat workspace. |
+| **Mission Deck** | **Data Monitor** | Launches or coordinates deeper evidence and QC review when interpretation should detach from control. |
+| **Mission Deck** | **Online Log** | Produces mission-time actions, system events, and operator notes that become part of the mission narrative. |
+| **Multi-Mission Context** | **Mission Deck** | Selects or shifts mission focus to an active mission package. |
+| **Hydrosens** | **Mission Deck** | Supplies environmental readiness truth that affects mission confidence without collapsing the full SVP workflow into Mission Deck. |
 | **Hydrosens** | **Online Log** | Produces traceable events for acquisition, QC, approval, export, and distribution. |
 | **Qinsy** | **Mission Deck / survey operation** | Provides navigation context and infrastructure integration that remain operationally essential even when external. |
 
 ## Current Product Direction
-- The current prototype is strongest in the acquisition-layer workspace and system-specific experiences.
-- Multi-mission context remains a core concept, even where prototype coverage is incomplete.
+- The current prototype already shows `Mission Overview` as the default overview surface inside Mission Deck.
+- The current prototype already expresses `Systems` as the explicit deep operational workspace.
 - Online Log is an active product/service, not only a future concept.
-- Hydrosens should now be treated as part of the broader OI Survey ecosystem.
-- Detached evidence viewing remains strategically important even if its final product shape is still evolving.
+- Data Monitor should be treated as the package-level evidence/QC direction, even where implementation still appears through stream windows and detached evidence patterns rather than one consolidated module.
+- Multi-Mission Context remains strategically important and should continue evolving in parallel with mission-level surfaces rather than being treated as a distant later-stage capability.
+- Hydrosens should remain a specialized subsystem whose workflow is surfaced into mission-time experience through environmental readiness and system dependency meaning rather than through generic system ownership.
 
 ## Summary Statement
-> OI Survey should be understood as a layered operational ecosystem: a core mission-time workspace supported by specialized subsystems, shared traceability services, and explicit external dependencies that remain part of the surveyor's working reality.
+> OI Survey should be understood as a layered operational ecosystem: a mission-time container built around Mission Overview and Systems, supported by Data Monitor capabilities, shared traceability services, specialist subsystems, and explicit external dependencies that remain part of the surveyor's working reality.
 
 ### DOCUMENT END | PDD.01
 
@@ -3225,7 +3262,7 @@ Not every operationally essential function needs to be absorbed into OI Survey U
 - section_id: `02PD`
 - section_title: `Product Design`
 - canonical_role: `canonical_doc`
-- estimated_tokens: `1100`
+- estimated_tokens: `1102`
 
 ---
 doc_id: PDD.02
@@ -3233,7 +3270,7 @@ title: Operational Information Model
 version: 0.2.0
 status: draft
 visibility: internal
-owners: ["design@survey-platform.io"]
+owners: ["pedro.baptista@oceaninfinity.com"]
 tags: ["design", "information-model", "operations", "traceability"]
 created: 2025-11-08
 last_updated: 2026-04-06
@@ -3308,7 +3345,7 @@ This document defines the product-level information model that should underpin O
 - section_id: `02PD`
 - section_title: `Product Design`
 - canonical_role: `canonical_doc`
-- estimated_tokens: `977`
+- estimated_tokens: `979`
 
 ---
 doc_id: PDD.03
@@ -3316,7 +3353,7 @@ title: Interaction Framework and Surface Grammar
 version: 0.2.0
 status: draft
 visibility: internal
-owners: ["design@survey-platform.io"]
+owners: ["pedro.baptista@oceaninfinity.com"]
 tags: ["design", "interaction", "ux", "surfaces"]
 created: 2025-11-09
 last_updated: 2026-04-06
@@ -3395,7 +3432,7 @@ Multi-screen operations remain an expected context for survey desks. However, th
 - section_id: `02PD`
 - section_title: `Product Design`
 - canonical_role: `canonical_doc`
-- estimated_tokens: `900`
+- estimated_tokens: `1040`
 
 ---
 doc_id: PDD.04.01
@@ -3403,7 +3440,7 @@ title: Multi-Mission Context
 version: 0.2.0
 status: draft
 visibility: internal
-owners: ["design@survey-platform.io"]
+owners: ["pedro.baptista@oceaninfinity.com"]
 tags: ["design", "multi-mission", "awareness", "prioritization"]
 created: 2025-11-09
 last_updated: 2026-04-06
@@ -3442,6 +3479,8 @@ This surface is not for detailed system control. Its role is to support:
 - escalation awareness
 - safe multi-mission operations where validated
 
+It should be treated as a **parallel cross-mission surface**, not the default primary operating surface for mission-time work. The active mission package should still center on Mission Deck and its internal mission-time surfaces, while Multi-Mission Context progressively combines the most important mission-level signals across several missions.
+
 ## Information To Show
 
 | Information | Why It Matters |
@@ -3468,6 +3507,8 @@ This surface is not for detailed system control. Its role is to support:
 ## Current Direction
 The former `Triage Hub` concept is now more accurately expressed as Multi-Mission Context. The concept remains core, but the exact UI treatment can evolve.
 
+Current product direction keeps Multi-Mission Context on a parallel track: strategically important and being developed alongside mission-level surfaces, not deferred until those surfaces are "finished."
+
 ## Research Implications
 The senior surveyor workshop reinforces that cross-mission context is not only a convenience layer. It is needed to:
 - compare relative mission posture quickly
@@ -3490,7 +3531,7 @@ This evidence strengthens the role of Multi-Mission Context as an attention-mana
 - section_id: `02PD`
 - section_title: `Product Design`
 - canonical_role: `canonical_doc`
-- estimated_tokens: `1057`
+- estimated_tokens: `1737`
 
 ---
 doc_id: PDD.04.02
@@ -3498,7 +3539,7 @@ title: Mission Deck
 version: 0.2.0
 status: draft
 visibility: internal
-owners: ["design@survey-platform.io"]
+owners: ["pedro.baptista@oceaninfinity.com"]
 tags: ["design", "mission-deck", "operations", "intervention"]
 created: 2025-11-09
 last_updated: 2026-04-06
@@ -3522,11 +3563,12 @@ links:
 **Core**
 
 ## Purpose
-Mission Deck is the primary mission-time workspace in OI Survey. It is where the surveyor supervises the active mission, understands selected system state, interprets key evidence, and performs safe interventions.
+Mission Deck is the primary mission-time container in OI Survey. It should hold together the active mission package while keeping different operational questions in the right internal surfaces rather than collapsing everything into one flat cockpit.
 
 ## Surveyor Need
-During live operations the surveyor needs one dependable workspace to answer:
+During live operations the surveyor needs one dependable mission-time package to answer:
 - What is happening in this mission right now?
+- What needs attention now?
 - Which system or dependency is causing concern?
 - What action is safe to take now?
 - What evidence supports or challenges my understanding?
@@ -3534,51 +3576,99 @@ During live operations the surveyor needs one dependable workspace to answer:
 
 ## Operational Role
 Mission Deck should coordinate:
-- mission posture and status
+- mission posture and issue awareness
 - selected-system understanding
 - intervention and recovery actions
 - readiness and dependency awareness
-- quick launch to deeper evidence or specialized workflows
+- movement to deeper evidence, traceability, or specialist workflows
 - traceable mission-time action
 
 ## Core Experience Model
 
+Mission Deck should be understood as a mission-time container composed primarily of two internal surfaces:
+
 | Area | Purpose |
 | --- | --- |
-| **Mission identity and posture** | Establishes active mission context, phase, and confidence. |
-| **Selected-system context** | Focuses the surveyor on the currently relevant operational system. |
-| **Intervention surfaces** | Supports actions that must be taken during mission time. |
-| **Evidence and health summaries** | Provide enough understanding to act or escalate without overloading the surveyor. |
-| **Links to deeper tools** | Launches detached evidence, Online Log, Hydrosens, or external navigation context when needed. |
+| **Mission Overview** | The default decision surface for active mission posture, issue recognition, and next attention target. |
+| **Systems** | The deep operational and control surface for selected-system action, recovery, configuration, and dependency understanding. |
+
+This means Mission Deck should support movement from overview to deeper operational action without forcing all mission-time work into one undifferentiated screen.
+
+## Internal Surface Roles
+
+### Mission Overview
+Mission Overview should:
+- establish active mission context
+- summarize posture, state, and confidence
+- highlight issues, attention, and next likely action
+- help the surveyor decide whether deeper system action is needed
+
+### Environmental Readiness
+Mission Overview should also be the primary place where **environmental readiness** is surfaced at mission level.
+
+This should include, where relevant:
+- current active profile age / freshness
+- trust state or validity of the currently relevant environmental profile
+- whether a newer cast is pending review
+- whether an approved profile has been distributed or applied to affected systems
+- mission consequence when profile truth is stale, missing, or questioned
+- a clear path to `Open Hydrosens`
+
+### Systems
+Systems should:
+- focus the surveyor on the currently relevant operational system
+- support intervention and recovery
+- expose consequence, dependency, and readiness meaning clearly
+- support system-specific variation while still feeling like one product
+
+For affected acoustic systems, `Systems` should:
+- show `SVP` as a dependency and readiness factor
+- show applied profile status where operationally meaningful
+- explain the consequence of stale, missing, or questioned environmental profile truth
+- provide a deep link into `Hydrosens`
+
+`Systems` should not absorb the full Hydrosens workflow. It should express dependency meaning, not subsystem ownership.
 
 ## Relationship To Other Product Elements
-- **Multi-Mission Context** chooses or shifts mission focus.
-- **Detached Evidence Surfaces** support deep inspection when evidence should detach from control.
+- **Multi-Mission Context** chooses or shifts mission focus at cross-mission level and should progressively reflect the most important mission-level signals that Mission Overview helps define.
+- **Data Monitor / Detached Evidence Surfaces** support deeper evidence review when interpretation should detach from the main mission-time surfaces.
 - **Online Log** captures the narrative of mission-time actions, alerts, and notes.
-- **Hydrosens** informs environmental readiness where sound velocity and related profiles matter.
+- **Hydrosens** informs environmental readiness where sound velocity and related profiles matter, while retaining the specialist workflow for acquisition, review, approval, and distribution.
 - **Qinsy** remains an external but essential navigation context for current operations.
 
 ## Design Requirements
 - The surveyor should be able to move from awareness to intervention without reconstructing context.
+- Mission Deck should not be treated as one flat cockpit where every function competes for the same interaction role.
+- Mission Overview should remain the default decision surface.
+- Systems should remain the deeper operational and control surface.
+- Environmental readiness should be visible at mission level without forcing the full Hydrosens workflow into Mission Deck.
+- Systems should express `SVP` dependency meaning for affected sensors without treating Hydrosens as a normal system pane.
 - Actions should expose consequence and downstream impact clearly.
-- Mission Deck should not try to fully absorb every specialized workflow.
-- It should support selected-system experiences that vary by system type while still feeling like one product.
-- The deck should remain effective in dense operational environments and support multiple-screen setups without depending on a rigid layout definition.
+- Mission Deck should not try to fully absorb every specialist workflow.
+- The package should remain effective in dense operational environments and support multiple-screen setups without depending on a rigid layout definition.
 
 ## Current Direction
-Mission Deck remains one of the most important and stable concepts in OI Survey. While the exact internal structure has evolved through prototyping, the product role remains clear: it is the surveyor's central mission-time workspace.
+Mission Deck remains one of the most important and stable concepts in OI Survey, but its internal structure is now clearer than earlier versions of the documentation suggested.
+
+The current direction is:
+- **Mission Overview** as the default primary decision surface
+- **Systems** as the deep operational/control surface
+- **Online Log** and **Data Monitor** as connected but distinct parts of the broader mission-time package
+- **Hydrosens** as a specialized environmental readiness subsystem connected through mission-level readiness and system-level dependency meaning
+
+This does not mean Mission Deck and Multi-Mission Context are being designed on separate timelines. The mission-level model should help shape what cross-mission aggregation needs to show and support.
 
 ## Research Implications
 The senior surveyor workshop strongly supports Mission Deck as the primary home for:
-- mission-time control and recovery
-- trustworthy selected-system understanding
-- visible consequence of start/stop/restart and related interventions
-- fast movement between intervention, diagnostics, evidence, and traceability
+- mission-time understanding and intervention
+- trustworthy selected-system context
+- visible consequence of start/stop/restart and related actions
+- fast movement between issue recognition, deep system work, evidence, and traceability
 
-The workshop does not require Mission Deck to absorb every specialist tool, but it does reinforce the need for one central mission-time operating surface where surveyors can understand and act without reconstructing context.
+The workshop supports one central mission-time package, but it does not require every mission-time need to live in one flat surface.
 
 ## Summary Statement
-> Mission Deck should be the surveyor's dependable mission-time cockpit: a place where state, evidence, intervention, and operational confidence come together without forcing deep specialist workflows into one flat surface.
+> Mission Deck should be the active mission package in OI Survey: a mission-time container that brings together Mission Overview, Systems, traceability, and connected evidence workflows without forcing all work into one overloaded surface.
 
 ### DOCUMENT END | PDD.04.02
 
@@ -3591,7 +3681,7 @@ The workshop does not require Mission Deck to absorb every specialist tool, but 
 - section_id: `02PD`
 - section_title: `Product Design`
 - canonical_role: `canonical_doc`
-- estimated_tokens: `670`
+- estimated_tokens: `853`
 
 ---
 doc_id: PDD.04.03
@@ -3599,7 +3689,7 @@ title: Detached Evidence Surfaces
 version: 0.2.0
 status: draft
 visibility: internal
-owners: ["design@survey-platform.io"]
+owners: ["pedro.baptista@oceaninfinity.com"]
 tags: ["design", "evidence", "qc", "monitoring"]
 created: 2025-11-09
 last_updated: 2026-04-06
@@ -3642,6 +3732,21 @@ This family may include:
 ## Product Direction
 The older `Stream Viewer` concept is still useful, but should now be treated as one possible product manifestation of the broader detached evidence capability.
 
+## Relationship To Data Monitor
+Current product direction introduces **Data Monitor** as the package-level name for the broader evidence and QC capability family.
+
+Within that direction:
+- `Detached Evidence Surfaces` remains the canonical design concept for evidence-first views that separate interpretation from direct control.
+- `Data Monitor` is the broader package-level capability label that can include:
+  - `Stream Viewer`
+  - `Stream QC`
+  - detached evidence views
+  - evolving evidence comparison or QC-oriented surfaces
+
+Working rule:
+- do not collapse Detached Evidence Surfaces into a single rigid module too early
+- do use `Data Monitor` when describing the broader product structure and capability family
+
 ## Design Rules
 - Detached evidence should remain mission-context aware.
 - The product should make it clear whether a surface is observational only or linked to operational consequence.
@@ -3671,7 +3776,7 @@ This supports keeping detached evidence as a durable capability even if the exac
 - section_id: `02PD`
 - section_title: `Product Design`
 - canonical_role: `canonical_doc`
-- estimated_tokens: `556`
+- estimated_tokens: `557`
 
 ---
 doc_id: PDD.04.04
@@ -3679,7 +3784,7 @@ title: Operational Configuration Management
 version: 0.2.0
 status: draft
 visibility: internal
-owners: ["design@survey-platform.io"]
+owners: ["pedro.baptista@oceaninfinity.com"]
 tags: ["design", "configuration", "validation", "governance"]
 created: 2025-11-09
 last_updated: 2026-04-06
@@ -3741,7 +3846,7 @@ The older `Configuration Manager` concept remains important, but its exact produ
 - section_id: `02PD`
 - section_title: `Product Design`
 - canonical_role: `canonical_doc`
-- estimated_tokens: `834`
+- estimated_tokens: `916`
 
 ---
 doc_id: PDD.04.05
@@ -3749,7 +3854,7 @@ title: Online Log and Traceability Service
 version: 0.2.0
 status: draft
 visibility: internal
-owners: ["design@survey-platform.io"]
+owners: ["pedro.baptista@oceaninfinity.com"]
 tags: ["design", "traceability", "logging", "service"]
 created: 2025-11-09
 last_updated: 2026-04-06
@@ -3805,6 +3910,14 @@ Online Log should be understood as a shared service, not only a panel or window.
 - Specialized subsystems such as Hydrosens should also contribute traceable workflow events.
 - Online Log should remain the backbone for later automation, analytics, and multi-mission operational understanding.
 
+For Hydrosens specifically, Online Log should capture events such as:
+- cast acquired
+- profile reviewed or cleaned
+- profile approved
+- profile exported
+- profile distributed or applied to downstream systems
+- explicit degraded-operation acceptance or override where environmental profile validity remains under question
+
 ## Research Implications
 The senior surveyor workshop reinforces traceability as an operational need rather than an administrative add-on. The strongest signals are:
 - event logging must support live operational understanding and later reporting
@@ -3827,7 +3940,7 @@ This strengthens the treatment of Online Log as a shared service backbone for OI
 - section_id: `02PD`
 - section_title: `Product Design`
 - canonical_role: `canonical_doc`
-- estimated_tokens: `841`
+- estimated_tokens: `1152`
 
 ---
 doc_id: PDD.04.06
@@ -3835,7 +3948,7 @@ title: Hydrosens Environmental Profile Management
 version: 0.1.0
 status: draft
 visibility: internal
-owners: ["design@survey-platform.io"]
+owners: ["pedro.baptista@oceaninfinity.com"]
 tags: ["design", "hydrosens", "svp", "environmental-profiles"]
 created: 2026-04-06
 last_updated: 2026-04-06
@@ -3861,6 +3974,8 @@ links:
 ## Purpose
 Hydrosens is the OI Survey subsystem responsible for the lifecycle of sound velocity profiles and related environmental data. It replaces EIVA SVP Manager in Ocean Infinity operations and should be treated as a first-class part of the broader survey experience.
 
+Hydrosens should be treated specifically as a **specialized environmental readiness subsystem**, not as a normal mission-time `Systems` pane and not merely as an evidence-monitoring surface under `Data Monitor`.
+
 ## Surveyor Need
 Survey teams need a trustworthy way to:
 - acquire environmental profile data
@@ -3874,6 +3989,7 @@ Hydrosens covers:
 - acquisition from connected hydrographic and environmental sensors
 - logging of raw and processed profile data
 - profile review, cleaning, comparison, resampling, extension, and preparation
+- approval of survey-ready profiles
 - export and distribution to downstream survey and navigation systems
 - future automation and remote-control potential through extensible interfaces
 
@@ -3887,8 +4003,23 @@ Sound velocity and environmental profile truth are not peripheral concerns. They
 
 ## Relationship To The Broader Experience
 - **Mission Deck** should expose the operational consequence of profile readiness without trying to absorb the full Hydrosens workflow.
-- **Online Log** should capture profile acquisition, approval, export, and distribution events.
+- **Mission Overview** should be the primary mission-level place where environmental readiness is surfaced.
+- **Systems** should show `SVP` dependency meaning for affected acoustic systems without treating Hydrosens as a generic system pane.
+- **Online Log** should capture profile acquisition, review, approval, export, and distribution events.
 - **Operational Configuration Management** should remain compatible with Hydrosens where thresholds, profiles, or distribution choices affect mission truth.
+
+## Placement In The Experience
+The preferred product placement is:
+- **primary home:** specialized subsystem
+- **mission-time presence:** environmental readiness summary and consequence in Mission Overview
+- **system-level presence:** `SVP` dependency and applied-profile meaning in affected acoustic systems
+- **traceability presence:** lifecycle events in Online Log
+- **cross-mission presence:** future aggregated environmental risk summaries in Multi-Mission Context
+
+Hydrosens should therefore not be treated as:
+- a standard `Systems` inventory item
+- the default place for line-time intervention
+- a capability absorbed into `Data Monitor`, except where observational or comparison views overlap
 
 ## Product Direction
 Hydrosens should be documented under its current product/module identity while also representing the longer-lived capability of environmental profile management.
@@ -3902,7 +4033,7 @@ The senior surveyor workshop adds strong support for keeping environmental and g
 This reinforces Hydrosens as a specialized but connected subsystem rather than a hidden utility.
 
 ## Summary Statement
-> Hydrosens should remain a distinct but fully connected part of OI Survey: the subsystem that turns raw environmental acquisition into validated, survey-ready profile truth that can be distributed and trusted downstream.
+> Hydrosens should remain a distinct but fully connected part of OI Survey: the specialized environmental readiness subsystem that turns raw environmental acquisition into validated, survey-ready profile truth that can be distributed and trusted downstream.
 
 ### DOCUMENT END | PDD.04.06
 
@@ -3915,7 +4046,7 @@ This reinforces Hydrosens as a specialized but connected subsystem rather than a
 - section_id: `02PD`
 - section_title: `Product Design`
 - canonical_role: `canonical_doc`
-- estimated_tokens: `665`
+- estimated_tokens: `841`
 
 ---
 doc_id: PDD.05
@@ -3923,7 +4054,7 @@ title: Operational State and Configuration Model
 version: 0.2.0
 status: draft
 visibility: internal
-owners: ["design@survey-platform.io"]
+owners: ["pedro.baptista@oceaninfinity.com"]
 tags: ["design", "state", "configuration", "operations"]
 created: 2025-11-09
 last_updated: 2026-04-06
@@ -3971,6 +4102,19 @@ This document defines the key states that matter across mission execution, confi
 - **Distributed**: exported or delivered to downstream systems.
 - **Stale / Questioned**: no longer trusted without revalidation.
 
+Environmental profile state should be treated as a **first-class operational state**, not merely as a background dependency. It should affect:
+- mission-level environmental readiness
+- affected-system readiness and dependency state
+- traceability and handover confidence
+
+## Environmental Readiness Expectations
+The product should make environmental readiness legible at mission level by answering:
+- how fresh the currently relevant profile is
+- whether the active profile is trusted
+- whether a newer cast is pending review
+- whether an approved profile has been distributed or applied to affected systems
+- what operational consequence follows if profile truth is stale, missing, or questioned
+
 ## Traceability Expectations
 Every significant shift between these states should be traceable through Online Log or equivalent trace events, with enough context to support handover, reporting, and audit.
 
@@ -3988,7 +4132,7 @@ Every significant shift between these states should be traceable through Online 
 - section_id: `02PD`
 - section_title: `Product Design`
 - canonical_role: `canonical_doc`
-- estimated_tokens: `943`
+- estimated_tokens: `944`
 
 ---
 doc_id: PDD.06
@@ -3996,7 +4140,7 @@ title: Roles, Authority and Operational Modes
 version: 0.2.0
 status: draft
 visibility: internal
-owners: ["design@survey-platform.io"]
+owners: ["pedro.baptista@oceaninfinity.com"]
 tags: ["design", "roles", "authority", "operations"]
 created: 2025-11-09
 last_updated: 2026-04-06
@@ -4074,7 +4218,7 @@ This supports keeping authority, permission, and collaboration concerns explicit
 - section_id: `02PD`
 - section_title: `Product Design`
 - canonical_role: `canonical_doc`
-- estimated_tokens: `524`
+- estimated_tokens: `2228`
 
 ---
 doc_id: PDD.07
@@ -4082,7 +4226,7 @@ title: Design Bets, Gaps and Future Directions
 version: 0.2.0
 status: draft
 visibility: internal
-owners: ["design@survey-platform.io"]
+owners: ["pedro.baptista@oceaninfinity.com"]
 tags: ["design", "future", "gaps", "bets"]
 created: 2025-11-09
 last_updated: 2026-04-06
@@ -4102,25 +4246,135 @@ links:
 ## Purpose
 This document preserves unresolved product questions, active design bets, prototype gaps, and future-facing concepts without confusing them with core product truth.
 
+It is also the canonical place to hold **promoted but unresolved architecture and interaction-model questions** that matter enough to preserve, but are not yet ready to become settled product truth or formal decision records.
+
 ## Active Design Bets
+- Stronger mission-level surface clarity is an important organizing direction and should continue to be reinforced.
 - Safe multi-mission operations remain strategically important and should continue to be refined rather than discarded.
 - Detached evidence surfaces remain important even if their final product shape is not yet fixed.
 - Operational configuration management is a necessary capability, even if its final UI boundary is still evolving.
+- `Data Monitor` is a useful package-level framing for evidence and QC capabilities, even though its final product boundary is still evolving.
 
 ## Current Gaps
 - Prototype coverage is strongest in acquisition-layer system experiences and does not yet represent the full OI Survey product.
+- Cross-mission maturity is still evolving, but it should continue to be shaped in parallel with mission-level surface development.
 - Collaboration, some role-specific workflows, and some cross-mission behaviors remain underdefined.
+- Exact product boundaries between `Data Monitor`, detached evidence, and other evidence/QC capabilities still need refinement.
 - Exact product boundaries between core surfaces, specialized subsystems, and shared services still need refinement.
+
+## Active Architecture Questions
+The following items are important enough to preserve canonically, but should not yet be treated as settled architecture. They exist to improve product memory and decision hygiene until stronger evidence or decisions are available.
+
+### Topic: Mission-Time Decision Model
+**Why it matters operationally**  
+Surveyors and senior surveyors need more than status visibility. They need a trustworthy decision contract for whether work is safe to run, continue with risk, pause, or escalate.
+
+**Current gap**  
+The current architecture describes awareness, readiness, and consequence, but it does not yet define an explicit safe-to-run / continue-with-risk / pause / escalate model for mission-time use.
+
+**Directionally true today**  
+Mission Overview should likely be the primary place where this mission-time decision logic becomes legible.
+
+**Unknowns / decisions not yet made**  
+How many operational states should exist, who can move between them, and how strongly they should affect Mission Deck, Systems, and Online Log behavior.
+
+**Evidence needed to close it**  
+Senior surveyor validation of real degraded-operation decision patterns, acceptance thresholds, and escalation behavior.
+
+**Priority / impact**  
+High. This is central to product fit and operational trust.
+
+### Topic: Spatial and Line-Context Integration
+**Why it matters operationally**  
+Survey work is often interpreted through line progress, KP/progress, deviation, and spatial context rather than through systems alone.
+
+**Current gap**  
+The docs acknowledge navigation and spatial truth, but the role of line, KP/progress, deviation, and survey-area context is still underdefined inside mission-time surfaces.
+
+**Directionally true today**  
+Mission Overview and Multi-Mission Context both need a stronger spatial/line-context layer, even if Qinsy remains an explicit external dependency.
+
+**Unknowns / decisions not yet made**  
+Which spatial signals should be shown directly in OI Survey, which should remain dependency acknowledgements, and how they should appear across mission-level and cross-mission surfaces.
+
+**Evidence needed to close it**  
+Examples of line-time supervisory workflows, navigation-heavy exception handling, and how surveyors actually combine spatial and system confidence signals.
+
+**Priority / impact**  
+High. This changes whether the product feels operationally credible or merely system-aware.
+
+### Topic: Multi-Mission Context Mandatory Signal Set
+**Why it matters operationally**  
+Cross-mission work is only safe if each mission is compressed into a reliable set of signals that survive aggregation without hiding critical context.
+
+**Current gap**  
+Multi-Mission Context is directionally defined, but its mandatory information contract is still too generic for safe supervisory use.
+
+**Directionally true today**  
+It should likely recombine a subset of the most important mission-level signals rather than invent a separate cross-mission status model.
+
+**Unknowns / decisions not yet made**  
+Which fields are mandatory in the compressed mission view: mission phase, active risk, environmental readiness, key degraded dependency, unresolved note state, reason this mission needs attention now, or other signals.
+
+**Evidence needed to close it**  
+Cross-mission triage examples, senior-surveyor review of compressed mission states, and validation of what can be safely omitted.
+
+**Priority / impact**  
+High. This directly affects safe multi-mission fit.
+
+### Topic: Cross-Surface Resolution Loop
+**Why it matters operationally**  
+Operational trust comes from the full loop: issue recognition, deeper diagnosis, specialist action, recorded outcome, and updated mission confidence.
+
+**Current gap**  
+The architecture defines the main surfaces, but not yet the explicit interaction pattern that links Mission Overview, Systems, Data Monitor, Hydrosens, and Online Log into one closed-loop operational flow.
+
+**Directionally true today**  
+Mission Overview should likely surface the issue, specialist or deeper surfaces should resolve it, and Online Log should preserve the accepted outcome while state flows back into mission-level surfaces.
+
+**Unknowns / decisions not yet made**  
+Which loops are generic across all issue types, which require subsystem-specific variants, and how much of the loop should be standardized in the product model.
+
+**Evidence needed to close it**  
+Concrete incident and recovery walkthroughs across systems, evidence, environmental workflows, and handover scenarios.
+
+**Priority / impact**  
+High. This is central to interaction-model coherence.
+
+### Topic: Degraded-Operation Governance and Sign-Off
+**Why it matters operationally**  
+Real operations often continue under controlled degradation rather than under clean nominal conditions. Accountability for that choice matters.
+
+**Current gap**  
+The current docs define roles and permissions broadly, but do not yet define who can accept degraded conditions, how that choice is surfaced, or how it is logged and reviewed.
+
+**Directionally true today**  
+This likely needs explicit linkage between Mission Overview, role/authority rules, and Online Log.
+
+**Unknowns / decisions not yet made**  
+Who can accept degraded operation, when a supervisor or senior surveyor sign-off is required, how overrides expire, and how accepted risk should remain visible afterward.
+
+**Evidence needed to close it**  
+Senior surveyor and supervisory role validation on degraded-mode authority, exception handling, and audit expectations.
+
+**Priority / impact**  
+High. This is necessary for operational trust, governance, and defensible traceability.
 
 ## Future Directions Worth Preserving
 - richer cross-mission supervision patterns
 - broader evidence detachment and comparison workflows
+- clearer consolidation of evidence and QC capabilities under the `Data Monitor` product direction
 - deeper integration between Online Log and operational automation
 - expanded environmental workflow automation through Hydrosens
 - clearer product treatment of external dependencies such as Qinsy over time
 
 ## Rule For Use
 Items in this document should inform research and design iteration, but should not override the more mature design truth captured in `PDD.00` through `PDD.06`.
+
+Questions captured under `Active Architecture Questions` are promoted unresolved items. They should not be treated as settled truth until they are either:
+- resolved into updates to more mature canonical docs
+- promoted into a formal `DCR.*` decision record
+- or supported by further evidence in `sources/`
 
 ## Summary Statement
 > PDD.07 exists to preserve promising directions and acknowledged gaps without allowing unresolved ideas to silently become the default product model.
@@ -4135,7 +4389,7 @@ Items in this document should inform research and design iteration, but should n
 - title: `Decisions`
 - base_path: `03_Decisions`
 - tags: [decisions, product, design, governance]
-- document_count: `1`
+- document_count: `3`
 
 ### DOCUMENT START | DCR.0001 | Multi-Mission Context Naming
 
@@ -4146,14 +4400,14 @@ Items in this document should inform research and design iteration, but should n
 - section_id: `03DC`
 - section_title: `Decisions`
 - canonical_role: `decision_record`
-- estimated_tokens: `430`
+- estimated_tokens: `432`
 
 ---
 decision_id: DCR.0001
 title: Multi-Mission Context Naming
 status: accepted
 visibility: internal
-owners: ["design@survey-platform.io"]
+owners: ["pedro.baptista@oceaninfinity.com"]
 tags: ["decision", "naming", "product-design", "multi-mission"]
 created: 2026-04-06
 last_updated: 2026-04-08
@@ -4196,5 +4450,173 @@ Use `OI Survey` as the primary full product name in product and UI copy. `OIS` r
 - Validate the terminology with a broader stakeholder group as the product language matures.
 
 ### DOCUMENT END | DCR.0001
+
+### DOCUMENT START | DCR.0002 | Product Surface Model
+
+- kind: `decision_id`
+- id: `DCR.0002`
+- title: `Product Surface Model`
+- path: `03_Decisions/DCR.0002_Product_Surface_Model.md`
+- section_id: `03DC`
+- section_title: `Decisions`
+- canonical_role: `decision_record`
+- estimated_tokens: `919`
+
+---
+decision_id: DCR.0002
+title: Product Surface Model
+status: accepted
+visibility: internal
+owners: ["pedro.baptista@oceaninfinity.com"]
+tags: ["decision", "product-model", "naming", "architecture"]
+created: 2026-04-13
+last_updated: 2026-04-13
+links:
+  - rel: evidence
+    href: 02_Product_Design/PDD.01_OIS_Product_Topology.md
+  - rel: evidence
+    href: 02_Product_Design/PDD.04.02_Mission_Deck.md
+  - rel: evidence
+    href: 02_Product_Design/PDD.04.03_Detached_Evidence_Surfaces.md
+  - rel: affected
+    href: 00_Product_Foundation/PFD.01_Product_Vision.md
+  - rel: affected
+    href: 00_Product_Foundation/PFD.03_Product_Architecture_Overview.md
+  - rel: affected
+    href: 02_Product_Design/PDD.01_OIS_Product_Topology.md
+---
+
+# DCR.0002 - Product Surface Model
+
+## Question
+How should OI Survey's near-term product structure be described so the documentation reflects the current direction without collapsing the product into one flat application model?
+
+## Decision
+Use a **product surface model** in which OI Survey is described first as a **unified operational ecosystem**, and structurally as a set of connected operational surfaces, shared services, and specialist subsystems.
+
+Within that model:
+- `Mission Deck` is the mission-time container/package element
+- `Mission Overview` is the default primary decision surface
+- `Systems` is the deep operational/control surface
+- `Data Monitor` is the package-level evidence/QC capability family
+- `Multi-Mission Context` remains a parallel cross-mission awareness surface
+- `Online Log` remains the traceability backbone and shared service
+
+## Why
+This model reflects the current product direction more accurately than describing OI Survey as one flat application shell or reducing it to a mere software package.
+
+It also matches observed prototype direction more closely:
+- Mission Overview already exists as the default overview surface inside Mission Deck
+- Systems already exists as the deeper operational workspace
+- Online Log is already first-class
+- Multi-Mission Context remains distinct
+- Mission Overview and Multi-Mission Context are being shaped together as related layers of the same attention model
+- evidence and QC capabilities exist in multiple forms that are better grouped under a package-level direction than forced into one early rigid module
+
+## Evidence
+- `02_Product_Design/PDD.01_OIS_Product_Topology.md`
+- `02_Product_Design/PDD.04.02_Mission_Deck.md`
+- `02_Product_Design/PDD.04.03_Detached_Evidence_Surfaces.md`
+- current `sm-poseidon` prototype naming and workspace structure
+
+## Implications
+- Product and design documentation should describe OI Survey as a unified operational ecosystem.
+- Mission Deck should no longer be described as one flat cockpit.
+- Mission Overview should be treated as the default mission-time decision surface.
+- Systems should be treated as the deep operational/control surface.
+- Data Monitor can be used as a package-level capability term without forcing Detached Evidence Surfaces to be renamed or discarded.
+- Multi-Mission Context remains strategically important and should continue evolving in parallel with mission-level surfaces rather than being treated as a distant later-stage capability.
+
+## Alternatives Considered
+- Keep describing OI Survey as a unified application.
+- Treat Multi-Mission Context as the primary default organizing model.
+- Rename Detached Evidence Surfaces directly to Data Monitor.
+
+## Follow-Up
+- Align Product Foundation and Product Design language to this model.
+- Preserve older terminology only where needed for traceability.
+- Keep validating the product boundary of Data Monitor as evidence and QC capabilities mature.
+
+### DOCUMENT END | DCR.0002
+
+### DOCUMENT START | DCR.0003 | Hydrosens Placement Model
+
+- kind: `decision_id`
+- id: `DCR.0003`
+- title: `Hydrosens Placement Model`
+- path: `03_Decisions/DCR.0003_Hydrosens_Placement_Model.md`
+- section_id: `03DC`
+- section_title: `Decisions`
+- canonical_role: `decision_record`
+- estimated_tokens: `826`
+
+---
+decision_id: DCR.0003
+title: Hydrosens Placement Model
+status: accepted
+visibility: internal
+owners: ["pedro.baptista@oceaninfinity.com"]
+tags: ["decision", "hydrosens", "svp", "product-model", "architecture"]
+created: 2026-04-14
+last_updated: 2026-04-14
+links:
+  - rel: evidence
+    href: 01_UX_Research/UXR.08_Senior_Surveyor_Workshop_Feature_Themes.md
+  - rel: affected
+    href: 02_Product_Design/PDD.01_OIS_Product_Topology.md
+  - rel: affected
+    href: 02_Product_Design/PDD.04.02_Mission_Deck.md
+  - rel: affected
+    href: 02_Product_Design/PDD.04.05_Online_Log_and_Traceability_Service.md
+  - rel: affected
+    href: 02_Product_Design/PDD.04.06_Hydrosens_Environmental_Profile_Management.md
+  - rel: affected
+    href: 02_Product_Design/PDD.05_Operational_State_and_Configuration_Model.md
+---
+
+# DCR.0003 - Hydrosens Placement Model
+
+## Question
+Where should Hydrosens fit inside the OI Survey product architecture and experience model?
+
+## Decision
+Treat `Hydrosens` as a **specialized environmental readiness subsystem**.
+
+Within that model:
+- Hydrosens owns the full SVP workflow: acquire, inspect, clean, compare, prepare, approve, export, distribute
+- Mission-time surfaces expose the **operational consequence** of environmental profile readiness
+- `Mission Overview` is the primary mission-level place where environmental readiness is surfaced
+- affected acoustic systems in `Systems` show `SVP` dependency state and operational consequence
+- `Online Log` records Hydrosens lifecycle events
+- `Multi-Mission Context` may later aggregate cross-mission environmental risk summaries, but does not own the specialist workflow
+
+## Why
+This model best matches senior surveyor operating logic.
+
+SVP management is not a normal line-time system pane. It is a readiness-governance workflow with mission-time consequences. Surveyors need to know whether environmental profile truth is affecting the mission now, but the full Hydrosens workflow should remain a specialist subsystem rather than being flattened into `Systems` or absorbed into `Data Monitor`.
+
+## Evidence
+- `01_UX_Research/UXR.08_Senior_Surveyor_Workshop_Feature_Themes.md`
+- current Hydrosens and environmental readiness positioning in `02_Product_Design`
+- prototype signals showing SVP age and dependency meaning in mission and sensor surfaces
+
+## Implications
+- Hydrosens should not be treated as a generic `Systems` pane.
+- Hydrosens should not be positioned merely as an evidence-monitoring capability under `Data Monitor`.
+- Mission Overview should surface environmental readiness at mission level.
+- Systems should show `SVP` dependency and applied-profile meaning for affected acoustic systems.
+- Online Log should capture profile acquisition, review, approval, export, and distribution events.
+
+## Alternatives Considered
+- Treat Hydrosens as a normal system pane inside `Systems`
+- Treat Hydrosens as part of `Data Monitor`
+- Hide Hydrosens behind mission-time dependency states without a visible subsystem identity
+
+## Follow-Up
+- Keep `Hydrosens` visible as the current product/module identity for the SVP manager.
+- Refine environmental readiness as a reusable mission-level concept.
+- Validate how Multi-Mission Context should summarize cross-mission environmental risk without absorbing the Hydrosens workflow.
+
+### DOCUMENT END | DCR.0003
 
 ## SECTION END | 03DC

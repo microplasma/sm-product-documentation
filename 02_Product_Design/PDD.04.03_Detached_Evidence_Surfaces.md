@@ -4,7 +4,7 @@ title: Detached Evidence Surfaces
 version: 0.2.0
 status: draft
 visibility: internal
-owners: ["design@survey-platform.io"]
+owners: ["pedro.baptista@oceaninfinity.com"]
 tags: ["design", "evidence", "qc", "monitoring"]
 created: 2025-11-09
 last_updated: 2026-04-06
@@ -46,6 +46,21 @@ This family may include:
 
 ## Product Direction
 The older `Stream Viewer` concept is still useful, but should now be treated as one possible product manifestation of the broader detached evidence capability.
+
+## Relationship To Data Monitor
+Current product direction introduces **Data Monitor** as the package-level name for the broader evidence and QC capability family.
+
+Within that direction:
+- `Detached Evidence Surfaces` remains the canonical design concept for evidence-first views that separate interpretation from direct control.
+- `Data Monitor` is the broader package-level capability label that can include:
+  - `Stream Viewer`
+  - `Stream QC`
+  - detached evidence views
+  - evolving evidence comparison or QC-oriented surfaces
+
+Working rule:
+- do not collapse Detached Evidence Surfaces into a single rigid module too early
+- do use `Data Monitor` when describing the broader product structure and capability family
 
 ## Design Rules
 - Detached evidence should remain mission-context aware.

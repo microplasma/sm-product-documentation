@@ -109,7 +109,7 @@ def build() -> None:
     sections, root_docs = parse_manifest(manifest_text)
 
     parts: list[str] = []
-    parts.append("# SM Product Documentation: Project Knowledge Bundle")
+    parts.append("# OI Survey Product Documentation: Project Knowledge Bundle")
     parts.append("")
     parts.append("This file is a retrieval-optimized merged export for ChatGPT Projects or GPT Knowledge.")
     parts.append("It preserves canonical document order, stable identifiers, source paths, and section boundaries.")

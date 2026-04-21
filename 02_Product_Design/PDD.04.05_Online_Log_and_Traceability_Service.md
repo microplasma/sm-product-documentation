@@ -4,7 +4,7 @@ title: Online Log and Traceability Service
 version: 0.2.0
 status: draft
 visibility: internal
-owners: ["design@survey-platform.io"]
+owners: ["pedro.baptista@oceaninfinity.com"]
 tags: ["design", "traceability", "logging", "service"]
 created: 2025-11-09
 last_updated: 2026-04-06
@@ -59,6 +59,14 @@ Online Log should be understood as a shared service, not only a panel or window.
 - Mission Deck and related surfaces should feed Online Log through both system-generated and user-generated events.
 - Specialized subsystems such as Hydrosens should also contribute traceable workflow events.
 - Online Log should remain the backbone for later automation, analytics, and multi-mission operational understanding.
+
+For Hydrosens specifically, Online Log should capture events such as:
+- cast acquired
+- profile reviewed or cleaned
+- profile approved
+- profile exported
+- profile distributed or applied to downstream systems
+- explicit degraded-operation acceptance or override where environmental profile validity remains under question
 
 ## Research Implications
 The senior surveyor workshop reinforces traceability as an operational need rather than an administrative add-on. The strongest signals are:

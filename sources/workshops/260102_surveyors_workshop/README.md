@@ -4,7 +4,7 @@ title: Surveyors Workshop
 source_type: workshop
 status: archived
 visibility: internal
-owners: ["design@survey-platform.io"]
+owners: ["pedro.baptista@oceaninfinity.com"]
 tags: ["workshop", "surveyors", "research"]
 created: 2026-01-02
 last_updated: 2026-04-06

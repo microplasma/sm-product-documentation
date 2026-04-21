@@ -4,7 +4,7 @@ title: Multi-Mission Context
 version: 0.2.0
 status: draft
 visibility: internal
-owners: ["design@survey-platform.io"]
+owners: ["pedro.baptista@oceaninfinity.com"]
 tags: ["design", "multi-mission", "awareness", "prioritization"]
 created: 2025-11-09
 last_updated: 2026-04-06
@@ -43,6 +43,8 @@ This surface is not for detailed system control. Its role is to support:
 - escalation awareness
 - safe multi-mission operations where validated
 
+It should be treated as a **parallel cross-mission surface**, not the default primary operating surface for mission-time work. The active mission package should still center on Mission Deck and its internal mission-time surfaces, while Multi-Mission Context progressively combines the most important mission-level signals across several missions.
+
 ## Information To Show
 
 | Information | Why It Matters |
@@ -68,6 +70,8 @@ This surface is not for detailed system control. Its role is to support:
 
 ## Current Direction
 The former `Triage Hub` concept is now more accurately expressed as Multi-Mission Context. The concept remains core, but the exact UI treatment can evolve.
+
+Current product direction keeps Multi-Mission Context on a parallel track: strategically important and being developed alongside mission-level surfaces, not deferred until those surfaces are "finished."
 
 ## Research Implications
 The senior surveyor workshop reinforces that cross-mission context is not only a convenience layer. It is needed to:

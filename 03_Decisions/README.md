@@ -33,3 +33,9 @@ They should capture:
 
 - **DCR.0001 - Multi-Mission Context Naming**  
   *Example record showing how to capture a naming and product-model decision.*
+
+- **DCR.0002 - Product Surface Model**  
+  *Locks the current package/surface framing for Mission Deck, Mission Overview, Systems, Data Monitor, and Multi-Mission Context.*
+
+- **DCR.0003 - Hydrosens Placement Model**  
+  *Locks Hydrosens as a specialized environmental readiness subsystem rather than a normal system pane or a Data Monitor sub-surface.*

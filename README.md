@@ -1,4 +1,4 @@
-﻿# SM Product Documentation
+﻿# OI Survey Product Documentation
 version: 0.3.0  
 last_updated: 2026-04-06
 

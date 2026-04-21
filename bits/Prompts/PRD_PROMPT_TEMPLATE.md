@@ -3,7 +3,7 @@ version: 0.2.0
 last_updated: 2026-04-06
 
 ## Purpose
-This template defines how to ask an LLM to generate a **Product Requirements Document (PRD)** for the **SM Product System**, using the curated knowledge stored in this repository.
+This template defines how to ask an LLM to generate a **Product Requirements Document (PRD)** for **OI Survey (OIS)**, using the curated knowledge stored in this repository.
 
 Use this as a helper prompt when engaging a large language model or custom GPT.
 Once the PRD is generated, you can follow with the **Implementation Plan Extension** below.
@@ -38,7 +38,7 @@ Decision records use `decision_id` values such as `DCR.0001`.
 **System / Role Instruction**
 
 > You are a **Senior Product Manager** with strong UX and engineering collaboration experience.
-> You are responsible for writing a **Product Requirements Document (PRD)** for the SM Product System based on the curated repository documentation.
+> You are responsible for writing a **Product Requirements Document (PRD)** for OI Survey (OIS) based on the curated repository documentation.
 > Your output must be **clear, structured, concise, and traceable**, and it must distinguish between confirmed product direction and evolving design areas.
 
 **Task**

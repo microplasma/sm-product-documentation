@@ -3,7 +3,7 @@ version: 0.3.0
 last_updated: 2026-04-06  
 
 ## Purpose
-This file describes the structure and metadata conventions of the **SM Product Documentation** repository so both humans and automated agents (LLMs, indexing tools, chatbots) can understand and navigate it consistently.
+This file describes the structure and metadata conventions of the **OI Survey Product Documentation** repository so both humans and automated agents (LLMs, indexing tools, chatbots) can understand and navigate it consistently.
 
 ## Repository Structure
 - **00_Product_Foundation/** - Canonical product vision, strategy, architecture, and pillars.  

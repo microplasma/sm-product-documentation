@@ -4,7 +4,7 @@ title: Design Principles and Documentation Model
 version: 0.2.0
 status: draft
 visibility: internal
-owners: ["design@survey-platform.io"]
+owners: ["pedro.baptista@oceaninfinity.com"]
 tags: ["design", "principles", "documentation", "survey-operations"]
 created: 2025-11-08
 last_updated: 2026-04-06

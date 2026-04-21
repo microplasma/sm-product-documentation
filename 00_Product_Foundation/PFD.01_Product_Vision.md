@@ -3,7 +3,7 @@ doc_id: PFD.01
 version: 0.1.0
 last_updated: 2025-11-09
 status: draft
-owners: [design@survey-platform.io]
+owners: [pedro.baptista@oceaninfinity.com]
 tags: [product-vision, ois, remote-operations, design-principles]
 ---
 
@@ -18,9 +18,11 @@ tags: [product-vision, ois, remote-operations, design-principles]
 
 ## 1. Vision Statement
 
-> **OI Survey (OIS)** enables Ocean Infinity's teams to manage, monitor, and control complex marine survey operations - across vessels, systems, and missions - from anywhere, with confidence, safety, and efficiency.
+> **OI Survey (OIS)** enables Ocean Infinity's teams to manage, monitor, and control complex marine survey operations through a unified operational ecosystem of connected surfaces and services - with confidence, safety, and efficiency.
 
-OIS is intended to transform how offshore, onshore, and remote surveyors collaborate. It aims to replace fragmented, tool-heavy workflows with a unified, intelligent environment that connects data, sensors, and people through real-time awareness, automation, and **safe multi-mission operations**.
+OIS is intended to transform how offshore, onshore, and remote surveyors collaborate. It aims to replace fragmented, tool-heavy workflows with a **unified operational ecosystem** that connects data, systems, and people through real-time awareness, safer intervention, and defensible traceability.
+
+Current product direction develops **mission-level clarity and multi-mission awareness in parallel**. Mission Overview and Multi-Mission Context should reinforce each other: the first clarifies what matters inside one mission, while the second should progressively combine the most important mission-level signals across several missions.
 
 ---
 
@@ -29,25 +31,28 @@ OIS is intended to transform how offshore, onshore, and remote surveyors collabo
 Modern survey operations span multiple vessels, remote hubs, and autonomous assets.  
 OIS is designed to:
 
-* Unify data and operational control across the fleet.  
-* Reduce cognitive and procedural load on operators.  
-* Ensure data integrity and operational safety.  
-* Enable future-state workflows where surveyors can manage multiple missions safely.  
-* Scale from single-vessel operations to fully remote, multi-mission environments.
+* reduce operational fragmentation across mission-time work
+* give surveyors dependable mission-level understanding and action support
+* improve confidence in data integrity, operational safety, and traceability
+* connect decision, control, evidence, and logging surfaces coherently
+* support cross-mission and multi-mission workflows as part of the evolving operating model
 
 ---
 
 ## 3. Strategic Context
 
-Marine survey operations are transitioning from vessel-based execution to distributed, remote, and autonomous control models.  
-OIS sits at the center of this transformation as a future-state product direction - **reducing operational complexity while enabling operator-level multi-mission oversight where it can be done safely and credibly**.
+Marine survey operations are transitioning from vessel-based execution to distributed, remote, and increasingly autonomous operating models.  
+OIS sits at the center of this transition as a product direction that should reduce operational complexity without pretending every workflow belongs inside one flat application shell.
 
-| Trend                                       | OIS Response                                               |
-| ------------------------------------------- | ---------------------------------------------------------- |
-| Fragmented workflows and high operator load | Unified modular platform with automated context management |
-| Increasing mission concurrency              | Operator-level multi-mission capability                    |
-| Remote collaboration challenges             | Role-based access and shared assistance workflows          |
-| Manual logging and QC overhead              | Automated logging and live event traceability              |
+The current product direction frames OIS as a **unified operational ecosystem** structured through connected operational surfaces, with mission-level and cross-mission models evolving together rather than as strictly separate time horizons.
+
+| Trend | OIS Response |
+| --- | --- |
+| Fragmented workflows and high operator load | Unified operational ecosystem with clearer boundary between decision, control, evidence, and traceability |
+| Need for stronger mission-time confidence | Mission Overview as the primary decision surface for the active mission |
+| Complex system recovery and control | Systems as the deep operational and control surface |
+| Manual logging and weak handovers | Online Log as a traceability backbone rather than an optional side feature |
+| Growing need for broader mission oversight | Multi-Mission Context as the cross-mission surface that recombines the most important mission-level signals |
 
 ---
 
@@ -55,68 +60,68 @@ OIS sits at the center of this transformation as a future-state product directio
 
 ### 4.1 What OIS Is
 
-A **mission-oriented operating system** for remote and autonomous survey operations, designed to unify control, monitoring, and collaboration through a coherent operational layer.
+A **unified operational ecosystem** for remote and distributed survey work, structured through connected mission-time surfaces, shared services, and specialist subsystems rather than a single undifferentiated application.
 
 ### 4.2 What OIS Is Not
 
-* Not a replacement for acquisition or navigation software.  
-* Not a reporting platform, though it feeds report generation.  
-* Not a long-term data repository - it synchronizes and validates operational data in real time.
+* Not a replacement for acquisition or navigation software.
+* Not a reporting platform, though it supports reporting through traceability and exportable records.
+* Not a long-term data repository - it coordinates operational truth, intervention, evidence, and traceability during survey work.
 
 ### 4.3 Core Role
 
-> **To orchestrate people, systems, and data across the survey lifecycle - through control, visibility, and automation.**
+> **To help survey teams understand what matters now, act safely in the active mission, interpret evidence with confidence, and preserve a trustworthy operational record.**
 
 ---
 
 ## 5. Core Vision Pillars
 
-| **Pillar**                       | **Purpose** | **Outcome** |
-| -------------------------------- | ----------- | ----------- |
-| **Command & Control**            | Centralized, safe execution of survey operations. | Reduced manual intervention and faster setup. |
-| **Active Monitoring**            | Unified awareness of data, sensors, and system health. | Early anomaly detection and improved data quality. |
-| **Collaboration & Traceability** | Seamless teamwork with full visibility of actions. | Fewer interruptions, easier handovers. |
-| **Scalability & Resilience**     | Distributed operations and future operator-level mission concurrency where validated. | Maintain operational throughput with fewer personnel while preserving safety and control integrity. |
+| **Pillar** | **Purpose** | **Outcome** |
+| --- | --- | --- |
+| **Command & Control** | Support safe operational action through the right mission-time surfaces. | Faster, clearer intervention with stronger consequence visibility. |
+| **Active Monitoring** | Make data quality, system health, and evidence easier to interpret. | Earlier detection of degraded conditions and stronger survey confidence. |
+| **Collaboration & Traceability** | Preserve a defensible operational narrative across shifts, roles, and services. | Better handovers, clearer accountability, fewer context gaps. |
+| **Scalability & Resilience** | Support growth in both mission-level and cross-mission operating models. | A credible path toward multi-mission work without reducing the value of either layer. |
 
 ---
 
 ## 6. Guiding Design Principles
 
 | **Principle** | **Description** |
-| ------------- | --------------- |
-| **Unified Context** | All critical mission data is accessible in one environment. |
-| **Non-Blocking Collaboration** | Users can assist or supervise without disrupting active operations. |
-| **Acknowledged Control** | All commands follow a clear feedback loop (Send -> Ack -> Working -> Done). |
-| **Reduced Complexity** | Consolidated interfaces simplify control and awareness across missions. |
-| **Role-Based Trust** | Permissions ensure safe command authority and auditability. |
-| **System Memory** | Every change, configuration, and event is recorded and restorable. |
+| --- | --- |
+| **Mission-Level Clarity With Cross-Mission Continuity** | The active mission should be easy to understand, and that clarity should inform how broader cross-mission awareness is built. |
+| **Surface-Specific Purpose** | Different operational questions should be served by the right surface, not collapsed into one flat workspace. |
+| **Evidence Supports Intervention** | Control actions should stay connected to the evidence needed to judge them safely. |
+| **Traceability Is Product-Critical** | Logging, event capture, and narrative continuity are part of the operating model. |
+| **Role-Based Trust** | Permissions and authority should protect live work while preserving collaboration. |
+| **System Memory** | Every meaningful action, configuration, and event should remain reviewable and reconstructable. |
 
 ---
 
 ## 7. Success Metrics
 
 | **Category** | **Metric** | **Target** |
-| ------------ | ---------- | ---------- |
+| --- | --- | --- |
 | **Operational Efficiency** | Mobilization time reduction | >= 30% |
-| **Operational Efficiency** | **Average missions per operator** | Target future state: >= 2 concurrent missions sustained safely |
 | **Situational Awareness** | Mean time to detect anomaly | <= 2 minutes |
 | **Reliability** | Fault recovery time | <= 10 minutes |
 | **User Experience** | Operator satisfaction | >= 90% positive |
 | **Traceability** | Automated event capture | 100% |
+| **Scalability** | Safe multi-mission capability | Evolving target, developed in parallel with mission-level operating clarity |
 
 ---
 
 ## 8. Roadmap Snapshot
 
 | **Phase** | **Focus** | **Key Deliverables** |
-| --------- | --------- | -------------------- |
-| **Phase 1 (MVP)** | Core operational control and monitoring | Mission Deck v1, Online Log, Sensor Control |
-| **Phase 2 (Expansion)** | Multi-user collaboration and diagnostics | RBAC, Configuration Templates, Rollback |
-| **Phase 3 (Scalability)** | Operator-level multi-mission capability | Mission concurrency, triage interface |
+| --- | --- | --- |
+| **Phase 1 (Core Operating Ecosystem)** | Strong mission-level and cross-mission foundations | Mission Deck, Mission Overview, Systems, Online Log, Multi-Mission Context direction, early Data Monitor direction |
+| **Phase 2 (Connected Operational Surfaces)** | Stronger evidence, configuration, service, and aggregation models | Expanded Data Monitor capability, configuration governance, deeper traceability and stronger Multi-Mission Context integration |
+| **Phase 3 (Broader Operational Scale)** | More mature supervisory and validated concurrency patterns | Multi-Mission Context maturity, cross-mission prioritization, future multi-mission operating support where validated |
 
-**Note:** Roadmap phases are indicative and subject to validation through feature prioritization workshops.
+**Note:** Roadmap phases are indicative and subject to validation through feature prioritization and operational review.
 
 ---
 
 **End of Document**  
-*"Simplifying control, enabling surveyors to manage more, safely and efficiently."*
+*"One operational ecosystem, with mission-level and cross-mission confidence evolving together."*

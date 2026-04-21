@@ -4,7 +4,7 @@ title: Hydrosens Environmental Profile Management
 version: 0.1.0
 status: draft
 visibility: internal
-owners: ["design@survey-platform.io"]
+owners: ["pedro.baptista@oceaninfinity.com"]
 tags: ["design", "hydrosens", "svp", "environmental-profiles"]
 created: 2026-04-06
 last_updated: 2026-04-06
@@ -30,6 +30,8 @@ links:
 ## Purpose
 Hydrosens is the OI Survey subsystem responsible for the lifecycle of sound velocity profiles and related environmental data. It replaces EIVA SVP Manager in Ocean Infinity operations and should be treated as a first-class part of the broader survey experience.
 
+Hydrosens should be treated specifically as a **specialized environmental readiness subsystem**, not as a normal mission-time `Systems` pane and not merely as an evidence-monitoring surface under `Data Monitor`.
+
 ## Surveyor Need
 Survey teams need a trustworthy way to:
 - acquire environmental profile data
@@ -43,6 +45,7 @@ Hydrosens covers:
 - acquisition from connected hydrographic and environmental sensors
 - logging of raw and processed profile data
 - profile review, cleaning, comparison, resampling, extension, and preparation
+- approval of survey-ready profiles
 - export and distribution to downstream survey and navigation systems
 - future automation and remote-control potential through extensible interfaces
 
@@ -56,8 +59,23 @@ Sound velocity and environmental profile truth are not peripheral concerns. They
 
 ## Relationship To The Broader Experience
 - **Mission Deck** should expose the operational consequence of profile readiness without trying to absorb the full Hydrosens workflow.
-- **Online Log** should capture profile acquisition, approval, export, and distribution events.
+- **Mission Overview** should be the primary mission-level place where environmental readiness is surfaced.
+- **Systems** should show `SVP` dependency meaning for affected acoustic systems without treating Hydrosens as a generic system pane.
+- **Online Log** should capture profile acquisition, review, approval, export, and distribution events.
 - **Operational Configuration Management** should remain compatible with Hydrosens where thresholds, profiles, or distribution choices affect mission truth.
+
+## Placement In The Experience
+The preferred product placement is:
+- **primary home:** specialized subsystem
+- **mission-time presence:** environmental readiness summary and consequence in Mission Overview
+- **system-level presence:** `SVP` dependency and applied-profile meaning in affected acoustic systems
+- **traceability presence:** lifecycle events in Online Log
+- **cross-mission presence:** future aggregated environmental risk summaries in Multi-Mission Context
+
+Hydrosens should therefore not be treated as:
+- a standard `Systems` inventory item
+- the default place for line-time intervention
+- a capability absorbed into `Data Monitor`, except where observational or comparison views overlap
 
 ## Product Direction
 Hydrosens should be documented under its current product/module identity while also representing the longer-lived capability of environmental profile management.
@@ -71,4 +89,4 @@ The senior surveyor workshop adds strong support for keeping environmental and g
 This reinforces Hydrosens as a specialized but connected subsystem rather than a hidden utility.
 
 ## Summary Statement
-> Hydrosens should remain a distinct but fully connected part of OI Survey: the subsystem that turns raw environmental acquisition into validated, survey-ready profile truth that can be distributed and trusted downstream.
+> Hydrosens should remain a distinct but fully connected part of OI Survey: the specialized environmental readiness subsystem that turns raw environmental acquisition into validated, survey-ready profile truth that can be distributed and trusted downstream.

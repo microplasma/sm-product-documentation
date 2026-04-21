@@ -4,7 +4,7 @@ title: Operational State and Configuration Model
 version: 0.2.0
 status: draft
 visibility: internal
-owners: ["design@survey-platform.io"]
+owners: ["pedro.baptista@oceaninfinity.com"]
 tags: ["design", "state", "configuration", "operations"]
 created: 2025-11-09
 last_updated: 2026-04-06
@@ -51,6 +51,19 @@ This document defines the key states that matter across mission execution, confi
 - **Survey-Ready**: accepted for operational use.
 - **Distributed**: exported or delivered to downstream systems.
 - **Stale / Questioned**: no longer trusted without revalidation.
+
+Environmental profile state should be treated as a **first-class operational state**, not merely as a background dependency. It should affect:
+- mission-level environmental readiness
+- affected-system readiness and dependency state
+- traceability and handover confidence
+
+## Environmental Readiness Expectations
+The product should make environmental readiness legible at mission level by answering:
+- how fresh the currently relevant profile is
+- whether the active profile is trusted
+- whether a newer cast is pending review
+- whether an approved profile has been distributed or applied to affected systems
+- what operational consequence follows if profile truth is stale, missing, or questioned
 
 ## Traceability Expectations
 Every significant shift between these states should be traceable through Online Log or equivalent trace events, with enough context to support handover, reporting, and audit.

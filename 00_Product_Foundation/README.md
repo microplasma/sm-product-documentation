@@ -6,6 +6,8 @@ This section defines the **why** and **what** of OIS: product vision, strategy, 
 
 These documents are intended to describe the target future-state product direction. They should stay strategic and conceptually clear, while avoiding unnecessary implementation detail or overclaiming where validation is still in progress.
 
+The current framing treats OI Survey as a **unified operational ecosystem** expressed through operational surfaces, with mission-level clarity and broader cross-mission awareness developing together.
+
 ## Files (PFD.*)
 - **PFD.01 - Product Vision**  
   [`PFD.01_Product_Vision.md`](./PFD.01_Product_Vision.md)  

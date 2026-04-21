@@ -4,7 +4,7 @@ title: Roles, Authority and Operational Modes
 version: 0.2.0
 status: draft
 visibility: internal
-owners: ["design@survey-platform.io"]
+owners: ["pedro.baptista@oceaninfinity.com"]
 tags: ["design", "roles", "authority", "operations"]
 created: 2025-11-09
 last_updated: 2026-04-06

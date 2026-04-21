@@ -3,7 +3,7 @@ doc_id: PFD.02
 version: 0.1.0
 last_updated: 2025-11-09
 status: draft
-owners: [design@survey-platform.io]
+owners: [pedro.baptista@oceaninfinity.com]
 tags: [product-strategy, ois, design, operations, transformation]
 ---
 
@@ -18,9 +18,9 @@ tags: [product-strategy, ois, design, operations, transformation]
 
 ## 1. Purpose
 
-This document defines the **strategic intent** of OI Survey (OIS), describing how it delivers operational, technological, and experiential transformation across Ocean Infinity's survey operations.
+This document defines the **strategic intent** of OI Survey (OIS), describing how it should deliver operational, technological, and experiential transformation across Ocean Infinity's survey operations.
 
-It translates OIS's **vision** ("to unify control, monitoring, and collaboration across survey operations") into **actionable strategic objectives** and **guiding principles**.
+It translates OIS's vision into a strategy grounded in a clearer product model: **OI Survey as a unified operational ecosystem** expressed through distinct but connected surfaces, not as one flat application shell.
 
 ---
 
@@ -28,41 +28,42 @@ It translates OIS's **vision** ("to unify control, monitoring, and collaboration
 
 ### 2.1 Industry Transformation
 
-The marine survey industry is shifting from on-vessel operations to distributed, remote, and increasingly autonomous workflows. Ocean Infinity's operational model requires scalability, efficiency, and resilience to maintain mission throughput with fewer personnel.
+The marine survey industry is shifting from vessel-based execution to distributed, remote, and increasingly autonomous workflows. Ocean Infinity's operating model requires better mission-time clarity, stronger traceability, and a credible cross-mission operating model.
 
-OIS is intended to enable this model - consolidating fragmented tools into a coherent environment that supports multi-user work and future **multi-mission operations at the operator level** where safely validated.
+OIS should support that transition by reducing fragmentation across survey work while preserving the operational nuance of different tasks, systems, and specialist workflows.
 
 ### 2.2 The Strategic Opportunity
 
-Surveyors currently manage complex toolchains across multiple systems and displays, leading to inefficiency and fatigue. OIS's strategic opportunity is to:
+Surveyors currently manage complex toolchains across multiple systems and displays, leading to inefficiency, re-checking, and fatigue. OIS's strategic opportunity is to:
 
-* **Reduce operational complexity.**
-* **Enable surveyors to manage multiple concurrent missions safely and effectively where validated.**
-* **Preserve situational awareness** through unified control and monitoring.
-* **Allow seamless peer assistance and supervisory support** without interrupting active missions.
+* **reduce operational complexity**
+* **improve mission-level decision quality and intervention confidence**
+* **strengthen traceability and handover continuity**
+* **separate decision, control, evidence, and service concerns more clearly**
+* **develop cross-mission and future multi-mission work as part of the same evolving operating model**
 
 ---
 
 ## 3. Strategic Objectives
 
 | **Objective** | **Goal** | **Outcome** |
-| ------------- | -------- | ----------- |
-| **1. Operational Efficiency** | Simplify workflows and reduce manual intervention. | Faster mobilization and reduced crew size. |
-| **2. Multi-Mission Readiness** | Allow individual operators to manage multiple concurrent missions where it is safe and operationally credible. | Maintain operational throughput with fewer personnel. |
-| **3. Situational Awareness** | Unify visibility across systems, missions, and roles. | Early anomaly detection and faster recovery. |
-| **4. Traceable Collaboration** | Enable safe, auditable, and distributed teamwork. | Seamless assistance and handovers. |
-| **5. Scalable Architecture** | Ensure the system can expand across fleet and shore nodes. | Sustained efficiency at scale. |
+| --- | --- | --- |
+| **1. Mission-Level Clarity** | Give surveyors a dependable operating model for the active mission. | Faster understanding of state, issue, and next safe action. |
+| **2. Operational Efficiency** | Simplify workflows and reduce manual intervention across mission-time surfaces. | Faster mobilization, fewer tool switches, reduced procedural overhead. |
+| **3. Situational Awareness** | Improve visibility across systems, evidence, health, and quality. | Earlier anomaly detection and better recovery decisions. |
+| **4. Traceable Collaboration** | Enable auditable distributed teamwork and stronger handovers. | Better continuity across shifts, roles, and interventions. |
+| **5. Scalable Product Structure** | Build a product model that can grow across mission-level and cross-mission workflows together. | Strong product coherence with broader operational range. |
 
 ---
 
 ## 4. Strategic Pillars
 
 | **Pillar** | **Focus** | **Strategic Intent** |
-| ---------- | --------- | -------------------- |
-| **Command & Control** | Safe execution of commands and configurations. | Standardize and automate operational workflows where direct control is appropriate. |
-| **Active Monitoring** | Real-time data, system, and QC visibility. | Deliver unified awareness across missions with intelligent triage. |
-| **Collaboration & Traceability** | Shared operations and historical transparency. | Introduce multi-user assistance, shared logs, and change tracking. |
-| **Scalability & Resilience** | Multi-mission and multi-user scalability. | Support operator-level concurrency and distributed fleet control as a future-state capability. |
+| --- | --- | --- |
+| **Command & Control** | Safe mission-time action and recovery. | Place operational intervention in the right surfaces, especially Systems inside Mission Deck. |
+| **Active Monitoring** | Real-time data, health, and QC interpretation. | Strengthen evidence and quality understanding through Mission Overview and Data Monitor capabilities. |
+| **Collaboration & Traceability** | Shared operations and historical continuity. | Make Online Log and related traceability services part of the operating model, not administrative add-ons. |
+| **Scalability & Resilience** | Strong mission-level and cross-mission ecosystem growth. | Expand toward broader multi-mission support without treating cross-mission awareness as a distant layer. |
 
 ---
 
@@ -70,66 +71,66 @@ Surveyors currently manage complex toolchains across multiple systems and displa
 
 ### 5.1 Design Strategy
 
-* **Reduced Operational Complexity:** Consolidate essential functions to reduce switching between tools.
-* **Role-Based Workspaces:** Interfaces adapt to each user's function (Operator, Senior, PEC).
-* **Multi-Mission Readiness:** Design for safe concurrent mission handling by individual surveyors where validated.
-* **Collaborative Assistance:** Enable shared control and supervision without disruption.
-* **Cognitive Efficiency:** Focus user attention through triage, priority alerts, and contextual visibility.
+* **Unified Ecosystem:** Treat OI Survey as one operational ecosystem expressed through coordinated surfaces, services, and subsystems.
+* **Parallel Mission and Cross-Mission Development:** Build Mission Overview and Multi-Mission Context together as related layers of the same attention model.
+* **Surface-Based Product Model:** Treat Mission Overview, Systems, Online Log, Data Monitor, and Multi-Mission Context as purpose-built parts of one ecosystem.
+* **Evidence-Backed Intervention:** Keep operational action close to the evidence needed for confidence.
+* **Traceable Workflows:** Ensure actions, changes, and observations contribute to a defensible narrative.
+* **Validated Scale:** Preserve multi-mission as a strategic direction without forcing it to dominate near-term design decisions.
 
 ### 5.2 Technology Strategy
 
-* **Mission Containerization:** Each mission runs in an isolated workspace with synchronized state.
-* **Pub/Sub Data Model:** Live updates and non-blocking synchronization between modules.
-* **RBAC Enforcement:** Command and view permissions controlled by roles and session context.
-* **Diagnostic Automation:** Health checks and safe rollback capabilities.
-* **Interoperability:** Abstract heterogeneous acquisition, navigation, and telemetry systems into a coherent operational layer.
+* **Mission-Oriented State Handling:** Maintain coherent mission context across connected surfaces and services.
+* **Shared Service Backbone:** Treat logging, configuration governance, and synchronization as cross-cutting product infrastructure.
+* **RBAC Enforcement:** Make role boundaries and authority visible where operationally necessary.
+* **Evidence and Monitoring Extensibility:** Allow Data Monitor capabilities to mature incrementally rather than forcing one early monolith.
+* **Interoperability:** Abstract heterogeneous acquisition, navigation, telemetry, and specialist tooling into product-level operational concepts.
 
 ### 5.3 Operational Strategy
 
-* **Remote-First Model:** Designed for onshore and offshore collaboration.
-* **Incremental Adoption:** OIS integrates progressively with existing workflows.
-* **Standardization:** Configuration templates and predefined mission profiles reduce variance.
-* **Data Integrity:** Automated event logging ensures traceability across missions.
+* **Remote-First Collaboration:** Support distributed work between offshore, onshore, and specialist roles.
+* **Incremental Adoption:** Improve mission-time work without requiring all external dependencies to be absorbed immediately.
+* **Operational Trust:** Reduce manual re-checking by making readiness, impact, and traceability more credible.
+* **Integrated Cross-Mission Track:** Continue developing Multi-Mission Context alongside mission-level surfaces so the two models inform each other.
 
 ---
 
 ## 6. Roadmap Framework
 
-The following roadmap is **indicative only** and will be validated against **feature prioritization workshops** (Command & Control and Active Monitoring short-/long-term scopes).
+The following roadmap is **indicative only** and should be validated against operator research, workshop priorities, and prototype maturity.
 
 | **Phase** | **Focus** | **Indicative Milestones** |
-| --------- | --------- | ------------------------- |
-| **Phase 1 - Core Operations** | Establish unified mission control and monitoring. | Mission Deck v1, Online Log integration, Sensor Control, QC Dashboard. |
-| **Phase 2 - Collaboration & Concurrency** | Enable multi-user and multi-mission operation. | Multi-Mission Context, Ack Loop, Config Templates, operator-level multi-mission sessions where validated. |
-| **Phase 3 - Intelligent Operations** | Introduce automation and predictive diagnostics. | AI Diagnostics, auto-triage, fleet orchestration. |
+| --- | --- | --- |
+| **Phase 1 - Core Operating Ecosystem** | Establish the primary mission-level and cross-mission foundations. | Mission Deck structure, Mission Overview, Systems, Online Log, package-level Data Monitor framing, Multi-Mission Context direction. |
+| **Phase 2 - Connected Operational Surfaces** | Strengthen evidence, configuration, specialist workflow, and aggregation connections. | Expanded Data Monitor capabilities, stronger configuration governance, clearer service integration, stronger Multi-Mission Context integration. |
+| **Phase 3 - Broader Operational Scale** | Mature cross-mission awareness and validated concurrency patterns. | Multi-Mission Context growth, prioritization patterns, future multi-mission operating support where validated. |
 
-**Note:** Final roadmap structure will be derived from workshop validation sessions.
+**Note:** Final roadmap structure will be derived from feature prioritization and stakeholder validation sessions.
 
 ---
 
 ## 7. Success Criteria
 
 | **Category** | **Metric** | **Target** |
-| ------------ | ---------- | ---------- |
+| --- | --- | --- |
 | **Efficiency** | Mobilization time reduction | >= 30% |
-| **Operational Efficiency** | **Average concurrent missions per operator** | Target future state: >= 2 sustained safely |
 | **Reliability** | Mean fault recovery time | <= 10 min |
 | **Situational Awareness** | Time to detect anomaly | <= 2 min |
 | **User Experience** | Operator satisfaction | >= 90% positive |
 | **Traceability** | Logged actions automatically captured | 100% |
+| **Scalability** | Multi-mission support | Evolving target, developed alongside mission-level clarity |
 
 ---
 
 ## 8. Strategic Outcomes
 
-1. **Unified Operational Command:** Operators manage core mission actions and awareness through one platform layer.
-2. **Operational Efficiency:** Multi-mission concurrency reduces crew needs while maintaining throughput where it can be introduced safely.
-3. **Fleet-Level Awareness:** Supervisors triage and assist across distributed missions.
-4. **Predictive Resilience:** Faults detected, logged, and triaged before impact.
-5. **Cultural Transformation:** A shift toward distributed, data-driven, remote operations.
+1. **Clearer Mission-Time Operations:** Surveyors can understand and act inside one coherent active-mission package.
+2. **Stronger Operational Trust:** Readiness, evidence, and traceability reduce re-checking and ambiguity.
+3. **Better Service Backbone:** Online Log and related shared services support live use, handover, and downstream reporting.
+4. **More Credible Product Structure:** Different operational questions are served by the right surface rather than one overloaded workspace.
+5. **Scalable Direction:** The product can grow toward cross-mission and multi-mission modes while keeping mission-level and cross-mission models connected.
 
 ---
 
 **End of Document**
-*"From complexity to clarity - enabling every surveyor to manage more, safely and efficiently."*
-
+*"One ecosystem, clarified through connected mission-level and cross-mission surfaces."*

@@ -8,7 +8,7 @@ decision_id: DCR.0001
 title: Example Decision
 status: proposed            # draft|proposed|accepted|superseded|rejected
 visibility: internal
-owners: ["design@survey-platform.io"]
+owners: ["pedro.baptista@oceaninfinity.com"]
 tags: ["decision", "product"]
 created: 2026-04-06
 last_updated: 2026-04-06

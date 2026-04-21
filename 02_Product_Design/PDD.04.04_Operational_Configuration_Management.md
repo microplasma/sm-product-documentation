@@ -4,7 +4,7 @@ title: Operational Configuration Management
 version: 0.2.0
 status: draft
 visibility: internal
-owners: ["design@survey-platform.io"]
+owners: ["pedro.baptista@oceaninfinity.com"]
 tags: ["design", "configuration", "validation", "governance"]
 created: 2025-11-09
 last_updated: 2026-04-06

@@ -4,7 +4,7 @@ title: Senior Surveyor Workshop Feature Themes
 version: 0.1.0
 status: draft
 visibility: internal
-owners: ["research@survey-platform.io"]
+owners: ["pedro.baptista@oceaninfinity.com"]
 tags: ["ux-research", "workshop", "senior-surveyor", "feature-themes"]
 created: 2026-04-06
 last_updated: 2026-04-06
@@ -229,4 +229,3 @@ The workshop synthesis supports the current layered design direction:
 
 ## Summary Statement
 > The senior surveyor workshop material is most useful when interpreted as evidence of recurring operator needs: stronger awareness, safer control, clearer evidence, more trustworthy traceability, and better visibility into environmental, diagnostic, and governance realities that shape remote survey work.
-
